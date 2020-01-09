@@ -6995,3 +6995,6 @@ i {
 
 .has-text-orange {
   color: orange; }
+
+.hero-body {
+  padding: 5em 0 !important; }
