@@ -26,6 +26,9 @@ $primary-invert: $pink-invert;
 // 4. Import the rest of Bulma
 */
 
+$black: hsl(0, 0%, 6%);
+$text: $black;
+
 @import "../node_modules/bulma/bulma";
 
 i {
@@ -56,4 +59,15 @@ i {
 
 .hero-body {
   padding: 5em 1em!important;
+}
+
+.box {
+  h2 {
+    margin-bottom: .5em;
+  }
+}
+
+.box:hover {
+  color: $black;
+  background: $white;
 }
