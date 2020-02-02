@@ -6979,15 +6979,7 @@ label.panel-block {
 i {
   font-weight: 900 !important; }
 
-.parts img {
-  width: 100%;
-  max-width: 100px; }
-
-.parts h1 {
-  font-weight: bold;
-  margin-bottom: 40px; }
-
-.parts h2 {
+.section-title {
   font-weight: bold; }
 
 .has-text-pink {
@@ -6996,8 +6988,8 @@ i {
 .has-text-orange {
   color: orange; }
 
-.hero-body {
-  padding: 5em 1em !important; }
+.tile {
+  padding: 1em; }
 
 .box h2 {
   margin-bottom: .5em; }

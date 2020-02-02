@@ -20,15 +20,17 @@
     </section>
     <section class="section">
       <div class="container">
-        <div class="columns parts">
-          <div class="column">
-            <h1 class="has-text-centered is-size-3 is-uppercase">Infrastructure</h1>
+        <h1 class="is-size-2 is-uppercase section-title">Infrastructure</h1>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler">
               <h2 class="is-size-4">
                 <i class="fas fa-flask has-text-link"></i> boiler<br />
               </h2>
               Boiler is a Docker orchestration software built on top of nginx & docker-compose.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/monitoring">
               <h2 class="is-size-4">
                 <i class="fas fa-chart-bar has-text-link"></i> monitoring<br />
@@ -36,110 +38,155 @@
               Services monitoring. Data collected with Loki, Promtail, cAdvisor, Prometheus. Monitored with Grafana.
             </a>
           </div>
-          <div class="column">
-            <h1 class="has-text-centered is-size-3 is-uppercase">Services</h1>
+        </div>
+        
+        <h1 class="is-size-2 is-uppercase section-title">Services</h1>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/arena">
               <h2 class="is-size-4">
                 <i class="fas fa-hat-wizard has-text-danger"></i> arena<br />
               </h2>
               The arena service is the service that will manage all the games & wizzards accounts in the Arena products.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/auth">
               <h2 class="is-size-4">
                 <i class="far fa-user has-text-danger"></i> auth<br />
               </h2>
               Main authentification service. Manages registrations & token generation.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/bots">
               <h2 class="is-size-4">
                 <i class="fas fa-robot has-text-danger"></i> <i class="fas fa-lock is-size-6 has-text-grey"></i> bots<br />
               </h2>
               Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.
             </a>
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging">
               <h2 class="is-size-4">
                 <i class="fas fa-bell has-text-danger"></i> messaging<br />
               </h2>
               Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe. It's lighter than Apache Kafka because we have simple needs here.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rest">
               <h2 class="is-size-4">
                 <i class="fas fa-boxes has-text-danger"></i> rest<br />
               </h2>
               Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rooms">
               <h2 class="is-size-4">
                 <i class="fas fa-comment-dots has-text-danger"></i> rooms<br />
               </h2>
               The rooms service will manage discussions between players inside rooms, contained in subjects.
             </a>
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/website">
               <h2 class="is-size-4">
                 <i class="fas fa-globe-europe has-text-danger"></i> website<br />
               </h2>
-              Website made with Sails.js
+              Website built with Sails.js, using all the other services to serve data to the players.
             </a>
           </div>
-          <div class="column">
-            <h1 class="has-text-centered is-size-3 is-uppercase">Tools & assets</h1>
+        </div>
+        
+        <h1 class="is-size-2 is-uppercase section-title">Tools & assets</h1>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/sharer">
               <h2 class="is-size-4">
                 <i class="far fa-star has-text-orange"></i> sharer<br />
               </h2>
               sharer is a simple CLI to add shared assets accross apps using Git submodules. It also add required NPM dependencies in the package.json file of the shared assets.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/flame">
               <h2 class="is-size-4">
                 <i class="fas fa-fire has-text-orange"></i> flame<br />
               </h2>
               Data computing & analysis on-demand on CLIs served by Google Fire.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/arena-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-hat-wizard has-text-orange"></i> arena-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/auth-shared">
               <h2 class="is-size-4">
                 <i class="far fa-user has-text-orange"></i> auth-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/env-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-server has-text-orange"></i> env-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/log-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-clipboard-list has-text-orange"></i> log-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-bell has-text-orange"></i> messaging-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rest-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-boxes has-text-orange"></i> rest-shared<br />
               </h2>
-              Shared & agostic resources for TFS platform
+              Shared & agostic resources for TFS platform. Served with the sharer tool.
             </a>
           </div>
-          <div class="column">
-            <h1 class="has-text-centered is-size-3 is-uppercase">Conferences</h1>
+        </div>
+        
+        <h1 class="is-size-2 is-uppercase section-title">Conferences</h1>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://drive.google.com/open?id=1_9hxo8BUy2za8tCdEt4hnruhYg74Ae8tUvW3nc5ITeI">
               <h2 class="is-size-4">
                 <i class="far fa-file-powerpoint has-text-pink"></i> Juste Arena<br />
               </h2>
               🇫🇷 Retour d’expérience sur la SOA et l’optimisation de la disponibilité de la data en NodeJS.
             </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://drive.google.com/open?id=13yy13ARVepqumGO2zfuV-i4ZcGAgh2dehhf96nc6aAE">
               <h2 class="is-size-4">
                 <i class="far fa-file-powerpoint has-text-pink"></i> Du déploiement au support<br />

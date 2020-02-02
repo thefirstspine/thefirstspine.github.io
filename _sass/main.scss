@@ -35,18 +35,8 @@ i {
   font-weight: 900!important;
 }
 
-.parts {
-  img {
-    width: 100%;
-    max-width: 100px;
-  }
-  h1 {
-    font-weight: bold;
-    margin-bottom: 40px;
-  }
-  h2 {
-    font-weight: bold;
-  }
+.section-title {
+  font-weight: bold;
 }
 
 .has-text-pink {
@@ -57,8 +47,8 @@ i {
   color: orange;
 }
 
-.hero-body {
-  padding: 5em 1em!important;
+.tile {
+  padding: 1em;
 }
 
 .box {
