@@ -47,8 +47,12 @@ i {
   color: orange;
 }
 
-.tile {
+.tile.is-4 {
   padding: 1em;
+}
+
+.has-margin-top {
+  margin-top: 2em!important;
 }
 
 .box {
