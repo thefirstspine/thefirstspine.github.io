@@ -20,6 +20,73 @@
     </section>
     <section class="section">
       <div class="container">
+        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-centered"><i class="fas fa-broom"></i> Summer cleanup</h1>
+        <p class="is-size-4 has-text-centered">This summer, a general cleanup of the architecture will be done. The most tasks will be to migrate the current shared assets to NPM dependencies since most cloud-based host providers does not support git submodules.</p>
+        <p>&nbsp;</p>
+        <div class="columns">
+          <div class="column is-6 is-offset-3">
+            <article class="panel is-link">
+              <p class="panel-heading">
+                // TODO
+              </p>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-success fas fa-check-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-success" style="text-decoration: line-through;">Make app module of Nest apps dynamics.</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Use dotenv instead of shared-env.</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Do secrets loading strategies for different providers.</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Migrate log-shared to a two-level NPM dependencies (thefirstspine-log and thefirstspine-nest-log).</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Migrate auth-shared to a two-level NPM dependencies (thefirstspine-auth and thefirstspine-nest-auth).</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Migrate messaging-shared to a two-level NPM dependencies (thefirstspine-messaging and thefirstspine-nest-messaging).</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Migrate arena-shared to a NPM dependency with types (thefirstspine-arena).</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Migrate rest-shared to a NPM dependency with types (thefirstspine-rest).</span>
+              </div>
+              <div class="panel-block">
+                <span class="panel-icon">
+                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
+                </span>
+                <span class="has-text-grey">Do a two-level NPM dependencies (thefirstspine-certificate-validation and thefirstspine-nest-certificate-validation).</span>
+              </div>
+            </article>
+          </div>
+        </div>
+        <hr />
         <h1 class="is-size-2 is-uppercase section-title has-margin-top">Infrastructure</h1>
         <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS plateform.</p>
         <div class="tile is-ancestor has-margin-top">
@@ -156,6 +223,10 @@
               <h2 class="is-size-4">
                 <i class="far fa-star has-text-orange"></i> sharer<br />
               </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
+              </h2>
               sharer is a simple CLI to add shared assets accross apps using Git submodules. It also add required NPM dependencies in the package.json file of the shared assets.
             </a>
           </div>
@@ -174,6 +245,10 @@
               <h2 class="is-size-4">
                 <i class="fas fa-hat-wizard has-text-orange"></i> arena-shared<br />
               </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
+              </h2>
               Shared & agostic resources for TFS platform. Served with the sharer tool. These resources are all related with the service Arena.
             </a>
           </div>
@@ -182,6 +257,10 @@
               <h2 class="is-size-4">
                 <i class="far fa-user has-text-orange"></i> auth-shared<br />
               </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
+              </h2>
               Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Auth.
             </a>
           </div>
@@ -189,6 +268,10 @@
             <a class="box" target="_blank" href="https://github.com/thefirstspine/env-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-server has-text-orange"></i> env-shared<br />
+              </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
               </h2>
               Shared & agostic resources for TFS platform. Served with the Sharer tool. Provides an `env` TS service to gather environment configurations through dotenv files or environment variables.
             </a>
@@ -200,6 +283,10 @@
               <h2 class="is-size-4">
                 <i class="fas fa-clipboard-list has-text-orange"></i> log-shared<br />
               </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
+              </h2>
               Shared & agostic resources for TFS platform. Served with the Sharer tool. Provides a Nest logger service with `winston`.
             </a>
           </div>
@@ -208,6 +295,10 @@
               <h2 class="is-size-4">
                 <i class="fas fa-bell has-text-orange"></i> messaging-shared<br />
               </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
+              </h2>
               Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Messaging. Provides a Nest service to send messages to the service.
             </a>
           </div>
@@ -215,6 +306,10 @@
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rest-shared">
               <h2 class="is-size-4">
                 <i class="fas fa-boxes has-text-orange"></i> rest-shared<br />
+              </h2>
+              <h2 class="notification">
+                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
+                This project will be part of the next summer cleanup and has to be not used in new projects.
               </h2>
               Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Rest.
             </a>
