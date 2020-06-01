@@ -9,17 +9,70 @@
     <link href="css/all.min.css" rel="stylesheet"/>
   </head>
   <body>
-    <section class="hero is-medium is-warning is-bold">
+
+    <section class="hero is-bold is-warning is-fullheight">
+      <div class="hero-head">
+        <nav class="navbar">
+          <div class="container">
+            <div class="navbar-brand">
+              <span class="navbar-item is-size-3 has-text-black has-text-weight-bold">
+                TFS OPEN SOURCE
+              </span>
+              <span class="navbar-burger burger" data-target="navbarMenuHeroB">
+                <span></span>
+                <span></span>
+                <span></span>
+              </span>
+            </div>
+            <div id="navbarMenuHeroB" class="navbar-menu">
+              <div class="navbar-end">
+                <span class="navbar-item">
+                  <a class="button is-dark" target="_blank" href="https://www.github.com/thefirstspine">
+                    <span class="icon">
+                      <i class="fab fa-github"></i>
+                    </span>
+                    <span>Github</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    
       <div class="hero-body">
-        <div class="container">
+        <div class="container has-text-centered">
           <h1 class="title is-2 is-spaced is-uppercase">
             Building online board games<br />through open source technology
           </h1>
         </div>
       </div>
+    
+      <div class="hero-foot">
+        <nav class="tabs is-boxed is-fullwidth">
+          <div class="container">
+            <ul>
+              <li>
+                <a href="#infrastructure">Infrastructure</a>
+              </li>
+              <li>
+                <a href="#services">Services</a>
+              </li>
+              <li>
+                <a href="#tools">Tools & assets</a>
+              </li>
+              <li>
+                <a href="#conferences">Conferences</a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
     </section>
+
     <section class="section">
       <div class="container">
+        <a name="infrastructure"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top">Infrastructure</h1>
         <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS plateform.</p>
         <div class="tile is-ancestor has-margin-top">
@@ -59,6 +112,7 @@
           </div>
         </div>
         
+        <a name="services"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top">Services</h1>
         <p class="is-size-4">The TFS plateform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
         <div class="tile is-ancestor has-margin-top">
@@ -140,6 +194,7 @@
           </div>
         </div>
         
+        <a name="tools"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top">Tools & assets</h1>
         <p class="is-size-4">All the tools & the assets we need to construct TFS apps.</p>
         <div class="tile is-ancestor has-margin-top">
@@ -249,6 +304,7 @@
           </div>
         </div>
         
+        <a name="conferences"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top">Conferences</h1>
         <p class="is-size-4">We do some conferences too in order to share what we learned.</p>
         <div class="tile is-ancestor has-margin-top">
