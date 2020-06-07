@@ -65,3 +65,11 @@ i {
   color: $black;
   background: $white;
 }
+
+.is-special {
+  background-image: url(../top.png);
+  background-size: cover;
+  .navbar-item {
+    color: #FFF!important;
+  }
+}

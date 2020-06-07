@@ -7157,3 +7157,9 @@ i {
 .box:hover {
   color: #0f0f0f;
   background: white; }
+
+.is-special {
+  background-image: url(../top.png);
+  background-size: cover; }
+  .is-special .navbar-item {
+    color: #FFF !important; }

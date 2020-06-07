@@ -10,18 +10,13 @@
   </head>
   <body>
 
-    <section class="hero is-bold is-warning is-fullheight">
+    <section class="hero is-light is-bold is-medium">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <span class="navbar-item is-size-3 has-text-black has-text-weight-bold">
-                TFS OPEN SOURCE
-              </span>
-              <span class="navbar-burger burger" data-target="navbarMenuHeroB">
-                <span></span>
-                <span></span>
-                <span></span>
+              <span class="navbar-item is-size-3 has-text-weight-bold is-uppercase">
+                <i class="fas fa-code"></i> TFS
               </span>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
@@ -34,6 +29,14 @@
                     <span>Github</span>
                   </a>
                 </span>
+                <span class="navbar-item">
+                  <a class="button is-dark" target="_blank" href="https://www.npmjs.com/~thefirstspine">
+                    <span class="icon">
+                      <i class="fab fa-npm"></i>
+                    </span>
+                    <span>NPM</span>
+                  </a>
+                </span>
               </div>
             </div>
           </div>
@@ -42,31 +45,10 @@
     
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title is-2 is-spaced is-uppercase">
-            Building online board games<br />through open source technology
+          <h1 class="title is-1 is-spaced is-uppercase">
+            Building online <span class="has-text-danger">board games</span><br />through <span class="has-text-danger">open source</span> technology
           </h1>
         </div>
-      </div>
-    
-      <div class="hero-foot">
-        <nav class="tabs is-boxed is-fullwidth">
-          <div class="container">
-            <ul>
-              <li>
-                <a href="#infrastructure">Infrastructure</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
-              </li>
-              <li>
-                <a href="#tools">Tools & assets</a>
-              </li>
-              <li>
-                <a href="#conferences">Conferences</a>
-              </li>
-            </ul>
-          </div>
-        </nav>
       </div>
     </section>
 
@@ -78,24 +60,36 @@
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler">
-              <h2 class="is-size-4">
-                <i class="fas fa-flask has-text-link"></i> boiler<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-flask has-text-link"></i><br />
+                boiler
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
+                <strong>Deprecation date: 2021-01-01</strong>
               </h2>
               Boiler is a Docker orchestration software built on top of nginx & docker-compose.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler-sign">
-              <h2 class="is-size-4">
-                <i class="fas fa-stamp has-text-link"></i> <i class="fas fa-lock is-size-6 has-text-grey"></i> boiler-sign<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-stamp has-text-link"></i><br />
+                boiler-sign
+              </h2>
+              <h2 class="notification is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
+                This repository is only available for The First Spine development team.
               </h2>
               Third-party certification service that generates private key / certificates in dotenv files.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/monitoring">
-              <h2 class="is-size-4">
-                <i class="fas fa-chart-bar has-text-link"></i> monitoring<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-chart-bar has-text-link"></i><br />
+                monitoring
               </h2>
               Services monitoring. Data collected with Loki, Promtail, cAdvisor, Prometheus. Monitored with Grafana.
             </a>
@@ -104,8 +98,18 @@
         <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/flexible-cupcake">
-              <h2 class="is-size-4">
-                <i class="fas fa-book has-text-link"></i> <i class="fas fa-lock is-size-6 has-text-grey"></i> flexible-cupcake<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-book has-text-link"></i><br />
+                flexible-cupcake
+              </h2>
+              <h2 class="notification is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
+                This repository is only available for The First Spine development team.
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
+                <strong>Deprecation date: 2021-01-01</strong>
               </h2>
               Flexible Cupcake is a sails app to self-document data across services.
             </a>
@@ -118,24 +122,31 @@
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/arena">
-              <h2 class="is-size-4">
-                <i class="fas fa-hat-wizard has-text-danger"></i> arena<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-hat-wizard has-text-danger"></i><br />
+                arena
               </h2>
               The arena service is the service that will manage all the games & wizzards accounts in the Arena products.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/auth">
-              <h2 class="is-size-4">
-                <i class="far fa-user has-text-danger"></i> auth<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-user has-text-danger"></i><br />
+                auth
               </h2>
               Main authentification service. Manages registrations & token generation.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/bots">
-              <h2 class="is-size-4">
-                <i class="fas fa-robot has-text-danger"></i> <i class="fas fa-lock is-size-6 has-text-grey"></i> bots<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-robot has-text-danger"></i><br />
+                bots
+              </h2>
+              <h2 class="notification is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
+                This repository is only available for The First Spine development team.
               </h2>
               Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.
             </a>
@@ -144,24 +155,27 @@
         <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging">
-              <h2 class="is-size-4">
-                <i class="fas fa-bell has-text-danger"></i> messaging<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-bell has-text-danger"></i><br />
+                messaging
               </h2>
               Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe. It's lighter than Apache Kafka because we have simple needs here.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rest">
-              <h2 class="is-size-4">
-                <i class="fas fa-boxes has-text-danger"></i> rest<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-boxes has-text-danger"></i><br />
+                rest
               </h2>
               Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rooms">
-              <h2 class="is-size-4">
-                <i class="fas fa-comment-dots has-text-danger"></i> rooms<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-comment-dots has-text-danger"></i><br />
+                rest
               </h2>
               The rooms service will manage discussions between players inside rooms, contained in subjects.
             </a>
@@ -170,24 +184,31 @@
         <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/shop">
-              <h2 class="is-size-4">
-                <i class="fas fa-shopping-bag has-text-danger"></i> <i class="fas fa-lock is-size-6 has-text-grey"></i> shop<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-shopping-bag has-text-danger"></i><br />
+                shop
+              </h2>
+              <h2 class="notification is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
+                This repository is only available for The First Spine development team.
               </h2>
               Manages all the purshases with real money. Works with the Stripe API.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/solid-pancake">
-              <h2 class="is-size-4">
-                <i class="fas fa-stroopwafel has-text-danger"></i> solid-pancake<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-stroopwafel has-text-danger"></i><br />
+                solid-pancake
               </h2>
               Solid Pancakes is an event-based consumer that tracks usages on the TFS products.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/website">
-              <h2 class="is-size-4">
-                <i class="fas fa-globe-europe has-text-danger"></i> website<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-globe-europe has-text-danger"></i><br />
+                website
               </h2>
               Website built with Sails.js, using all the other services to serve data to the players.
             </a>
@@ -199,107 +220,157 @@
         <p class="is-size-4">All the tools & the assets we need to construct TFS apps.</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/flame">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-burn has-text-orange"></i><br />
+                flame
+              </h2>
+              Data computing & analysis on-demand on CLIs served by Google Fire.
+            </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/nest-filesocket">
-              <h2 class="is-size-4">
-                <i class="far fa-archway has-text-orange"></i> nest-filesocket<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-archway has-text-orange"></i><br />
+                nest-filesocket
               </h2>
               This NestJS module allows you to call your app context through local file socket.
             </a>
           </div>
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/sharer">
-              <h2 class="is-size-4">
-                <i class="far fa-star has-text-orange"></i> sharer<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/types-arena">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-hat-wizard has-text-orange"></i><br />
+                @thefirstspine/types-arena
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              sharer is a simple CLI to add shared assets accross apps using Git submodules. It also add required NPM dependencies in the package.json file of the shared assets.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/flame">
-              <h2 class="is-size-4">
-                <i class="fas fa-burn has-text-orange"></i> flame<br />
-              </h2>
-              Data computing & analysis on-demand on CLIs served by Google Fire.
+              Types definition for Arena resources.
             </a>
           </div>
         </div>
         <div class="tile is-ancestor">
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/arena-shared">
-              <h2 class="is-size-4">
-                <i class="fas fa-hat-wizard has-text-orange"></i> arena-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-user has-text-orange"></i><br />
+                @thefirstspine/auth
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the sharer tool. These resources are all related with the service Arena.
+              Javascript & Typescript dependency to help developers to use the auth net service & guard.
             </a>
           </div>
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/auth-shared">
-              <h2 class="is-size-4">
-                <i class="far fa-user has-text-orange"></i> auth-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth-nest">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-user has-text-orange"></i><br />
+                @thefirstspine/auth-nest
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Auth.
+              Built on top of <code>@thefirstspine/auth</code>. Provides Nest services.
             </a>
           </div>
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/env-shared">
-              <h2 class="is-size-4">
-                <i class="fas fa-server has-text-orange"></i> env-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-validation">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-stamp has-text-orange"></i><br />
+                @thefirstspine/certificate-validation
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the Sharer tool. Provides an `env` TS service to gather environment configurations through dotenv files or environment variables.
+              Javascript and Typescript service to validate public keys against private key stored in environment variable.
             </a>
           </div>
         </div>
         <div class="tile is-ancestor">
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/log-shared">
-              <h2 class="is-size-4">
-                <i class="fas fa-clipboard-list has-text-orange"></i> log-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-validation-nest">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-stamp has-text-orange"></i><br />
+                @thefirstspine/certificate-validation-nest
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the Sharer tool. Provides a Nest logger service with `winston`.
+              Built on top of <code>thefirstspine-certificate-validation</code>. Provides Nest services.
             </a>
           </div>
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging-shared">
-              <h2 class="is-size-4">
-                <i class="fas fa-bell has-text-orange"></i> messaging-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-bell has-text-orange"></i><br />
+                @thefirstspine/messaging
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Messaging. Provides a Nest service to send messages to the service.
+              Javascript and Typescript service to interact with the messaging net service.
             </a>
           </div>
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/rest-shared">
-              <h2 class="is-size-4">
-                <i class="fas fa-boxes has-text-orange"></i> rest-shared<br />
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging-nest">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-bell has-text-orange"></i><br />
+                @thefirstspine/messaging-nest
               </h2>
-              <h2 class="notification">
-                <i class="fas fa-broom"></i> &nbsp; <strong>Summer cleanup</strong><br />
-                This project will be part of the next summer cleanup and has to be not used in new projects.
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
               </h2>
-              Shared & agostic resources for TFS platform. Served with the Sharer tool. These resources are all related with the service Rest.
+              Built on top of <code>thefirstspine-messaging</code>. Provides Nest services.
+            </a>
+          </div>
+        </div>
+        <div class="tile is-ancestor">
+          <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-chart-bar has-text-orange"></i><br />
+                @thefirstspine/logs
+              </h2>
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
+              </h2>
+              Javascript and Typescript service to deliver unified logs. Works with Winstonjs.
+            </a>
+          </div>
+          <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs-nest">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-chart-bar has-text-orange"></i><br />
+                @thefirstspine/logs-nest
+              </h2>
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
+              </h2>
+              Built on top of <code>thefirstspine-logs</code>. Provides Nest services.
+            </a>
+          </div>
+          <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/types-rest">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-boxes has-text-orange"></i><br />
+                @thefirstspine/types-rest
+              </h2>
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
+              </h2>
+              Types definition for REST resources.
             </a>
           </div>
         </div>
@@ -310,84 +381,41 @@
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://drive.google.com/open?id=1_9hxo8BUy2za8tCdEt4hnruhYg74Ae8tUvW3nc5ITeI">
-              <h2 class="is-size-4">
-                <i class="far fa-file-powerpoint has-text-pink"></i> Juste Arena<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-file-powerpoint has-text-pink"></i><br />
+                Juste Arena
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This conference is refering to old statements and will be removed soon.
               </h2>
               🇫🇷 Retour d’expérience sur la SOA et l’optimisation de la disponibilité de la data en NodeJS.
             </a>
           </div>
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://drive.google.com/open?id=13yy13ARVepqumGO2zfuV-i4ZcGAgh2dehhf96nc6aAE">
-              <h2 class="is-size-4">
-                <i class="far fa-file-powerpoint has-text-pink"></i> Du déploiement au support<br />
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-file-powerpoint has-text-pink"></i><br />
+                Du déploiement au support
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This conference is refering to old statements and will be removed soon.
               </h2>
               🇫🇷 Présentation des outils développés et utilisés pour déployer, surveiller et faciliter les décisions.
             </a>
           </div>
         </div>
-        <hr />
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-centered"><i class="fas fa-broom"></i> Summer cleanup</h1>
-        <p class="is-size-4 has-text-centered">This summer, a general cleanup of the architecture will be done. The most tasks will be to migrate the current shared assets to NPM dependencies since most cloud-based host providers does not support git submodules.</p>
-        <p>&nbsp;</p>
-        <div class="columns">
-          <div class="column is-6 is-offset-3">
-            <article class="panel is-link">
-              <p class="panel-heading">
-                // TODO
-              </p>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-success fas fa-check-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-success" style="text-decoration: line-through;">Make app module of Nest apps dynamics.</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Migrate log-shared to a two-level NPM dependencies (thefirstspine-log and thefirstspine-nest-log).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-link fas fa-minus-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-link">Migrate auth-shared to a two-level NPM dependencies (thefirstspine-auth and thefirstspine-nest-auth).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Migrate messaging-shared to a two-level NPM dependencies (thefirstspine-messaging and thefirstspine-nest-messaging).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Migrate arena-shared to a NPM dependency with types (thefirstspine-arena).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Migrate rest-shared to a NPM dependency with types (thefirstspine-rest).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Do a two-level NPM dependencies (thefirstspine-certificate-validation and thefirstspine-nest-certificate-validation).</span>
-              </div>
-              <div class="panel-block">
-                <span class="panel-icon">
-                  <i class="has-text-grey fas fa-square" aria-hidden="true"></i>
-                </span>
-                <span class="has-text-grey">Use dotenv instead of shared-env.</span>
-              </div>
-            </article>
-          </div>
-        </div>
+        
       </div>
     </section>
+    <footer class="footer">
+      <div class="content has-text-centered is-size-7">
+        <p>
+          //
+        </p>
+      </div>
+    </footer>
     <script type="text/javascript" src="lib/main.js"></script>
   </body>
 </html>
