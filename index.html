@@ -10,7 +10,7 @@
   </head>
   <body>
 
-    <section class="hero is-light is-bold is-medium">
+    <section class="hero is-link is-bold is-medium">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
@@ -46,7 +46,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced is-uppercase">
-            Building online <span class="has-text-danger">board games</span><br />through <span class="has-text-danger">open source</span> technology
+            Building online <span class="has-text-warning">board games</span><br />through <span class="has-text-warning">open source</span> technology
           </h1>
         </div>
       </div>
@@ -54,9 +54,13 @@
 
     <section class="section">
       <div class="container">
+        <div class="notification is-link">
+          <h1 class="is-size-2 is-uppercase section-title">📦 we're moving!</h1>
+          <p class="is-size-4">We are moving to Google Cloud Platform. Some services are now deprecate. Please read the notes about the infrastructure.</p>
+        </div>
         <a name="infrastructure"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top">Infrastructure</h1>
-        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS plateform.</p>
+        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-link">Infrastructure</h1>
+        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS plateform. Due to a fully managed infrastructure by Google all these projects are now sunset. Prepare to say goodbye 👋</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler">
@@ -67,7 +71,7 @@
               <h2 class="notification is-danger is-light">
                 <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
                 This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2021-01-01</strong>
+                <strong>Deprecation date: 2020-07-31</strong>
               </h2>
               Boiler is a Docker orchestration software built on top of nginx & docker-compose.
             </a>
@@ -78,14 +82,14 @@
                 <i class="fas fa-stamp has-text-link"></i><br />
                 boiler-sign
               </h2>
-              <h2 class="notification is-danger is-light">
-                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
-                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2021-01-01</strong>
-              </h2>
               <h2 class="notification is-light">
                 <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
                 This repository is only available for The First Spine development team.
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
+                <strong>Deprecation date: 2020-07-31</strong>
               </h2>
               Third-party certification service that generates private key / certificates in dotenv files.
             </a>
@@ -95,6 +99,11 @@
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-chart-bar has-text-link"></i><br />
                 monitoring
+              </h2>
+              <h2 class="notification is-danger is-light">
+                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
+                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
+                <strong>Deprecation date: 2020-07-31</strong>
               </h2>
               Services monitoring. Data collected with Loki, Promtail, cAdvisor, Prometheus. Monitored with Grafana.
             </a>
@@ -114,7 +123,7 @@
               <h2 class="notification is-danger is-light">
                 <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
                 This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2021-01-01</strong>
+                <strong>Deprecation date: 2020-07-31</strong>
               </h2>
               Flexible Cupcake is a sails app to self-document data across services.
             </a>
@@ -122,7 +131,7 @@
         </div>
         
         <a name="services"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top">Services</h1>
+        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-danger">Services</h1>
         <p class="is-size-4">The TFS plateform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
@@ -221,31 +230,46 @@
         </div>
         
         <a name="tools"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top">Tools & assets</h1>
+        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-success">Tools & assets</h1>
         <p class="is-size-4">All the tools & the assets we need to construct TFS apps.</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/flame">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-burn has-text-orange"></i><br />
+                <i class="fas fa-burn has-text-success"></i><br />
                 flame
               </h2>
               Data computing & analysis on-demand on CLIs served by Google Fire.
             </a>
           </div>
           <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/certificate-authority">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-stamp has-text-success"></i><br />
+                @thefirstspine/certificate-authority
+              </h2>
+              <h2 class="notification is-link is-light">
+                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
+                This project is fairly new, and some documentation might be missing.
+              </h2>
+              Javascript and Typescript service to validate public keys against private key stored in environment variable.
+            </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/nest-filesocket">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-archway has-text-orange"></i><br />
-                nest-filesocket
+                <i class="fas fa-archway has-text-success"></i><br />
+                @thefirstspine/nest-filesocket
               </h2>
               This NestJS module allows you to call your app context through local file socket.
             </a>
           </div>
+        </div>
+        <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/types-arena">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-hat-wizard has-text-orange"></i><br />
+                <i class="fas fa-hat-wizard has-text-success"></i><br />
                 @thefirstspine/types-arena
               </h2>
               <h2 class="notification is-link is-light">
@@ -255,12 +279,10 @@
               Types definition for Arena resources.
             </a>
           </div>
-        </div>
-        <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-user has-text-orange"></i><br />
+                <i class="fas fa-user has-text-success"></i><br />
                 @thefirstspine/auth
               </h2>
               <h2 class="notification is-link is-light">
@@ -273,7 +295,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth-nest">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-user has-text-orange"></i><br />
+                <i class="fas fa-user has-text-success"></i><br />
                 @thefirstspine/auth-nest
               </h2>
               <h2 class="notification is-link is-light">
@@ -283,25 +305,12 @@
               Built on top of <code>@thefirstspine/auth</code>. Provides Nest services.
             </a>
           </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-validation">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stamp has-text-orange"></i><br />
-                @thefirstspine/certificate-validation
-              </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
-              Javascript and Typescript service to validate public keys against private key stored in environment variable.
-            </a>
-          </div>
         </div>
         <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-validation-nest">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stamp has-text-orange"></i><br />
+                <i class="fas fa-stamp has-text-success"></i><br />
                 @thefirstspine/certificate-validation-nest
               </h2>
               <h2 class="notification is-link is-light">
@@ -314,7 +323,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-bell has-text-orange"></i><br />
+                <i class="fas fa-bell has-text-success"></i><br />
                 @thefirstspine/messaging
               </h2>
               <h2 class="notification is-link is-light">
@@ -327,7 +336,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging-nest">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-bell has-text-orange"></i><br />
+                <i class="fas fa-bell has-text-success"></i><br />
                 @thefirstspine/messaging-nest
               </h2>
               <h2 class="notification is-link is-light">
@@ -342,7 +351,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chart-bar has-text-orange"></i><br />
+                <i class="fas fa-chart-bar has-text-success"></i><br />
                 @thefirstspine/logs
               </h2>
               <h2 class="notification is-link is-light">
@@ -355,7 +364,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs-nest">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chart-bar has-text-orange"></i><br />
+                <i class="fas fa-chart-bar has-text-success"></i><br />
                 @thefirstspine/logs-nest
               </h2>
               <h2 class="notification is-link is-light">
@@ -368,7 +377,7 @@
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/types-rest">
               <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-boxes has-text-orange"></i><br />
+                <i class="fas fa-boxes has-text-success"></i><br />
                 @thefirstspine/types-rest
               </h2>
               <h2 class="notification is-link is-light">
