@@ -60,7 +60,7 @@
         </div>
         <a name="infrastructure"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-link">Infrastructure</h1>
-        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS plateform. Due to a fully managed infrastructure by Google all these projects are now sunset. Prepare to say goodbye 👋</p>
+        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform. Due to a fully managed infrastructure by Google all these projects are now sunset. Prepare to say goodbye 👋</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler">
@@ -132,7 +132,7 @@
         
         <a name="services"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-danger">Services</h1>
-        <p class="is-size-4">The TFS plateform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
+        <p class="is-size-4">The TFS platform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/arena">
@@ -148,6 +148,10 @@
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-user has-text-danger"></i><br />
                 auth
+              </h2>
+              <h2 class="notification is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
+                This repository is only available for The First Spine development team.
               </h2>
               Main authentification service. Manages registrations & token generation.
             </a>
@@ -248,10 +252,6 @@
                 <i class="fas fa-stamp has-text-success"></i><br />
                 @thefirstspine/certificate-authority
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Javascript and Typescript service to validate public keys against private key stored in environment variable.
             </a>
           </div>
@@ -272,10 +272,6 @@
                 <i class="fas fa-hat-wizard has-text-success"></i><br />
                 @thefirstspine/types-arena
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Types definition for Arena resources.
             </a>
           </div>
@@ -285,10 +281,6 @@
                 <i class="fas fa-user has-text-success"></i><br />
                 @thefirstspine/auth
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Javascript & Typescript dependency to help developers to use the auth net service & guard.
             </a>
           </div>
@@ -297,10 +289,6 @@
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-user has-text-success"></i><br />
                 @thefirstspine/auth-nest
-              </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
               </h2>
               Built on top of <code>@thefirstspine/auth</code>. Provides Nest services.
             </a>
@@ -313,10 +301,6 @@
                 <i class="fas fa-stamp has-text-success"></i><br />
                 @thefirstspine/certificate-validation-nest
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Built on top of <code>thefirstspine-certificate-validation</code>. Provides Nest services.
             </a>
           </div>
@@ -326,10 +310,6 @@
                 <i class="fas fa-bell has-text-success"></i><br />
                 @thefirstspine/messaging
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Javascript and Typescript service to interact with the messaging net service.
             </a>
           </div>
@@ -338,10 +318,6 @@
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-bell has-text-success"></i><br />
                 @thefirstspine/messaging-nest
-              </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
               </h2>
               Built on top of <code>thefirstspine-messaging</code>. Provides Nest services.
             </a>
@@ -354,10 +330,6 @@
                 <i class="fas fa-chart-bar has-text-success"></i><br />
                 @thefirstspine/logs
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
               Javascript and Typescript service to deliver unified logs. Works with Winstonjs.
             </a>
           </div>
@@ -366,10 +338,6 @@
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-chart-bar has-text-success"></i><br />
                 @thefirstspine/logs-nest
-              </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
               </h2>
               Built on top of <code>thefirstspine-logs</code>. Provides Nest services.
             </a>
@@ -380,11 +348,30 @@
                 <i class="fas fa-boxes has-text-success"></i><br />
                 @thefirstspine/types-rest
               </h2>
+              Types definition for REST resources.
+            </a>
+          </div>
+        </div>
+        
+        <a name="tools"></a>
+        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-warning">Projects</h1>
+        <p class="is-size-4">The projects that will be outside of the TFS platform, but using this platform.</p>
+        <div class="tile is-ancestor has-margin-top">
+          <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/arena-client-bga">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-burn has-text-warning"></i><br />
+                arena-client-bga
+              </h2>
               <h2 class="notification is-link is-light">
                 <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
                 This project is fairly new, and some documentation might be missing.
               </h2>
-              Types definition for REST resources.
+              <h2 class="notification is-success is-light">
+                <i class="fas fa-user-secret"></i>&nbsp; <strong>Open to contributions</strong><br />
+                This repository is maintened by the TFS team and other contributors.
+              </h2>
+              Game client for Board Game Arena using the TFS Platform APIs.
             </a>
           </div>
         </div>
