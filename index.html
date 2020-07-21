@@ -7,22 +7,32 @@
     <title>TFS Platform</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="css/all.min.css" rel="stylesheet"/>
+    <style>
+      .hero.is-tfs {
+        background-image: url(https://www.thefirstspine.fr/images/top-hunter.png);
+        background-position: center;
+        background-size: cover;
+      }
+      .hero.is-tfs h1 {
+        text-shadow: black 0 0 10px;
+      }
+    </style>
   </head>
   <body>
 
-    <section class="hero is-link is-bold is-medium">
+    <section class="hero is-black is-tfs is-medium">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <span class="navbar-item is-size-3 has-text-weight-bold is-uppercase">
-                <i class="fas fa-code"></i> TFS
+              <span class="navbar-item is-size-3 has-text-weight-bold has-text-warning is-uppercase">
+                <i class="fas fa-code"></i> &nbsp; TFS
               </span>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
                 <span class="navbar-item">
-                  <a class="button is-dark" target="_blank" href="https://www.github.com/thefirstspine">
+                  <a class="button is-warning" target="_blank" href="https://www.github.com/thefirstspine">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -30,7 +40,7 @@
                   </a>
                 </span>
                 <span class="navbar-item">
-                  <a class="button is-dark" target="_blank" href="https://www.npmjs.com/~thefirstspine">
+                  <a class="button is-warning" target="_blank" href="https://www.npmjs.com/~thefirstspine">
                     <span class="icon">
                       <i class="fab fa-npm"></i>
                     </span>
@@ -54,13 +64,9 @@
 
     <section class="section">
       <div class="container">
-        <div class="notification is-link">
-          <h1 class="is-size-2 is-uppercase section-title">📦 we're moving!</h1>
-          <p class="is-size-4">We are moving to Google Cloud Platform. Some services are now deprecate. Please read the notes about the infrastructure.</p>
-        </div>
         <a name="infrastructure"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-link">Infrastructure</h1>
-        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform. Due to a fully managed infrastructure by Google all these projects are now sunset. Prepare to say goodbye 👋</p>
+        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler">
@@ -68,64 +74,7 @@
                 <i class="fas fa-flask has-text-link"></i><br />
                 boiler
               </h2>
-              <h2 class="notification is-danger is-light">
-                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
-                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2020-07-31</strong>
-              </h2>
               Boiler is a Docker orchestration software built on top of nginx & docker-compose.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler-sign">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stamp has-text-link"></i><br />
-                boiler-sign
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              <h2 class="notification is-danger is-light">
-                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
-                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2020-07-31</strong>
-              </h2>
-              Third-party certification service that generates private key / certificates in dotenv files.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/monitoring">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chart-bar has-text-link"></i><br />
-                monitoring
-              </h2>
-              <h2 class="notification is-danger is-light">
-                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
-                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2020-07-31</strong>
-              </h2>
-              Services monitoring. Data collected with Loki, Promtail, cAdvisor, Prometheus. Monitored with Grafana.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/flexible-cupcake">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-book has-text-link"></i><br />
-                flexible-cupcake
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              <h2 class="notification is-danger is-light">
-                <i class="fas fa-cloud-sun"></i> &nbsp; <strong>Sunset</strong><br />
-                This project is now sunset and will be soon archived. Only security fixes will be done.<br />
-                <strong>Deprecation date: 2020-07-31</strong>
-              </h2>
-              Flexible Cupcake is a sails app to self-document data across services.
             </a>
           </div>
         </div>
@@ -232,7 +181,7 @@
             </a>
           </div>
         </div>
-        
+
         <a name="tools"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-success">Tools & assets</h1>
         <p class="is-size-4">All the tools & the assets we need to construct TFS apps.</p>
@@ -355,7 +304,7 @@
         
         <a name="tools"></a>
         <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-warning">Projects</h1>
-        <p class="is-size-4">The projects that will be outside of the TFS platform, but using this platform.</p>
+        <p class="is-size-4">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
         <div class="tile is-ancestor has-margin-top">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/arena-client-bga">
@@ -368,7 +317,7 @@
                 This project is fairly new, and some documentation might be missing.
               </h2>
               <h2 class="notification is-success is-light">
-                <i class="fas fa-code-branch"></i>&nbsp; <strong>Open to contributions</strong><br />
+                <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br />
                 This repository is maintened by the TFS team and other contributors.
               </h2>
               Game client for Board Game Arena using the TFS Platform APIs.
@@ -381,7 +330,7 @@
     <footer class="footer">
       <div class="content has-text-centered is-size-7">
         <p>
-          //
+          <i class="fas fa-code"></i>
         </p>
       </div>
     </footer>
