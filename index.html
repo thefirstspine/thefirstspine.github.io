@@ -7,20 +7,10 @@
     <title>TFS Platform</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="css/all.min.css" rel="stylesheet"/>
-    <style>
-      .hero.is-tfs {
-        background-image: url(https://www.thefirstspine.fr/images/top-hunter.png);
-        background-position: center;
-        background-size: cover;
-      }
-      .hero.is-tfs h1 {
-        text-shadow: black 0 0 10px;
-      }
-    </style>
   </head>
   <body>
 
-    <section class="hero is-black is-tfs is-medium">
+    <section class="hero is-black is-medium">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
@@ -62,6 +52,119 @@
       </div>
     </section>
 
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <nav class="level">
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Arena</p>
+                <p class="title">
+                  <script>
+                    fetch('https://arena.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-arena').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-arena').className = 'status-ko');
+                  </script>
+                  <div id="status-arena"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Auth</p>
+                <p class="title">
+                  <script>
+                    fetch('https://auth.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-auth').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-auth').className = 'status-ko');
+                  </script>
+                  <div id="status-auth"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Bots</p>
+                <p class="title">
+                  <script>
+                    fetch('https://bots.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-bots').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-bots').className = 'status-ko');
+                  </script>
+                  <div id="status-bots"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Messaging</p>
+                <p class="title">
+                  <script>
+                    fetch('https://messaging.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-messaging').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-messaging').className = 'status-ko');
+                  </script>
+                  <div id="status-messaging"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Rest</p>
+                <p class="title">
+                  <script>
+                    fetch('https://rest.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-rest').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-rest').className = 'status-ko');
+                  </script>
+                  <div id="status-rest"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Rooms</p>
+                <p class="title">
+                  <script>
+                    fetch('https://rooms.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-rooms').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-rooms').className = 'status-ko');
+                  </script>
+                  <div id="status-rooms"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Shop</p>
+                <p class="title">
+                  <script>
+                    fetch('https://shop.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-shop').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-shop').className = 'status-ko');
+                  </script>
+                  <div id="status-shop"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Solid Pancake</p>
+                <p class="title">
+                  <script>
+                    fetch('https://solid-pancake.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-solid-pancake').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-solid-pancake').className = 'status-ko');
+                  </script>
+                  <div id="status-solid-pancake"></div>
+                </p>
+              </div>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </section>
+
     <section class="section">
       <div class="container">
         <a name="infrastructure"></a>
@@ -83,11 +186,11 @@
                 <i class="fas fa-network-wired has-text-link"></i><br />
                 terraform
               </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
+              <h2 class="notification is-success is-light">
+                <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
+                This project is at an early conception stage and can change anytime.
               </h2>
-              Terraform file for the TFS platform.
+              Terraform file for the TFS platform based on Openstack.
             </a>
           </div>
         </div>
@@ -258,12 +361,12 @@
         </div>
         <div class="tile is-ancestor">
           <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-validation-nest">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-nest">
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-stamp has-text-success"></i><br />
-                @thefirstspine/certificate-validation-nest
+                @thefirstspine/certificate-nest
               </h2>
-              Built on top of <code>thefirstspine-certificate-validation</code>. Provides Nest services.
+              Built on top of <code>@thefirstspine/certificate-authority</code>. Provides Nest services.
             </a>
           </div>
           <div class="tile is-4">
@@ -350,12 +453,12 @@
                 arena-client-bga
               </h2>
               <h2 class="notification is-link is-light">
-                <i class="fas fa-snowflake"></i> &nbsp; <strong>Fresh code</strong><br />
-                This project is fairly new, and some documentation might be missing.
-              </h2>
-              <h2 class="notification is-success is-light">
                 <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br />
                 This repository is maintened by the TFS team and other contributors.
+              </h2>
+              <h2 class="notification is-success is-light">
+                <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
+                This project is at an early conception stage and can change anytime.
               </h2>
               Game client for Board Game Arena using the TFS Platform APIs.
             </a>

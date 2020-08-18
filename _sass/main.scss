@@ -66,10 +66,18 @@ i {
   background: $white;
 }
 
-.is-special {
-  background-image: url(../top.png);
-  background-size: cover;
-  .navbar-item {
-    color: #FFF!important;
-  }
+.status-ok, .status-ko {
+  display: inline-block;
+  width: .5em;
+  height: .5em;
+  padding: .5em;
+  margin: .5em;
+  border-radius: 1em;
+  background: orange;
+}
+.status-ok {
+  background: greenyellow;
+}
+.status-ko {
+  background: red;
 }
