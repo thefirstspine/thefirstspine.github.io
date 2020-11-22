@@ -97,6 +97,19 @@
             </div>
             <div class="level-item has-text-centered">
               <div>
+                <p class="heading">Calendar</p>
+                <p class="title">
+                  <script>
+                    fetch('https://calendar.thefirstspine.fr/status')
+                      .then((r) => document.getElementById('status-calendar').className = r.ok ? 'status-ok' : 'status-ko')
+                      .catch((r) => document.getElementById('status-calendar').className = 'status-ko');
+                  </script>
+                  <div id="status-calendar"></div>
+                </p>
+              </div>
+            </div>
+            <div class="level-item has-text-centered">
+              <div>
                 <p class="heading">Messaging</p>
                 <p class="title">
                   <script>
@@ -228,6 +241,15 @@
         </div>
         <div class="tile is-ancestor">
           <div class="tile is-4">
+            <a class="box" target="_blank" href="https://github.com/thefirstspine/bots">
+              <h2 class="is-size-4 has-text-centered">
+                <i class="fas fa-calendar-alt has-text-danger"></i><br />
+                calendar
+              </h2>
+              Calendar API. All the temporary things belong here (events, cycles, etc.)
+            </a>
+          </div>
+          <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging">
               <h2 class="is-size-4 has-text-centered">
                 <i class="fas fa-bell has-text-danger"></i><br />
@@ -245,6 +267,8 @@
               Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.
             </a>
           </div>
+        </div>
+        <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/rooms">
               <h2 class="is-size-4 has-text-centered">
@@ -254,8 +278,6 @@
               The rooms service will manage discussions between players inside rooms, contained in subjects.
             </a>
           </div>
-        </div>
-        <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/shop">
               <h2 class="is-size-4 has-text-centered">
@@ -278,6 +300,8 @@
               Solid Pancakes is an event-based consumer that tracks usages on the TFS products.
             </a>
           </div>
+        </div>
+        <div class="tile is-ancestor">
           <div class="tile is-4">
             <a class="box" target="_blank" href="https://github.com/thefirstspine/website">
               <h2 class="is-size-4 has-text-centered">
