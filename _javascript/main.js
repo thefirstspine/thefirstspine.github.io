@@ -109,7 +109,6 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'infrastructure',
           color: 'link',
           icon: 'fas fa-flask',
-          isUnderConception: true,
           name: 'boiler2',
           description: 'Boiler is a Docker orchestration software built with Cobra to ship secure apps. Works along nginx, Docker & certbot.',
           urls: {
