@@ -409,6 +409,18 @@ document.addEventListener('DOMContentLoaded', () => {
             repo: 'https://github.com/thefirstspine/arena-client-bga',
           },
         },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-gamepad',
+          name: 'drifters-tails',
+          description: 'Next game to be delivered on PC & consoles.',
+          isUnderConception: true,
+          isProtected: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/drifters-tails',
+          },
+        },
       ].sort(byName)
     }
   })
