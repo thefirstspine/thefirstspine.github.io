@@ -36,7 +36,10 @@ document.addEventListener('DOMContentLoaded', () => {
             <i class="fas fa-book"></i>
           </a>
           <a v-if="link.urls.npm" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.npm">
-          <i class="fab fa-npm"></i>
+            <i class="fab fa-npm"></i>
+          </a>
+          <a v-if="link.urls.docker" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docker">
+            <i class="fab fa-docker"></i>
           </a>
         </p>
         <hr class="my-3" />
@@ -230,6 +233,8 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Data computing & analysis on-demand on CLIs served by Google Fire.',
           urls: {
             repo: 'https://github.com/thefirstspine/flame',
+            docs: '',
+            docker: 'https://hub.docker.com/r/thefirstspine/flame',
           },
         },
         {
@@ -414,7 +419,6 @@ document.addEventListener('DOMContentLoaded', () => {
           icon: 'fas fa-gamepad',
           name: 'drifters-tails',
           description: 'Next game to be delivered on PC & consoles.',
-          isUnderConception: true,
           isProtected: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifters-tails',
