@@ -30,54 +30,6 @@ $black: hsl(0, 0%, 6%);
 $text: $black;
 
 @import "../node_modules/bulma/bulma";
-
-i {
-  font-weight: 900!important;
-}
-
-.section-title {
-  font-weight: bold;
-}
-
-.has-text-pink {
-  color: blueviolet;
-}
-
-.has-text-orange {
-  color: orange;
-}
-
-.tile.is-4 {
-  padding: 1em;
-}
-
-.has-margin-top {
-  margin-top: 2em!important;
-}
-
-.box {
-  h2 {
-    margin-bottom: .5em;
-  }
-}
-
-.box:hover {
-  color: $black;
-  background: $white;
-}
-
-.status-ok, .status-ko {
-  display: inline-block;
-  width: .5em;
-  height: .5em;
-  padding: .5em;
-  margin: .5em;
-  border-radius: 1em;
-  background: orange;
-}
-.status-ok {
-  background: greenyellow;
-}
-.status-ko {
-  background: red;
-}
+@import "status.scss";
+@import "links.scss";
+@import "docs.scss";

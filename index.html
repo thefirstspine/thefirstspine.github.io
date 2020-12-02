@@ -7,9 +7,11 @@
     <title>TFS Platform</title>
     <link rel="stylesheet" href="css/main.css">
     <link href="css/all.min.css" rel="stylesheet"/>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
   </head>
-  <body>
 
+  <body>
+  <div id="app">
     <section class="hero is-black is-medium">
       <div class="hero-head">
         <nav class="navbar">
@@ -56,123 +58,8 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <nav class="level">
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Arena</p>
-                <p class="title">
-                  <script>
-                    fetch('https://arena.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-arena').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-arena').className = 'status-ko');
-                  </script>
-                  <div id="status-arena"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Auth</p>
-                <p class="title">
-                  <script>
-                    fetch('https://auth.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-auth').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-auth').className = 'status-ko');
-                  </script>
-                  <div id="status-auth"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Bots</p>
-                <p class="title">
-                  <script>
-                    fetch('https://bots.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-bots').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-bots').className = 'status-ko');
-                  </script>
-                  <div id="status-bots"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Calendar</p>
-                <p class="title">
-                  <script>
-                    fetch('https://calendar.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-calendar').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-calendar').className = 'status-ko');
-                  </script>
-                  <div id="status-calendar"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Messaging</p>
-                <p class="title">
-                  <script>
-                    fetch('https://messaging.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-messaging').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-messaging').className = 'status-ko');
-                  </script>
-                  <div id="status-messaging"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Rest</p>
-                <p class="title">
-                  <script>
-                    fetch('https://rest.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-rest').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-rest').className = 'status-ko');
-                  </script>
-                  <div id="status-rest"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Rooms</p>
-                <p class="title">
-                  <script>
-                    fetch('https://rooms.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-rooms').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-rooms').className = 'status-ko');
-                  </script>
-                  <div id="status-rooms"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Shop</p>
-                <p class="title">
-                  <script>
-                    fetch('https://shop.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-shop').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-shop').className = 'status-ko');
-                  </script>
-                  <div id="status-shop"></div>
-                </p>
-              </div>
-            </div>
-            <div class="level-item has-text-centered">
-              <div>
-                <p class="heading">Solid Pancake</p>
-                <p class="title">
-                  <script>
-                    fetch('https://solid-pancake.thefirstspine.fr/status')
-                      .then((r) => document.getElementById('status-solid-pancake').className = r.ok ? 'status-ok' : 'status-ko')
-                      .catch((r) => document.getElementById('status-solid-pancake').className = 'status-ko');
-                  </script>
-                  <div id="status-solid-pancake"></div>
-                </p>
-              </div>
-            </div>
+            <app-status v-for="service in services" v-bind:key="service.name" :service="service">
+            </app-status>
           </nav>
         </div>
       </div>
@@ -181,332 +68,34 @@
     <section class="section">
       <div class="container">
         <a name="infrastructure"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-link">Infrastructure</h1>
-        <p class="is-size-4">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
-        <div class="tile is-ancestor has-margin-top">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/boiler2">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-flask has-text-link"></i><br />
-                boiler2
-              </h2>
-              <h2 class="notification is-success is-light">
-                <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
-                This project is at an early conception stage and can change anytime.
-              </h2>
-              Boiler is a Docker orchestration software built with Cobra to ship secure apps. Works along nginx, Docker & certbot.
-            </a>
-          </div>
-        </div>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-link">Infrastructure</h1>
+        <p class="is-size-4 my-3">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
+        <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" :link="link">
+        </link-card>
         
         <a name="services"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-danger">Services</h1>
-        <p class="is-size-4">The TFS platform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
-        <div class="tile is-ancestor has-margin-top">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/arena">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-hat-wizard has-text-danger"></i><br />
-                arena
-              </h2>
-              The arena service is the service that will manage all the games & wizzards accounts in the Arena products.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/auth">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-user has-text-danger"></i><br />
-                auth
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              Main authentification service. Manages registrations & token generation.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/bots">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-robot has-text-danger"></i><br />
-                bots
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/bots">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-calendar-alt has-text-danger"></i><br />
-                calendar
-              </h2>
-              Calendar API. All the temporary things belong here (events, cycles, etc.)
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/messaging">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-bell has-text-danger"></i><br />
-                messaging
-              </h2>
-              Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/rest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-boxes has-text-danger"></i><br />
-                rest
-              </h2>
-              Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/rooms">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-comment-dots has-text-danger"></i><br />
-                rooms
-              </h2>
-              The rooms service will manage discussions between players inside rooms, contained in subjects.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/shop">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-shopping-bag has-text-danger"></i><br />
-                shop
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              Manages all the purshases with real money. Works with the Stripe API.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/solid-pancake">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stroopwafel has-text-danger"></i><br />
-                solid-pancake
-              </h2>
-              Solid Pancakes is an event-based consumer that tracks usages on the TFS products.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/website">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-globe-europe has-text-danger"></i><br />
-                website
-              </h2>
-              Website built with Sails.js, using all the other services to serve data to the players.
-            </a>
-          </div>
-        </div>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-danger">Services</h1>
+        <p class="is-size-4 my-3">The TFS platform is powered by a Server-Oriented Architecture. These services are served by Boiler in containers.</p>
+        <link-card v-for="link in links.filter((l) => l.part === 'services')" :link="link">
+        </link-card>
 
         <a name="tools"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-success">Tools & assets</h1>
-        <p class="is-size-4">All the tools & the assets we need to construct TFS apps.</p>
-        <div class="tile is-ancestor has-margin-top">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/flame">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-burn has-text-success"></i><br />
-                flame
-              </h2>
-              Data computing & analysis on-demand on CLIs served by Google Fire.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/certificate-authority">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stamp has-text-success"></i><br />
-                @thefirstspine/certificate-authority
-              </h2>
-              Javascript and Typescript service to validate public keys against private key stored in environment variable.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/nest-filesocket">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-archway has-text-success"></i><br />
-                @thefirstspine/nest-filesocket
-              </h2>
-              This NestJS module allows you to call your app context through local file socket.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/types-arena">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-hat-wizard has-text-success"></i><br />
-                @thefirstspine/types-arena
-              </h2>
-              Types definition for Arena resources. Contains all interfaces & build scripts.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-user has-text-success"></i><br />
-                @thefirstspine/auth
-              </h2>
-              Javascript & Typescript dependency to help developers to use the auth net service & guard.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-auth-nest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-user has-text-success"></i><br />
-                @thefirstspine/auth-nest
-              </h2>
-              Built on top of <code>@thefirstspine/auth</code>. Provides Nest services.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-certificate-nest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-stamp has-text-success"></i><br />
-                @thefirstspine/certificate-nest
-              </h2>
-              Built on top of <code>@thefirstspine/certificate-authority</code>. Provides Nest services.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-bell has-text-success"></i><br />
-                @thefirstspine/messaging
-              </h2>
-              Javascript and Typescript service to interact with the messaging net service.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-messaging-nest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-bell has-text-success"></i><br />
-                @thefirstspine/messaging-nest
-              </h2>
-              Built on top of <code>thefirstspine-messaging</code>. Provides Nest services.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chart-bar has-text-success"></i><br />
-                @thefirstspine/logs
-              </h2>
-              Javascript and Typescript service to deliver unified logs. Works with Winstonjs.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/dependency-logs-nest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chart-bar has-text-success"></i><br />
-                @thefirstspine/logs-nest
-              </h2>
-              Built on top of <code>thefirstspine-logs</code>. Provides Nest services.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/types-rest">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-boxes has-text-success"></i><br />
-                @thefirstspine/types-rest
-              </h2>
-              Types definition for REST resources. Contains all interfaces & build scripts.
-            </a>
-          </div>
-        </div>
-        <div class="tile is-ancestor">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/confluence2markdown">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fab fa-confluence has-text-success"></i><br />
-                confluence2markdown
-              </h2>
-              Confluence module to export pages as markdown, avoiding to write documentation twice 💪
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/lighthouse">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-lightbulb has-text-success"></i><br />
-                lighthouse
-              </h2>
-              <h2 class="notification is-light">
-                <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-                This repository is only available for The First Spine development team.
-              </h2>
-              <h2 class="notification is-success is-light">
-                <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
-                This project is at an early conception stage and can change anytime.
-              </h2>
-              Lighthouse is an ARG framework used to create & animate events for TFS.
-            </a>
-          </div>
-        </div>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-success">Tools & assets</h1>
+        <p class="is-size-4 my-3">All the tools & the assets we need to construct TFS apps.</p>
+        <link-card v-for="link in links.filter((l) => l.part === 'tools')" :link="link">
+        </link-card>
         
         <a name="contributions"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-primary">Contributions</h1>
-        <p class="is-size-4">We are also contributing to & maintaining some open source projects.</p>
-        <div class="tile is-ancestor has-margin-top">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/terraform-providers/terraform-provider-oneandone">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-network-wired has-text-primary"></i><br />
-                terraform-provider-oneandone
-              </h2>
-              The 1&1 provider gives the ability to deploy and configure resources using the 1&1 Cloud Server API.
-            </a>
-          </div>
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/1and1/oneandone-cloudserver-sdk-go">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-network-wired has-text-primary"></i><br />
-                oneandone-cloudserver-sdk-go
-              </h2>
-              The 1&1 Go SDK is a Go library designed for interaction with the 1&1 cloud platform over the REST API.
-            </a>
-          </div>
-        </div>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-primary">Contributions</h1>
+        <p class="is-size-4 my-3">We are also contributing to & maintaining some open source projects.</p>
+        <link-card v-for="link in links.filter((l) => l.part === 'contributions')" :link="link">
+        </link-card>
         
         <a name="projects"></a>
-        <h1 class="is-size-2 is-uppercase section-title has-margin-top has-text-warning">Projects</h1>
-        <p class="is-size-4">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
-        <div class="tile is-ancestor has-margin-top">
-          <div class="tile is-4">
-            <a class="box" target="_blank" href="https://github.com/thefirstspine/arena-client-bga">
-              <h2 class="is-size-4 has-text-centered">
-                <i class="fas fa-chess has-text-warning"></i><br />
-                arena-client-bga
-              </h2>
-              <h2 class="notification is-link is-light">
-                <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br />
-                This repository is maintened by the TFS team and other contributors.
-              </h2>
-              <h2 class="notification is-success is-light">
-                <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
-                This project is at an early conception stage and can change anytime.
-              </h2>
-              Game client for Board Game Arena using the TFS Platform APIs.
-            </a>
-          </div>
-        </div>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-warning">Projects</h1>
+        <p class="is-size-4 my-3">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
+        <link-card v-for="link in links.filter((l) => l.part === 'projects')" :link="link">
+        </link-card>
         
       </div>
     </section>
@@ -519,6 +108,7 @@
         </p>
       </div>
     </footer>
+  </div>
     <script type="text/javascript" src="lib/main.js"></script>
   </body>
 </html>
