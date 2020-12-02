@@ -233,7 +233,7 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Data computing & analysis on-demand on CLIs served by Google Fire.',
           urls: {
             repo: 'https://github.com/thefirstspine/flame',
-            docs: '',
+            docs: 'docs/Data-computing-with-Flame_63340602.html',
             docker: 'https://hub.docker.com/r/thefirstspine/flame',
           },
         },
@@ -246,6 +246,7 @@ document.addEventListener('DOMContentLoaded', () => {
           urls: {
             repo: 'https://github.com/thefirstspine/certificate-authority',
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
+            docs: 'docs/Endpoint-protections_15958663.html',
           },
         },
         {
