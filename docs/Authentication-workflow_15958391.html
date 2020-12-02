@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Authentication workflow</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Auth_15958333.html">Auth</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Authentication workflow
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Jul 22, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <div class="contentLayout2">
+<div class="columnLayout two-equal" data-layout="two-equal">
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">+------------+  Login with email and password                         +------------+
+|            | +----------------------------------------------------&gt; |            |
+| CLIENT     |                                                        | AUTH       |
+| APP        |                                                        | SERVICE    |
+|            |  Sends access_token and refresh_token                  |            |
+|            | &lt;----------------------------------------------------+ |            |
+|            |                                                        |            |
+|            |                     +------------+                     |            |
+|            |  Interacts sending  |            |  Asking for token   |            |
+|            |  access_token       | OTHER      |  Validation         |            |
+|            | +-----------------&gt; | SERVICE    | +-----------------&gt; |            |
+|            |                     |            |                     |            |
+|            |                     |            |                     |            |
+|            |  Service respond    |            |  &quot;ok it seems       |            |
+|            |  with protected     |            |  legit&quot;             |            |
+|            |  resource           |            |                     |            |
+|            | &lt;-----------------+ |            | &lt;-----------------+ |            |
+|            |                     |            |                     |            |
+|            |                     +------------+                     |            |
+|            |                                                        |            |
+|            |  Ask for a new access_token &amp; refresh_token            |            |
+|            | +----------------------------------------------------&gt; |            |
+|            |                                                        |            |
+|            |  Sends access_token &amp; refresh_token                    |            |
+|            | &lt;----------------------------------------------------+ |            |
++------------+                                                        +------------+
+</pre>
+</div></div></div>
+</div>
+<div class="cell normal" data-type="normal">
+<div class="innerCell">
+<h2 id="Authenticationworkflow-Accesstokenstates">Access token states</h2><p>The access token can now have 3 states:</p><ul><li><p><strong>active</strong> - the access token has not been revoked, and is not expired</p></li><li><p><strong>inactive</strong> - the access token cannot be used anymore. It has been revoked and will be deleted soon</p></li></ul><h2 id="Authenticationworkflow-Tokenslifecycles">Tokens lifecycles</h2><h3 id="Authenticationworkflow-Accesstokens">Access tokens</h3><p>Access tokens are JWT with these properties:</p><ul><li><p><code>sub</code> the subject of the token (the user ID)</p></li><li><p><code>iat</code> the issued date of the token</p></li><li><p><code>exp</code> the expiration date of the token</p></li></ul><p>The access tokens are stored in the database. When a token is verified, the JWT is validated &amp; the token is compared with the one stored in database.</p><h3 id="Authenticationworkflow-Refreshtokens">Refresh tokens</h3><p>Refresh tokens are JWT with these properties:</p><ul><li><p><code>sub</code> the subject of the token (the access token this refresh token refers to)</p></li><li><p><code>iat</code> the issued date of the token</p></li><li><p><code>exp</code> the expiration date of the token</p></li></ul><p>The refresh tokens are stored in the database. When a token is verified, the JWT is validated &amp; the token is compared with the one stored in database.</p><p>The expired refresh tokens are deleted from the database too thanks to an internal routine.</p></div>
+</div>
+</div>
+</div>
+                    </div>
+
+                                        <div class="pageSection group">
+                        <div class="pageSectionHeader">
+                            <h2 id="attachments" class="pageSectionTitle">Attachments:</h2>
+                        </div>
+
+                        <div class="greybox" align="left">
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15958391/16023685.png">Untitled Diagram.png</a> (image/png)
+                                <br/>
+                                                            <img src="images/icons/bullet_blue.gif" height="8" width="8" alt=""/>
+                                <a href="attachments/15958391/15958423.png">Untitled Diagram (1).png</a> (image/png)
+                                <br/>
+                                                    </div>
+                    </div>
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Dec 02, 2020 19:46</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

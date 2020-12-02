@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Boiler2</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Boiler2
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Nov 16, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <h2 id="Boiler2-About">About</h2><p>Boiler is a Docker orchestration software built on top of nginx &amp; docker.</p><h2 id="Boiler2-Prerequisites">Prerequisites</h2><p>You need a server with <code>git</code>, <code>docker</code>, <code>nginx</code> and <code>certbot</code> installed. To install these dependencies, you can run the <code>./setup.sh</code> script.</p><p>Also, your server needs to access your repositories in order to boil some apps.</p><h2 id="Boiler2-Usage">Usage</h2><h3 id="Boiler2-Deployaproject">Deploy a project</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">./boiler deploy [project] [options]</pre>
+</div></div><p>Here's the options available:</p><ul><li><p><code>tag_or_branch</code>: The tag or the branch to deploy. Default to <code>master</code>.</p></li><li><p><code>skip_build</code>: Skip the docker build. <code>1</code> or <code>0</code>. Defaults to <code>0</code>.</p></li><li><p><code>skip_sign</code>: Skip the certbot call. <code>1</code> or <code>0</code>. Defaults to <code>0</code>.</p></li><li><p><code>skip_clean</code>: Skip the clean at the end of the deployment. <code>1</code> or <code>0</code>. Defaults to <code>0</code>.</p></li></ul><h3 id="Boiler2-ExamplewithArena">Example with Arena</h3><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">./boiler deploy arena --tag_or_branch=1.0.0</pre>
+</div></div><h2 id="Boiler2-Configuringaproject">Configuring a project</h2><p>The configurations are stored inside in JSON located at  <code>config/boiler.json</code>. Here’s an explaination of the content of the file:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;common&quot;: {
+    &quot;env&quot;: [
+      &quot;{environment key}={value}&quot;
+    ]
+  },
+  &quot;projects&quot;: [
+    {
+      &quot;name&quot;: &quot;{project name}&quot;,
+      &quot;domain&quot;: &quot;{domain}&quot;,
+      &quot;repository&quot;: &quot;{repository - HTTPS or SSH}&quot;,
+      &quot;env&quot;: [
+        &quot;{environment key}={value}&quot;
+      ]
+    }
+  ]
+}</pre>
+</div></div><h2 id="Boiler2-Completeexample">Complete example</h2><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence"># Write config
+echo &#39;{
+  &quot;common&quot;: {
+    &quot;env&quot;: [
+      &quot;ARENA_URL=https://arena.thefirstspine.fr&quot;,
+      &quot;WEBSITE_URL=https://www.thefirstspine.fr&quot;
+    ]
+  },
+  &quot;projects&quot;: [
+    {
+      &quot;name&quot;: &quot;rest&quot;,
+      &quot;domain&quot;: &quot;rest.sandbox.thefirstspine.fr&quot;,
+      &quot;repository&quot;: &quot;https://github.com/thefirstspine/rest.git&quot;,
+      &quot;env&quot;: [
+        &quot;PORT=8080&quot;
+      ]
+    }
+  ]
+}&#39; &gt; boiler.json
+# Download from github
+wget https://github.com/thefirstspine/boiler2/releases/download/v-0.1.0/boiler2_v-0.1.0_linux_amd64.tar.gz boiler2_v-0.1.0_linux_amd64.tar.gz
+# Untar release
+tar vxf boiler2_v-0.1.0_linux_amd64.tar.gz
+# Make it executable
+chmod +x boiler2
+# Execute file
+./boiler2 deploy rest</pre>
+</div></div><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Dec 02, 2020 19:46</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

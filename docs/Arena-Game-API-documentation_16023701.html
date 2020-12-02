@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Arena Game API documentation</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Arena_688144.html">Arena</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Arena Game API documentation
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Aug 24, 2020
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1606934762360 {padding: 0px;}
+div.rbtoc1606934762360 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1606934762360 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1606934762360'>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Methodsdocumentation'>Methods documentation</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-createQueue'>createQueue</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Parameters'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-getQueue'>getQueue</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Parameters.1'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.1'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-joinQueue'>joinQueue</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Parameters.2'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.2'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-refreshQueueAsk'>refreshQueueAsk</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Parameters.3'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.3'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-quitQueue'>quitQueue</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.1'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Parameters.4'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.4'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-getCurrentGame'>getCurrentGame</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.2'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.5'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-getGame'>getGame</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.3'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.6'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-getCards'>getCards</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.4'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.7'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-getActions'>getActions</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.5'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.8'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-respondToAction'>respondToAction</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.6'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Parameters.5'>Parameters</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.9'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#ArenaGameAPIdocumentation-concede'>concede</a>
+<ul class='toc-indentation'>
+<li><a href='#ArenaGameAPIdocumentation-Authorization.7'>Authorization</a></li>
+<li><a href='#ArenaGameAPIdocumentation-Responses.10'>Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr/><p>The Arena Game API is a JSON-RPC 2.0 API used to interact with games &amp; queues. See <a href="https://www.jsonrpc.org/specification" class="external-link" rel="nofollow">https://www.jsonrpc.org/specification</a> for more informations about the JSPN-RPC 2.0 format.</p><h2 id="ArenaGameAPIdocumentation-Methodsdocumentation">Methods documentation</h2><p>Every method requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h3 id="ArenaGameAPIdocumentation-createQueue">createQueue</h3><p>Creates a queue instance, joinable by every player.</p><h4 id="ArenaGameAPIdocumentation-Parameters">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>gameTypeId</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The ID of the game type. Can be found in the REST API.</p></td></tr><tr><td class="confluenceTd"><p><code>theme</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>no</p></td><td class="confluenceTd"><p>A theme. See here <a href="18481153.html" data-linked-resource-id="18481153" data-linked-resource-version="9" data-linked-resource-type="page">Games modifiers &amp; themes</a>  all the themes.</p></td></tr><tr><td class="confluenceTd"><p><code>modifiers</code></p></td><td class="confluenceTd"><p><code>string[]</code></p></td><td class="confluenceTd"><p>no</p></td><td class="confluenceTd"><p>A list of compoenents. See here <a href="18481153.html" data-linked-resource-id="18481153" data-linked-resource-version="9" data-linked-resource-type="page">Games modifiers &amp; themes</a>  all the available modifiers.</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;7029&quot;,
+    &quot;gameTypeId&quot;: &quot;standard&quot;,
+    &quot;users&quot;: [],
+    &quot;createdAt&quot;: 1596115522185,
+    &quot;expiresAt&quot;: 1596117322185,
+    &quot;queue&quot;: []
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-getQueue">getQueue</h3><p>Get queue information.</p><h4 id="ArenaGameAPIdocumentation-Parameters.1">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>key</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>Key of the queue.</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses.1">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: []
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-joinQueue">joinQueue</h3><p>Join a queue in the queue service for 60 seconds. This joining request should be refreshed with the <code>refreshQueueAsk</code> method.</p><h4 id="ArenaGameAPIdocumentation-Parameters.2">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>key</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The key of the queue to join</p></td></tr><tr><td class="confluenceTd"><p><code>destiny</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The destiny the user wants to play with. Can be found in the REST API.</p></td></tr><tr><td class="confluenceTd"><p><code>origin</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>no</p></td><td class="confluenceTd"><p>The origin the user wants to play witj. Can be found in the REST API.</p></td></tr><tr><td class="confluenceTd"><p><code>style</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>no</p></td><td class="confluenceTd"><p>The style the user wants to play with. The allowed styles can be found in the <code>items</code> of the wizard account.</p></td></tr><tr><td class="confluenceTd"><p><code>cover</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p>no</p></td><td class="confluenceTd"><p>The cover the user wants to play with. The allowed covers can be found in the <code>items</code> of the wizard account.</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses.2">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ]
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-refreshQueueAsk">refreshQueueAsk</h3><p>Refresh the joining request, and set the expiration date to 60 seconds from this refresh.</p><h4 id="ArenaGameAPIdocumentation-Authorization">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Parameters.3">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>key</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The key of the queue to refresh.</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses.3">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ]
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-quitQueue">quitQueue</h3><p>Quit a queue in the queue service</p><h4 id="ArenaGameAPIdocumentation-Authorization.1">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Parameters.4">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>key</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The key of the queue to refresh.</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses.4">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ]
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-getCurrentGame">getCurrentGame</h3><p>Get the current game to player joined previously.</p><h4 id="ArenaGameAPIdocumentation-Authorization.2">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Responses.5">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;gameType&quot;: &quot;fpe&quot;,
+    &quot;id&quot;: 139,
+    &quot;status&quot;: &quot;active&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: 1,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;&quot;,
+        &quot;cover&quot;: &quot;&quot;,
+        &quot;queueExpiresAt&quot;: 1598219805429,
+        &quot;queueEnteredAt&quot;: 1598219724810
+      },
+      {
+        &quot;destiny&quot;: &quot;summoner&quot;,
+        &quot;origin&quot;: null,
+        &quot;user&quot;: 0,
+        &quot;style&quot;: &quot;&quot;
+      }
+    ],
+    &quot;theme&quot;: &quot;dead-forest&quot;,
+    &quot;modifiers&quot;: [
+      &quot;golden-galleons&quot;
+    ],
+    &quot;stats&quot;: {
+      &quot;cardsInHand&quot;: {
+        &quot;1&quot;: 4
+      },
+      &quot;cardsInDeck&quot;: {
+        &quot;1&quot;: 6
+      }
+    }
+  },
+  &quot;id&quot;: 139
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-getGame">getGame</h3><p>Get a game instance. The <code>id</code> field must be filled for this method.</p><h4 id="ArenaGameAPIdocumentation-Authorization.3">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Responses.6">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ]
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-getCards">getCards</h3><p>Get cards in a game instance. Only the cards visible for the current player are visible (e.g. cards on board, on the discards and on the player's hand). The <code>id</code> field must be filled for this method.</p><h4 id="ArenaGameAPIdocumentation-Authorization.4">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Responses.7">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: [
+    {
+      &quot;user&quot;: 1,
+      &quot;id&quot;: &quot;fpe_1&quot;,
+      &quot;card&quot;: {
+        &quot;id&quot;: &quot;applicant&quot;,
+        &quot;text&quot;: {
+          &quot;en&quot;: &quot;This card is a collection card can only be played during the First Game Experience&quot;,
+          &quot;fr&quot;: &quot;Cette carte est une carte de collection ne peut être jouée que pendant la Première Expérience de Jeu.&quot;
+        },
+        &quot;lore&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;fr&quot;: &quot;&quot;
+        },
+        &quot;art&quot;: &quot;Maylhine &amp; Teddy Gandon&quot;,
+        &quot;imageUrl&quot;: &quot;https://static.thefirstspine.fr/applicant.png&quot;,
+        &quot;name&quot;: {
+          &quot;en&quot;: &quot;Applicant&quot;,
+          &quot;fr&quot;: &quot;Postulant&quot;
+        },
+        &quot;stats&quot;: {
+          &quot;bottom&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 0
+          },
+          &quot;left&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 0
+          },
+          &quot;life&quot;: 1,
+          &quot;right&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 0
+          },
+          &quot;top&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 0
+          }
+        },
+        &quot;type&quot;: &quot;player&quot;
+      },
+      &quot;location&quot;: &quot;board&quot;,
+      &quot;coords&quot;: {
+        &quot;x&quot;: 3,
+        &quot;y&quot;: 0
+      },
+      &quot;currentStats&quot;: {
+        &quot;bottom&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 0
+        },
+        &quot;left&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 0
+        },
+        &quot;life&quot;: 1,
+        &quot;right&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 0
+        },
+        &quot;top&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 0
+        }
+      },
+      &quot;metadata&quot;: {}
+    },
+    {
+      &quot;id&quot;: &quot;fpe_2&quot;,
+      &quot;card&quot;: {
+        &quot;id&quot;: &quot;barbers&quot;,
+        &quot;text&quot;: {
+          &quot;en&quot;: &quot;&quot;,
+          &quot;fr&quot;: &quot;&quot;
+        },
+        &quot;lore&quot;: {
+          &quot;en&quot;: &quot;« I challenge you to cross them. »\n- Blase-the-blasted.&quot;,
+          &quot;fr&quot;: &quot;« Je vous défie de les franchir. »\n- Olivier-le-fou-droyé.&quot;
+        },
+        &quot;art&quot;: &quot;Maylhine&quot;,
+        &quot;imageUrl&quot;: &quot;https://static.thefirstspine.fr/barbers.png&quot;,
+        &quot;name&quot;: {
+          &quot;en&quot;: &quot;Barbed wire&quot;,
+          &quot;fr&quot;: &quot;Barbelés&quot;
+        },
+        &quot;stats&quot;: {
+          &quot;life&quot;: 1,
+          &quot;bottom&quot;: {
+            &quot;defense&quot;: 1,
+            &quot;strength&quot;: 1
+          },
+          &quot;left&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 3
+          },
+          &quot;right&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 3
+          },
+          &quot;top&quot;: {
+            &quot;defense&quot;: 0,
+            &quot;strength&quot;: 4
+          }
+        },
+        &quot;type&quot;: &quot;artifact&quot;
+      },
+      &quot;user&quot;: 1,
+      &quot;location&quot;: &quot;hand&quot;,
+      &quot;currentStats&quot;: {
+        &quot;life&quot;: 1,
+        &quot;bottom&quot;: {
+          &quot;defense&quot;: 1,
+          &quot;strength&quot;: 1
+        },
+        &quot;left&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 3
+        },
+        &quot;right&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 3
+        },
+        &quot;top&quot;: {
+          &quot;defense&quot;: 0,
+          &quot;strength&quot;: 4
+        }
+      },
+      &quot;metadata&quot;: {}
+    }
+  ],
+  &quot;id&quot;: 141
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-getActions">getActions</h3><p>Get the actions available for the current player. The <code>id</code> field must be filled for this method.</p><h4 id="ArenaGameAPIdocumentation-Authorization.5">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Responses.8">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: [
+    {
+      &quot;type&quot;: &quot;fpe-2&quot;,
+      &quot;createdAt&quot;: 1598280195994,
+      &quot;name&quot;: {
+        &quot;en&quot;: &quot;Discard&quot;,
+        &quot;fr&quot;: &quot;Défausser&quot;
+      },
+      &quot;description&quot;: {
+        &quot;en&quot;: &quot;You can discard one or more cards.\nDiscard the Heal.&quot;,
+        &quot;fr&quot;: &quot;Vous pouvez défausser une ou plusieurs cartes.\nDéfaussez-vous du soin.&quot;
+      },
+      &quot;priority&quot;: 10,
+      &quot;interaction&quot;: {
+        &quot;type&quot;: &quot;moveCardsToDiscard&quot;,
+        &quot;description&quot;: {
+          &quot;en&quot;: &quot;Discard one or more cards.&quot;,
+          &quot;fr&quot;: &quot;Défausser une ou plusieurs cartes&quot;
+        },
+        &quot;params&quot;: {
+          &quot;handIndexes&quot;: [
+            3
+          ],
+          &quot;max&quot;: 1,
+          &quot;min&quot;: 1
+        }
+      },
+      &quot;user&quot;: 1
+    }
+  ],
+  &quot;id&quot;: 141
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-respondToAction">respondToAction</h3><p>Respond to an action. The <code>id</code> field must be filled for this method.</p><h4 id="ArenaGameAPIdocumentation-Authorization.6">Authorization</h4><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>PICK ONE</strong><br/>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.<br/>This endpoint requires a certificate to ensure that calls comes from an authorized application under the <code>X-Client-Cert: xxx</code> header.</p></div></div><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Parameters.5">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>response</code></p></td><td class="confluenceTd"><p><code>Object</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The response to the action</p></td></tr><tr><td class="confluenceTd"><p><code>actionType</code></p></td><td class="confluenceTd"><p><code>String</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The action type to respond</p></td></tr></tbody></table></div><h4 id="ArenaGameAPIdocumentation-Responses.9">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;sent&quot;: true
+  },
+  &quot;id&quot;: 141
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="ArenaGameAPIdocumentation-concede">concede</h3><p>Concede a game.</p><h4 id="ArenaGameAPIdocumentation-Authorization.7">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="Endpoint-protections_15958663.html" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="ArenaGameAPIdocumentation-Responses.10">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Forbidden</code></p></td><td class="confluenceTd"><p>The provided access token is not valid.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;message&quot;: {
+    &quot;statusCode&quot;: 403,
+    &quot;error&quot;: &quot;Forbidden&quot;,
+    &quot;message&quot;: &quot;Forbidden resource&quot;
+  },
+  &quot;statusCode&quot;: 403,
+  &quot;timestamp&quot;: &quot;2020-07-20T21:29:43.427Z&quot;,
+  &quot;path&quot;: &quot;/wizard/me&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>The provided parameters are not valid. Refer to the <code>message</code> property for further information.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32602
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Server-side error.</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;error&quot;: {
+    &quot;message&quot;: &quot;xxx&quot;,
+    &quot;code&quot;: -32603
+  }
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>201 Created</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;jsonrpc&quot;: &quot;2.0&quot;,
+  &quot;result&quot;: {
+    &quot;key&quot;: &quot;classic&quot;,
+    &quot;gameTypeId&quot;: &quot;classic&quot;,
+    &quot;users&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ],
+    &quot;createdAt&quot;: 1594898748788,
+    &quot;queue&quot;: [
+      {
+        &quot;user&quot;: &quot;1&quot;,
+        &quot;destiny&quot;: &quot;hunter&quot;,
+        &quot;origin&quot;: &quot;healer&quot;,
+        &quot;style&quot;: &quot;ghostly&quot;,
+        &quot;cover&quot;: &quot;sorcerer&quot;,
+        &quot;queueExpiresAt&quot;: 1596122417465,
+        &quot;queueEnteredAt&quot;: 1596122357465
+      }
+    ]
+  },
+  &quot;id&quot;: null
+}</pre>
+</div></div></td></tr></tbody></table></div><p /><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Dec 02, 2020 19:46</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
