@@ -36,6 +36,12 @@
     }
   }
 
+  .toc-macro {
+    .toc-indentation {
+      margin-left: 2em;
+    }
+  }
+
   .columnLayout {
     display: flex;
     &.three-equal {
