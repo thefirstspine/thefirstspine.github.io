@@ -30,6 +30,7 @@ $black: hsl(0, 0%, 6%);
 $text: $black;
 
 @import "../node_modules/bulma/bulma";
+@import "tfs.scss";
 @import "status.scss";
 @import "links.scss";
 @import "docs.scss";

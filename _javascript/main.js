@@ -197,7 +197,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'services',
           color: 'danger',
-          icon: 'fas fa-comment-dots',
+          icon: 'fas fa-comment-fas fa-shopping-cart',
           isProtected: true,
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
@@ -213,6 +213,7 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
           urls: {
             repo: 'https://github.com/thefirstspine/solid-pancake',
+            docs: 'docs/Solid-Pancake_37355521.html',
           },
         },
         {
@@ -357,29 +358,6 @@ document.addEventListener('DOMContentLoaded', () => {
           urls: {
             repo: 'https://github.com/thefirstspine/types-rest',
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-rest',
-          },
-        },
-        {
-          part: 'tools',
-          color: 'success',
-          icon: 'fab fa-confluence',
-          name: 'confluence2markdown',
-          isDeprecated: true,
-          description: 'Confluence module to export pages as markdown, avoiding to write documentation twice 💪',
-          urls: {
-            repo: 'https://github.com/thefirstspine/confluence2markdown',
-          },
-        },
-        {
-          part: 'tools',
-          color: 'success',
-          icon: 'fas fa-lightbulb',
-          name: 'lighthouse',
-          isProtected: true,
-          isUnderConception: true,
-          description: 'Lighthouse is an ARG framework used to create & animate events for TFS.',
-          urls: {
-            repo: 'https://github.com/thefirstspine/lighthouse',
           },
         },
         {

@@ -1,0 +1,14 @@
+.hero {
+  &.is-tfs {
+    background-color: black;
+    background-image: url(https://www.thefirstspine.fr/images/top-hunter.png);
+    background-repeat: no-repeat;
+    background-position: top center;
+    * {
+      text-shadow: black 0 0 20px, black 0 0 20px;
+    }
+    .button * {
+      text-shadow: none;
+    }
+  }
+}
