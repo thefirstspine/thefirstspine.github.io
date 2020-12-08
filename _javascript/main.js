@@ -396,11 +396,11 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'projects',
           color: 'warning',
           icon: 'fas fa-gamepad',
-          name: 'drifters-tails',
+          name: 'drifters-tales',
           description: 'Next game to be delivered on PC & consoles.',
           isProtected: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/drifters-tails',
+            repo: 'https://github.com/thefirstspine/drifters-tales',
           },
         },
       ].sort(byName)
