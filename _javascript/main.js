@@ -397,7 +397,7 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'warning',
           icon: 'fas fa-gamepad',
           name: 'drifter-tales',
-          description: 'Next game to be delivered on PC & consoles.',
+          description: 'Next game to be delivered on PC.',
           isProtected: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
