@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Auth API v2 documentation</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Auth_15958333.html">Auth</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Auth API v2 documentation
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Mar 18, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1616591641397 {padding: 0px;}
+div.rbtoc1616591641397 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1616591641397 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1616591641397'>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Endpointsdocumentation'>Endpoints documentation</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/signup'>POST /api/v2/signup</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Parameters'>Parameters</a></li>
+<li><a href='#AuthAPIv2documentation-Responses'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/login'>POST /api/v2/login</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization.1'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Parameters.1'>Parameters</a></li>
+<li><a href='#AuthAPIv2documentation-Responses.1'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/login-with-facebook'>POST /api/v2/login-with-facebook</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization.2'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Parameters.2'>Parameters</a></li>
+<li><a href='#AuthAPIv2documentation-Responses.2'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/refresh'>POST /api/v2/refresh</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization.3'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Parameters.3'>Parameters</a></li>
+<li><a href='#AuthAPIv2documentation-Responses.3'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/logout'>POST /api/v2/logout</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization.4'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Responses.4'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#AuthAPIv2documentation-POST/api/v2/reset-password'>POST /api/v2/reset-password</a>
+<ul class='toc-indentation'>
+<li><a href='#AuthAPIv2documentation-Authorization.5'>Authorization</a></li>
+<li><a href='#AuthAPIv2documentation-Parameters.4'>Parameters</a></li>
+<li><a href='#AuthAPIv2documentation-Responses.5'>Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr/><p>The auth API is used to authenticate users to TFS apps.</p><h2 id="AuthAPIv2documentation-Endpointsdocumentation">Endpoints documentation</h2><p>This part describes the endpoints of the API.</p><h3 id="AuthAPIv2documentation-POST/api/v2/signup">POST /api/v2/signup</h3><p>Used to register a user in the auth service</p><h4 id="AuthAPIv2documentation-Authorization">Authorization</h4><p>This endpoint is public.</p><h4 id="AuthAPIv2documentation-Parameters">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>email</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The email</p></td></tr><tr><td class="confluenceTd"><p><code>password</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The password. Must have more than 8 characters. </p></td></tr></tbody></table></div><h4 id="AuthAPIv2documentation-Responses">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>The user already exists, or the provided parameters are malformed.</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;user_id&quot;: 123
+  }</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="AuthAPIv2documentation-POST/api/v2/login">POST /api/v2/login</h3><p>Used to exchange a email/password couple to a JWT token</p><h4 id="AuthAPIv2documentation-Authorization.1">Authorization</h4><p>This endpoint is public</p><h4 id="AuthAPIv2documentation-Parameters.1">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>email</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The email</p></td></tr><tr><td class="confluenceTd"><p><code>password</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The password. Must have more than 8 characters. </p></td></tr></tbody></table></div><h4 id="AuthAPIv2documentation-Responses.1">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>The provided parameters are malformed.</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>401 Unauthorized</code></p></td><td class="confluenceTd"><p>The user cannot log in</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;access_token&quot;: xxx.xxx.xxx,
+    &quot;refresh_token&quot;: xxx.xxx.xxx
+  }</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="AuthAPIv2documentation-POST/api/v2/login-with-facebook">POST /api/v2/login-with-facebook</h3><p>Used to exchange a Facebook OAuth token to a JWT token</p><h4 id="AuthAPIv2documentation-Authorization.2">Authorization</h4><p>This endpoint is public.</p><h4 id="AuthAPIv2documentation-Parameters.2">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>code</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The OAuth code</p></td></tr><tr><td class="confluenceTd"><p><code>redirect_uri</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The redirect_uri used in the OAuth standard. </p></td></tr></tbody></table></div><h4 id="AuthAPIv2documentation-Responses.2">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>The provided parameters are malformed.</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>401 Unauthorized</code></p></td><td class="confluenceTd"><p>The user cannot log in</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;access_token&quot;: xxx.xxx.xxx,
+    &quot;refresh_token&quot;: xxx.xxx.xxx
+  }</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="AuthAPIv2documentation-POST/api/v2/refresh">POST /api/v2/refresh</h3><p>Refreshes a JWT token. Needs to have an <code>Authorization: Bearer {token}</code> header.</p><h4 id="AuthAPIv2documentation-Authorization.3">Authorization</h4><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>PICK ONE</strong><br/>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p></div></div><p>More information here: <a href="https://thefirstspine.atlassian.net/wiki/spaces/TECH/pages/15958663/Endpoint+protections" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="AuthAPIv2documentation-Parameters.3">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>refresh_token</code></p></td><td class="confluenceTd"><p><code>type</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The refresh token</p></td></tr></tbody></table></div><h4 id="AuthAPIv2documentation-Responses.3">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>The provided parameters are malformed.</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>401 Unauthorized</code></p></td><td class="confluenceTd"><p>The user cannot log in</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;access_token&quot;: xxx.xxx.xxx,
+    &quot;refresh_token&quot;: xxx.xxx.xxx
+  }</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="AuthAPIv2documentation-POST/api/v2/logout">POST /api/v2/logout</h3><p>Invalidates both access &amp; refresh token. Needs to have an <code>Authorization: Bearer {token}</code> header.</p><h4 id="AuthAPIv2documentation-Authorization.4">Authorization</h4><div class="confluence-information-macro confluence-information-macro-information"><span class="aui-icon aui-icon-small aui-iconfont-info confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>PICK ONE</strong><br/>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p></div></div><p>More information here: <a href="https://thefirstspine.atlassian.net/wiki/spaces/TECH/pages/15958663/Endpoint+protections" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="AuthAPIv2documentation-Responses.4">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;success&quot;: true
+  }</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="AuthAPIv2documentation-POST/api/v2/reset-password">POST /api/v2/reset-password</h3><p>Used to change the password without providing one. Send an email to the account with the new password.</p><h4 id="AuthAPIv2documentation-Authorization.5">Authorization</h4><p>This endpoint is public.</p><h4 id="AuthAPIv2documentation-Parameters.4">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>email</code></p></td><td class="confluenceTd"><p><code>type</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The address email</p></td></tr></tbody></table></div><h4 id="AuthAPIv2documentation-Responses.5">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>The provided parameters are malformed.</p></td><td class="confluenceTd"><p>Can vary</p></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">  {
+    &quot;success&quot;: true
+  }</pre>
+</div></div></td></tr></tbody></table></div><p />
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Mar 24, 2021 14:14</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

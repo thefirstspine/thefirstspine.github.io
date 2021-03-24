@@ -71,10 +71,6 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       services: [
         {
-          name: "arena",
-          url: "https://arena.thefirstspine.fr/status",
-        },
-        {
           name: "auth",
           url: "https://auth.thefirstspine.fr/status",
         },
@@ -107,10 +103,32 @@ document.addEventListener('DOMContentLoaded', () => {
           url: "https://solid-pancake.thefirstspine.fr/status",
         },
       ],
+      realms: [
+        {
+          name: "Legacy",
+          url: "https://arena.thefirstspine.fr/status",
+        },
+        {
+          name: "Sanctuaire",
+          url: "https://sanctuaire.arena.thefirstspine.fr/status",
+        },
+        {
+          name: "Sanctuary",
+          url: "https://sanctuary.arena.thefirstspine.fr/status",
+        },
+        {
+          name: "Refuge",
+          url: "https://refuge.arena.thefirstspine.fr/status",
+        },
+        {
+          name: "Shelter",
+          url: "https://shelter.arena.thefirstspine.fr/status",
+        },
+      ],
       links: [
         {
           part: 'infrastructure',
-          color: 'link',
+          color: 'info',
           icon: 'fas fa-flask',
           name: 'boiler2',
           description: 'Boiler is a Docker orchestration software built with Cobra to ship secure apps. Works along nginx, Docker & certbot.',
@@ -227,8 +245,8 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         {
-          part: 'tools',
-          color: 'success',
+          part: 'infrastructure',
+          color: 'info',
           icon: 'fas fa-burn',
           name: 'flame',
           description: 'Data computing & analysis on-demand on CLIs served by Google Fire.',

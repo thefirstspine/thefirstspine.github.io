@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Messaging subjects</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Messaging_40993212.html">Messaging</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Messaging subjects
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Mar 20, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <p>Here’s all the known subjects in the messaging service.</p><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 205.0px;"/><col style="width: 208.0px;"/><col style="width: 139.0px;"/><col style="width: 208.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Topic name</strong></p></th><th class="confluenceTh"><p><strong>Meaning</strong></p></th><th class="confluenceTh"><p><strong>To…</strong></p></th><th class="confluenceTh"><p><strong>Data schema</strong></p></th></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:queue</code> <span class="status-macro aui-lozenge aui-lozenge-error">DEPRECATED</span></p></td><td class="confluenceTd"><p>The queue has changed in the Arena service.</p></td><td class="confluenceTd"><p>N/A</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;event&quot;: string,
+  &quot;gameType&quot;: IGameType,
+  &quot;queue&quot;: int
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:game</code> <span class="status-macro aui-lozenge aui-lozenge-error">DEPRECATED</span>  </p></td><td class="confluenceTd"><p>A change occured in a game instance.</p></td><td class="confluenceTd"><p>N/A</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;event&quot;: string,
+  &quot;gameType&quot;: IGameType,
+  &quot;gameId&quot;: int
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:queue:{queueName}:joined</code></p></td><td class="confluenceTd"><p>Someone joined the queue.</p></td><td class="confluenceTd"><p>All subscribers</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  IQueueInstance
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:queue:{queueName}:leaved</code></p></td><td class="confluenceTd"><p>Someone leaved the queue.</p></td><td class="confluenceTd"><p>All subscribers</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  IQueueInstance
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:game:created</code>  </p></td><td class="confluenceTd"><p>A game was created</p></td><td class="confluenceTd"><p>The players in the game instance</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;gameId&quot;: int,
+  &quot;gameType&quot;: IGameType
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:game:{gameId}:action</code></p></td><td class="confluenceTd"><p>An action was updated</p></td><td class="confluenceTd"><p>All subscribers</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  IGameAction
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:game:{gameId}:cardChanged</code></p></td><td class="confluenceTd"><p>A card changed in a game instance</p></td><td class="confluenceTd"><p>All subscribers</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;changes&quot;: {
+    [key]: [change value]
+  },
+  &quot;gameCard&quot;: IGameCard
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:messageRoom:{roomName}</code></p></td><td class="confluenceTd"><p>A message was posted in a room</p></td><td class="confluenceTd"><p>The senders in the room</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  IPublicMessage
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>TheFirstSpine:account</code></p></td><td class="confluenceTd"><p>The account was updated</p></td><td class="confluenceTd"><p>The user of the account</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  IWizard
+}</pre>
+</div></div></td></tr></tbody></table></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Mar 24, 2021 14:14</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>

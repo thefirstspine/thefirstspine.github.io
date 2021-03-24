@@ -46,21 +46,10 @@
       </div>
     </section>
 
-    <section class="hero is-light">
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <nav class="level">
-            <app-status v-for="service in services" v-bind:key="service.name" :service="service">
-            </app-status>
-          </nav>
-        </div>
-      </div>
-    </section>
-
     <section class="section">
       <div class="container">
         <a name="infrastructure"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-link">Infrastructure</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-info">Infrastructure</h1>
         <p class="is-size-4 my-3">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" :link="link">
         </link-card>
@@ -91,6 +80,25 @@
         
       </div>
     </section>
+
+    <section class="hero is-light">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h3 class="is-size-3 mb-6">Services status</h3>
+          <nav class="level">
+            <app-status v-for="service in services" v-bind:key="service.name" :service="service">
+            </app-status>
+          </nav>
+          <hr />
+          <h3 class="is-size-3 mb-6">Realms status</h3>
+          <nav class="level">
+            <app-status v-for="realm in realms" v-bind:key="realm.name" :service="realm">
+            </app-status>
+          </nav>
+        </div>
+      </div>
+    </section>
+
     <footer class="footer">
       <div class="content has-text-centered is-size-7">
         <p>
