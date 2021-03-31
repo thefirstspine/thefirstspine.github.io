@@ -41,6 +41,9 @@ document.addEventListener('DOMContentLoaded', () => {
           <a v-if="link.urls.docker" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docker">
             <i class="fab fa-docker"></i>
           </a>
+          <a v-if="link.urls.website" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.website">
+            <i class="fas fa-link"></i>
+          </a>
         </p>
         <hr class="my-3" />
         <h2 class="notification is-success is-light" v-if="link.isUnderConception">
@@ -409,6 +412,19 @@ document.addEventListener('DOMContentLoaded', () => {
           isProtected: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-terminal',
+          name: 'yield',
+          description: 'Yield allows your app to communicate with the TFS platform with your own authentication and services.',
+          isProtected: true,
+          urls: {
+            website: 'https://yield.thefirstspine.fr/',
+            docs: 'docs/Yield_174063667.html',
+            repo: 'https://github.com/thefirstspine/yield',
           },
         },
       ].sort(byName)

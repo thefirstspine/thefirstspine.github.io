@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : 🧪 Yield API documentation</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Yield_174063667.html">Yield</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : 🧪 Yield API documentation
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Mar 31, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1617224964537 {padding: 0px;}
+div.rbtoc1617224964537 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1617224964537 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1617224964537'>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Endpointsdocumentation'>Endpoints documentation</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-GET/api/key'>GET /api/key</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Authorization'>Authorization</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Responses'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#id-🧪YieldAPIdocumentation-POST/users'>POST /users</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Authorization.1'>Authorization</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Parameters'>Parameters</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Responses.1'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#id-🧪YieldAPIdocumentation-GET/users'>GET /users</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Authorization.2'>Authorization</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Responses.2'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#id-🧪YieldAPIdocumentation-GET/users/:id'>GET /users/:id</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Authorization.3'>Authorization</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Responses.3'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#id-🧪YieldAPIdocumentation-POST/games'>POST /games</a>
+<ul class='toc-indentation'>
+<li><a href='#id-🧪YieldAPIdocumentation-Authorization.4'>Authorization</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Parameters.1'>Parameters</a></li>
+<li><a href='#id-🧪YieldAPIdocumentation-Responses.4'>Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr/><div class="confluence-information-macro confluence-information-macro-tip"><span class="aui-icon aui-icon-small aui-iconfont-approve confluence-information-macro-icon"></span><div class="confluence-information-macro-body"><p><strong>THIS PAGE DESCRIBES AN UNFINISHED FEATURE</strong><br/>This page is documenting a feature that is not ready yet. Sometimes, we are working with a DDD (Documentation Driven Development) to ensure that documentation is coherent with the developed feature</p></div></div><p>Yield allows you to create and play games on the TFS platform. Here's some concepts to understand before going further. To use your app with TFS you should fist bind your users with some Yield users. You can create users in Yield and identify them with a custom ID. Once your users created, you should then create a game on Yield.</p><h2 id="id-🧪YieldAPIdocumentation-Endpointsdocumentation">Endpoints documentation</h2><p>This part describes the endpoints of the API.</p><h3 id="id-🧪YieldAPIdocumentation-GET/api/key">GET /api/key</h3><p>Get information about the used key.</p><h4 id="id-🧪YieldAPIdocumentation-Authorization">Authorization</h4><p>The <code>X-API-Key</code> header is required with the API Key provided by the Yield team.</p><h4 id="id-🧪YieldAPIdocumentation-Responses">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Unauthorized</code></p></td><td class="confluenceTd"><p>Invalid API Key</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;status&quot;: false,
+  &quot;error&quot;: &quot;Invalid API Key&quot;
+}  </pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;data&quot;: {
+    &quot;email&quot;: &quot;email@email.com&quot;
+  }
+}  </pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="id-🧪YieldAPIdocumentation-POST/users">POST /users</h3><p>Create a user. You can chose the User ID (under custom_id) to help you bind this user to your app.</p><h4 id="id-🧪YieldAPIdocumentation-Authorization.1">Authorization</h4><p>The <code>X-API-Key</code> header is required with the API Key provided by the Yield team.</p><h4 id="id-🧪YieldAPIdocumentation-Parameters">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>custom_id</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The custom ID of the user</p></td></tr></tbody></table></div><h4 id="id-🧪YieldAPIdocumentation-Responses.1">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Unauthorized</code></p></td><td class="confluenceTd"><p>Invalid API Key</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;status&quot;: false,
+  &quot;error&quot;: &quot;Invalid API Key&quot;
+}  </pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;data&quot;: {
+    &quot;custom_id&quot;: &quot;string&quot;,
+    &quot;created_at&quot;: &quot;2021-03-31T20:13:32.417Z&quot;,
+    &quot;updated_at&quot;: &quot;2021-03-31T20:13:32.417Z&quot;
+  }
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="id-🧪YieldAPIdocumentation-GET/users">GET /users</h3><p>Retrieve the users created with your API Key</p><h4 id="id-🧪YieldAPIdocumentation-Authorization.2">Authorization</h4><p>The <code>X-API-Key</code> header is required with the API Key provided by the Yield team.</p><h4 id="id-🧪YieldAPIdocumentation-Responses.2">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Unauthorized</code></p></td><td class="confluenceTd"><p>Invalid API Key</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;status&quot;: false,
+  &quot;error&quot;: &quot;Invalid API Key&quot;
+}  </pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;data&quot;: [
+    {
+      &quot;custom_id&quot;: &quot;string&quot;,
+      &quot;created_at&quot;: &quot;2021-03-31T20:15:49.424Z&quot;,
+      &quot;updated_at&quot;: &quot;2021-03-31T20:15:49.424Z&quot;
+    }
+  ],
+  &quot;pagination&quot;: {
+    &quot;max&quot;: 0,
+    &quot;limit&quot;: 0,
+    &quot;offset&quot;: 0
+  }
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="id-🧪YieldAPIdocumentation-GET/users/:id">GET /users/:id</h3><p>Retrieve a user created with your API Key</p><h4 id="id-🧪YieldAPIdocumentation-Authorization.3">Authorization</h4><p>The <code>X-API-Key</code> header is required with the API Key provided by the Yield team.</p><h4 id="id-🧪YieldAPIdocumentation-Responses.3">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Unauthorized</code></p></td><td class="confluenceTd"><p>Invalid API Key</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;status&quot;: false,
+  &quot;error&quot;: &quot;Invalid API Key&quot;
+}  </pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;data&quot;: {
+    &quot;string&quot;: {
+      &quot;custom_id&quot;: &quot;string&quot;,
+      &quot;created_at&quot;: &quot;2021-03-31T20:16:42.289Z&quot;,
+      &quot;updated_at&quot;: &quot;2021-03-31T20:16:42.289Z&quot;
+    }
+  }
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="id-🧪YieldAPIdocumentation-POST/games">POST /games</h3><p>Retrieve a user created with your API Key</p><h4 id="id-🧪YieldAPIdocumentation-Authorization.4">Authorization</h4><p>The <code>X-API-Key</code> header is required with the API Key provided by the Yield team.</p><h4 id="id-🧪YieldAPIdocumentation-Parameters.1">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 190.0px;"/><col style="width: 190.0px;"/><col style="width: 190.0px;"/><col style="width: 190.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>user1.custom_id</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The custom ID of the user</p></td></tr><tr><td class="confluenceTd"><p><code>user1.origin</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>An origin. For further information about the available origins, see the REST API service.</p></td></tr><tr><td class="confluenceTd"><p><code>user1.destiny</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>A destiny. For further information about the available origins, see the REST API service.</p></td></tr><tr><td class="confluenceTd"><p><code>user2.custom_id</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>The custom ID of the user</p></td></tr><tr><td class="confluenceTd"><p><code>user2.origin</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>An origin. For further information about the available origins, see the REST API service.</p></td></tr><tr><td class="confluenceTd"><p><code>user2.destiny</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>A destiny. For further information about the available origins, see the REST API service.</p></td></tr></tbody></table></div><h4 id="id-🧪YieldAPIdocumentation-Responses.4">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>403 Unauthorized</code></p></td><td class="confluenceTd"><p>Invalid API Key</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;status&quot;: false,
+  &quot;error&quot;: &quot;Invalid API Key&quot;
+}  </pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+  &quot;id&quot;: 0,
+  &quot;created_at&quot;: &quot;2021-03-31T20:18:21.051Z&quot;,
+  &quot;updated_at&quot;: &quot;2021-03-31T20:18:21.051Z&quot;,
+  &quot;users&quot;: [
+    {
+      &quot;custom_id&quot;: &quot;string&quot;,
+      &quot;created_at&quot;: &quot;2021-03-31T20:18:21.051Z&quot;,
+      &quot;updated_at&quot;: &quot;2021-03-31T20:18:21.051Z&quot;
+    }
+  ]
+}</pre>
+</div></div></td></tr></tbody></table></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Mar 31, 2021 23:09</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
