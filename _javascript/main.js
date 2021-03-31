@@ -200,6 +200,7 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
           urls: {
             repo: 'https://github.com/thefirstspine/rest',
+            docs: 'docs/Rest_40993179.html',
           },
         },
         {
@@ -221,6 +222,7 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           urls: {
             repo: 'https://github.com/thefirstspine/shop',
+            docs: 'docs/Shop_303038481.html',
           },
         },
         {

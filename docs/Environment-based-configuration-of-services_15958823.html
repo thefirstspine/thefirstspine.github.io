@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Tech : Nest file socket communication</title>
+        <title>Tech : Environment-based configuration of services</title>
         <link rel="stylesheet" href="styles/site.css" type="text/css" />
         <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
     </head>
@@ -15,14 +15,11 @@
                             <li class="first">
                                 <span><a href="index.html">Tech</a></span>
                             </li>
-                                                    <li>
-                                <span><a href="Arena_688144.html">Arena</a></span>
-                            </li>
                                                 </ol>
                     </div>
                     <h1 id="title-heading" class="pagetitle">
                                                 <span id="title-text">
-                            Tech : Nest file socket communication
+                            Tech : Environment-based configuration of services
                         </span>
                     </h1>
                 </div>
@@ -36,13 +33,10 @@
     
         
         
-            Created by <span class='author'> Teddy GANDON</span> on Jan 31, 2021
+            Created by <span class='author'> Teddy GANDON</span>, last modified on Jul 29, 2020
                         </div>
                     <div id="main-content" class="wiki-content group">
-                    <p>In Arena, the current games are loaded in memory to ensure quick calculation and less I/O on databases. The <a href="https://www.npmjs.com/package/@thefirstspine/nest-filesocket" class="external-link" rel="nofollow">Nest File Socket</a> NPM extension allow any user to communicate with a working app.</p><h2 id="Nestfilesocketcommunication-Socketfileformat">Socket file format</h2><p>The socket file named <code>socket</code>at the root of the app contains all the commands to call in the app context. It has this format:</p><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
-<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{&quot;name&quot;:&quot;my-command&quot;, &quot;args&quot;: [&quot;first&quot;, &quot;second&quot;]}
-{&quot;name&quot;:&quot;another-command&quot;, &quot;args&quot;: [&quot;third&quot;]}</pre>
-</div></div><h2 id="Nestfilesocketcommunication-Availablecommands">Available commands</h2><h3 id="Nestfilesocketcommunication-close-game">close-game</h3><p>Arguments:</p><ul><li><p><code>gameId</code> - the game ID</p></li></ul>
+                    <p>In the TFS Platform, every net service is configured with environment variables. These variables can be loaded with a dotenv file names <code>.env</code> at the root of the app, or can be assigned when a container is raised.</p>
                     </div>
 
                     
