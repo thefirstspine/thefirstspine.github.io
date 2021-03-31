@@ -247,8 +247,8 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         {
-          part: 'infrastructure',
-          color: 'info',
+          part: 'tools',
+          color: 'success',
           icon: 'fas fa-burn',
           name: 'flame',
           description: 'Data computing & analysis on-demand on CLIs served by Google Fire.',
