@@ -172,6 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           urls: {
             repo: 'https://github.com/thefirstspine/bots',
+            docs: 'docs/Bots_305725445.html',
           },
         },
         {
@@ -246,6 +247,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           urls: {
+            website: 'https://www.thefirstspine.fr/',
             repo: 'https://github.com/thefirstspine/website',
           },
         },
