@@ -108,10 +108,6 @@ document.addEventListener('DOMContentLoaded', () => {
       ],
       realms: [
         {
-          name: "Legacy",
-          url: "https://arena.thefirstspine.fr/status",
-        },
-        {
           name: "Sanctuaire",
           url: "https://sanctuaire.arena.thefirstspine.fr/status",
         },
