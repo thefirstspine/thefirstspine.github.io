@@ -105,6 +105,10 @@ document.addEventListener('DOMContentLoaded', () => {
           name: "solid-pancake",
           url: "https://solid-pancake.thefirstspine.fr/status",
         },
+        {
+          name: "drifters-tales-worlds",
+          url: "https://drifters-tales-worlds.thefirstspine.fr/status",
+        },
       ],
       realms: [
         {
@@ -245,6 +249,18 @@ document.addEventListener('DOMContentLoaded', () => {
           urls: {
             website: 'https://www.thefirstspine.fr/',
             repo: 'https://github.com/thefirstspine/website',
+          },
+        },
+        {
+          part: 'services',
+          color: 'danger',
+          icon: 'fas fa-globe-europe',
+          isProtected: true,
+          name: 'drifters-tales-worlds',
+          description: 'Connected-worlds service for our upcoming game.',
+          urls: {
+            website: 'https://drifters-tales-worlds.thefirstspine.fr/',
+            repo: 'https://github.com/thefirstspine/drifters-tales-worlds',
           },
         },
         {
