@@ -17,14 +17,14 @@
         <nav class="navbar">
           <div class="container">
             <div class="navbar-brand">
-              <span class="navbar-item is-size-3 has-text-weight-bold has-text-warning is-uppercase">
+              <span class="navbar-item is-size-3 has-text-weight-bold has-text-info is-uppercase">
                 <i class="fas fa-code"></i> &nbsp; TFS
               </span>
             </div>
             <div id="navbarMenuHeroB" class="navbar-menu">
               <div class="navbar-end">
                 <span class="navbar-item">
-                  <a class="button is-warning" target="_blank" href="https://www.github.com/thefirstspine">
+                  <a class="button is-info" target="_blank" href="https://www.github.com/thefirstspine">
                     <span class="icon">
                       <i class="fab fa-github"></i>
                     </span>
@@ -39,9 +39,18 @@
     
       <div class="hero-body">
         <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced is-uppercase">
-            Building online <span class="has-text-warning">board games</span><br />through <span class="has-text-warning">open source</span> technology
+          <h1 class="title is-1 is-spaced is-uppercase mt-10">
+            Building online <span class="has-text-info">board games</span><br />through <span class="has-text-info">open source</span> technology
           </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-black is-bold is-small">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <h3 class="is-size-3 is-uppercase"><i class="fas fa-sun has-text-warning fa-spin"></i> Summer is comming.</h3>
+          <h4 class="is-size-4">We are moving from Boiler to Ansible to automate deployments.<br />Also, contributions to deprecated Terraform providers are stopped.</h4>
         </div>
       </div>
     </section>
@@ -49,31 +58,31 @@
     <section class="section">
       <div class="container">
         <a name="infrastructure"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-info">Infrastructure</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info">Infrastructure</h1>
         <p class="is-size-4 my-3">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" :link="link">
         </link-card>
         
         <a name="services"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-danger">Services</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger">Services</h1>
         <p class="is-size-4 my-3">The TFS platform is powered by a Service-Oriented Architecture. These services are served by Boiler in containers.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'services')" :link="link">
         </link-card>
 
         <a name="tools"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-success">Tools & assets</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success">Tools & assets</h1>
         <p class="is-size-4 my-3">All the tools & the assets we need to construct TFS apps.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'tools')" :link="link">
         </link-card>
         
         <a name="contributions"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-primary">Contributions</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-primary">Contributions</h1>
         <p class="is-size-4 my-3">We are also contributing to & maintaining some open source projects.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'contributions')" :link="link">
         </link-card>
         
         <a name="projects"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-6 has-text-warning">Projects</h1>
+        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning">Projects</h1>
         <p class="is-size-4 my-3">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
         <link-card v-for="link in links.filter((l) => l.part === 'projects')" :link="link">
         </link-card>

@@ -135,9 +135,21 @@ document.addEventListener('DOMContentLoaded', () => {
           icon: 'fas fa-flask',
           name: 'boiler2',
           description: 'Boiler is a Docker orchestration software built with Cobra to ship secure apps. Works along nginx, Docker & certbot.',
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/boiler2',
             docs: 'docs/Boiler2_63307806.html',
+          },
+        },
+        {
+          part: 'infrastructure',
+          color: 'info',
+          icon: 'fab fa-redhat',
+          name: 'ansible-playbooks',
+          description: 'Ansible playbooks to setup nodes & deploy apps.',
+          isUnderConception: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/ansible-playbooks',
           },
         },
         {
@@ -145,7 +157,7 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'danger',
           icon: 'fas fa-hat-wizard',
           name: 'arena',
-          description: 'The arena service is the service that will manage all the games & wizzards accounts in the Arena products.',
+          description: 'The arena service is the service that will manage all the games & wizards accounts in the Arena products.',
           urls: {
             repo: 'https://github.com/thefirstspine/arena',
             docs: 'docs/Arena_688144.html',
@@ -258,6 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
           isProtected: true,
           name: 'drifters-tales-worlds',
           description: 'Connected-worlds service for our upcoming game.',
+          isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifters-tales-worlds',
           },
@@ -402,6 +415,7 @@ document.addEventListener('DOMContentLoaded', () => {
           icon: 'fas fa-network-wired',
           name: 'terraform-provider-oneandone',
           description: 'The 1&1 provider gives the ability to deploy and configure resources using the 1&1 Cloud Server API.',
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/terraform-providers/terraform-provider-oneandone',
           },
@@ -412,6 +426,7 @@ document.addEventListener('DOMContentLoaded', () => {
           icon: 'fas fa-network-wired',
           name: 'oneandone-cloudserver-sdk-go',
           description: 'The 1&1 Go SDK is a Go library designed for interaction with the 1&1 cloud platform over the REST API.',
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/1and1/oneandone-cloudserver-sdk-go',
           },
@@ -423,6 +438,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'drifter-tales',
           description: 'Next game to be delivered on PC.',
           isProtected: true,
+          isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
           },
@@ -434,6 +450,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'yield',
           description: 'Yield allows your app to communicate with the TFS platform with your own authentication and services.',
           isProtected: true,
+          isUnderConception: true,
           urls: {
             website: 'https://yield.thefirstspine.fr/',
             docs: 'docs/Yield_174063667.html',
