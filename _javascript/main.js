@@ -145,11 +145,11 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'infrastructure',
           color: 'info',
           icon: 'fab fa-redhat',
-          name: 'ansible-playbooks',
+          name: 'ansible',
           description: 'Ansible playbooks to setup nodes & deploy apps.',
           isUnderConception: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/ansible-playbooks',
+            repo: 'https://github.com/thefirstspine/ansible',
           },
         },
         {
