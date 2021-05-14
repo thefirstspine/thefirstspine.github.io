@@ -26,7 +26,7 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2 class="is-size-4 has-text-centered">
           <i :class="link.icon + ' has-text-' + link.color"></i><br />
           {{ link.name }}
-          <span class="bd-snippet-tag">
+          <span class="bd-snippet-tag" v-if="link.isProtected">
             Private repo
           </span>
         </h2>
