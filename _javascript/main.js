@@ -25,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     template: `<div class="tile link-tile is-4 px-2 py-2 mt-6 mb-3">
         <h2 class="is-size-4 has-text-centered">
           <i :class="link.icon + ' has-text-' + link.color"></i><br />
-          {{ link.name }}
+          <i class="fas fa-lock is-size-7 has-text-grey" v-if="link.isProtected" info="Private repository"></i> {{ link.name }}
         </h2>
         <hr class="my-3" />
         <p class="has-text-centered">
@@ -50,10 +50,6 @@ document.addEventListener('DOMContentLoaded', () => {
           <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
           This project is at an early conception stage and can change anytime.
         </h2>
-        <h2 class="notification is-light" v-if="link.isProtected">
-          <i class="fas fa-user-secret"></i>&nbsp; <strong>Protected repository</strong><br />
-          This repository is only available for The First Spine development team.
-        </h2>
         <h2 class="notification is-link is-light" v-if="link.isOpenedToContributions">
           <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br>
           This repository is maintened by the TFS team and other contributors.
@@ -61,6 +57,10 @@ document.addEventListener('DOMContentLoaded', () => {
         <h2 class="notification is-danger is-light" v-if="link.isDeprecated">
           <i class="fas fa-hourglass-end"></i>&nbsp; <strong>Sunset</strong><br>
           This repository is considered as deprecated and will be deleted soon. New projects should not use it.
+        </h2>
+        <h2 class="notification is-danger is-light" v-if="link.isOnHold">
+          <i class="fas fa-stop-circle"></i>&nbsp; <strong>On hold</strong><br>
+          This development is on hold. New projects should not use it.
         </h2>
         <p>
           {{ link.description }}
@@ -379,7 +379,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'tools',
           color: 'success',
-          icon: 'fas fa-chart-bar',
+          icon: 'fas fa-file-alt',
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
           urls: {
@@ -390,7 +390,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'tools',
           color: 'success',
-          icon: 'fas fa-chart-bar',
+          icon: 'fas fa-file-alt',
           name: '@thefirstspine/logs-nest',
           description: 'Build on top of @thefirstspine/logs. Provides Nest services.',
           urls: {
@@ -450,11 +450,22 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'yield',
           description: 'Yield allows your app to communicate with the TFS platform with your own authentication and services.',
           isProtected: true,
-          isUnderConception: true,
+          isOnHold: true,
           urls: {
             website: 'https://yield.thefirstspine.fr/',
             docs: 'docs/Yield_174063667.html',
             repo: 'https://github.com/thefirstspine/yield',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-chart-bar',
+          name: 'solid-pancake-viewer',
+          description: 'Data viewer for Solid Pancake. Made with Laravel and Vue JS.',
+          isProtected: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/solid-pancake-viewer',
           },
         },
       ].sort(byName)
