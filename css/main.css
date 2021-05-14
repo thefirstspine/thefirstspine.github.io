@@ -7732,6 +7732,19 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   .hero.is-tfs .button * {
     text-shadow: none; }
 
+.bd-snippet-tag {
+  align-items: center;
+  border-radius: .5em;
+  display: inline-flex;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: .4em;
+  font-weight: 600;
+  height: 1rem;
+  padding: 0 .5em;
+  background: #EEE;
+  vertical-align: middle; }
+
 .status-ok, .status-ko {
   display: inline-block;
   width: .5em;

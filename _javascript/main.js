@@ -25,7 +25,10 @@ document.addEventListener('DOMContentLoaded', () => {
     template: `<div class="tile link-tile is-4 px-2 py-2 mt-6 mb-3">
         <h2 class="is-size-4 has-text-centered">
           <i :class="link.icon + ' has-text-' + link.color"></i><br />
-          <i class="fas fa-lock is-size-7 has-text-grey" v-if="link.isProtected" info="Private repository"></i> {{ link.name }}
+          {{ link.name }}
+          <span class="bd-snippet-tag">
+            Private repo
+          </span>
         </h2>
         <hr class="my-3" />
         <p class="has-text-centered">
@@ -58,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <i class="fas fa-hourglass-end"></i>&nbsp; <strong>Sunset</strong><br>
           This repository is considered as deprecated and will be deleted soon. New projects should not use it.
         </h2>
-        <h2 class="notification is-danger is-light" v-if="link.isOnHold">
+        <h2 class="notification is-warning is-light" v-if="link.isOnHold">
           <i class="fas fa-stop-circle"></i>&nbsp; <strong>On hold</strong><br>
           This development is on hold. New projects should not use it.
         </h2>
