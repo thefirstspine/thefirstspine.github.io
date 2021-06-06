@@ -7745,6 +7745,27 @@ a.has-text-danger-dark:hover, a.has-text-danger-dark:focus {
   background: #EEE;
   vertical-align: middle; }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #111; }
+  p, h1, h2, h3, h4, h5, h6 {
+    color: #DDD; }
+  hr {
+    background-color: #222; }
+  .notification.is-light.is-success {
+    background-color: #257942;
+    color: #DDD; }
+  .notification.is-light.is-danger {
+    background-color: #990f35;
+    color: #DDD; }
+  .notification.is-light.is-warning {
+    background-color: #947600;
+    color: #DDD; }
+  .hero.is-light, .footer {
+    background-color: #222; }
+  .bd-snippet-tag {
+    color: #111; } }
+
 .status-ok, .status-ko {
   display: inline-block;
   width: .5em;
