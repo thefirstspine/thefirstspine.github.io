@@ -52,7 +52,7 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h3 class="is-size-3 is-uppercase"><i class="fas fa-sun has-text-warning fa-spin"></i> Summer is comming.</h3>
-          <h4 class="is-size-4">We are moving from Boiler to Ansible to automate deployments.<br />Also, contributions to deprecated Terraform providers are stopped.</h4>
+          <h4 class="is-size-4">We are moving from Boiler to Ansible to automate deployments.</h4>
         </div>
       </div>
     </section>
@@ -75,12 +75,6 @@
         <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success">Tools & assets</h1>
         <p class="is-size-4 my-3">All the tools & the assets we need to construct TFS apps.</p>
         <link-card v-for="link in links.filter((l) => l.part === 'tools')" :link="link">
-        </link-card>
-        
-        <a name="contributions"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-primary">Contributions</h1>
-        <p class="is-size-4 my-3">We are also contributing to & maintaining some open source projects.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'contributions')" :link="link">
         </link-card>
         
         <a name="projects"></a>

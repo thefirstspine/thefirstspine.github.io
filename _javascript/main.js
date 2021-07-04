@@ -413,28 +413,6 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         {
-          part: 'contributions',
-          color: 'primary',
-          icon: 'fas fa-network-wired',
-          name: 'terraform-provider-oneandone',
-          description: 'The 1&1 provider gives the ability to deploy and configure resources using the 1&1 Cloud Server API.',
-          isDeprecated: true,
-          urls: {
-            repo: 'https://github.com/terraform-providers/terraform-provider-oneandone',
-          },
-        },
-        {
-          part: 'contributions',
-          color: 'primary',
-          icon: 'fas fa-network-wired',
-          name: 'oneandone-cloudserver-sdk-go',
-          description: 'The 1&1 Go SDK is a Go library designed for interaction with the 1&1 cloud platform over the REST API.',
-          isDeprecated: true,
-          urls: {
-            repo: 'https://github.com/1and1/oneandone-cloudserver-sdk-go',
-          },
-        },
-        {
           part: 'projects',
           color: 'warning',
           icon: 'fas fa-gamepad',
