@@ -135,18 +135,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'infrastructure',
           color: 'info',
-          icon: 'fas fa-flask',
-          name: 'boiler2',
-          description: 'Boiler is a Docker orchestration software built with Cobra to ship secure apps. Works along nginx, Docker & certbot.',
-          isDeprecated: true,
-          urls: {
-            repo: 'https://github.com/thefirstspine/boiler2',
-            docs: 'docs/Boiler2_63307806.html',
-          },
-        },
-        {
-          part: 'infrastructure',
-          color: 'info',
           icon: 'fab fa-redhat',
           name: 'ansible',
           description: 'Ansible playbooks to setup nodes & deploy apps.',

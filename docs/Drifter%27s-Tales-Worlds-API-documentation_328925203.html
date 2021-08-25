@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tech : Drifter&#39;s Tales Worlds API documentation</title>
+        <link rel="stylesheet" href="styles/site.css" type="text/css" />
+        <META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    </head>
+
+    <body class="theme-default aui-theme-default">
+        <div id="page">
+            <div id="main" class="aui-page-panel">
+                <div id="main-header">
+                    <div id="breadcrumb-section">
+                        <ol id="breadcrumbs">
+                            <li class="first">
+                                <span><a href="index.html">Tech</a></span>
+                            </li>
+                                                    <li>
+                                <span><a href="Drifter%27s-Tales-Worlds_328826906.html">Drifter&#39;s Tales Worlds</a></span>
+                            </li>
+                                                </ol>
+                    </div>
+                    <h1 id="title-heading" class="pagetitle">
+                                                <span id="title-text">
+                            Tech : Drifter&#39;s Tales Worlds API documentation
+                        </span>
+                    </h1>
+                </div>
+
+                <div id="content" class="view">
+                    <div class="page-metadata">
+                        
+        
+    
+        
+    
+        
+        
+            Created by <span class='author'> Teddy GANDON</span> on Apr 22, 2021
+                        </div>
+                    <div id="main-content" class="wiki-content group">
+                    <style type='text/css'>/*<![CDATA[*/
+div.rbtoc1629920150918 {padding: 0px;}
+div.rbtoc1629920150918 ul {list-style: disc;margin-left: 0px;}
+div.rbtoc1629920150918 li {margin-left: 0px;padding-left: 0px;}
+
+/*]]>*/</style><div class='toc-macro rbtoc1629920150918'>
+<ul class='toc-indentation'>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Endpointsdocumentation'>Endpoints documentation</a>
+<ul class='toc-indentation'>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-POST/event'>POST /event</a>
+<ul class='toc-indentation'>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Authorization'>Authorization</a></li>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Parameters'>Parameters</a></li>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Responses'>Responses</a></li>
+</ul>
+</li>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-GET/monarch'>GET /monarch</a>
+<ul class='toc-indentation'>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Authorization.1'>Authorization</a></li>
+<li><a href='#Drifter&#39;sTalesWorldsAPIdocumentation-Responses.1'>Responses</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</div><hr/><p>The Drifter’s Tales Worlds API is used to provide online features to the Drifter’s Tales game.</p><h2 id="Drifter&#39;sTalesWorldsAPIdocumentation-Endpointsdocumentation">Endpoints documentation</h2><p>This part describes the endpoints of the API.</p><h3 id="Drifter&#39;sTalesWorldsAPIdocumentation-POST/event">POST /event</h3><p>Register an event in the API. A message will be posted in the Messaging service, with a bounce of 60 seconds.</p><h4 id="Drifter&#39;sTalesWorldsAPIdocumentation-Authorization">Authorization</h4><p>This endpoint requires an access token under the <code>Authorization: Bearer xxx.xxx.xxx</code> header.</p><p>More information here: <a href="https://thefirstspine.atlassian.net/wiki/spaces/TECH/pages/15958663/Endpoint+protections" data-linked-resource-id="15958663" data-linked-resource-version="5" data-linked-resource-type="page">Endpoint protections</a> </p><h4 id="Drifter&#39;sTalesWorldsAPIdocumentation-Parameters">Parameters</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/><col style="width: 170.0px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Parameter name</strong></p></th><th class="confluenceTh"><p><strong>Type</strong></p></th><th class="confluenceTh"><p><strong>Required ?</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th></tr><tr><td class="confluenceTd"><p><code>name</code></p></td><td class="confluenceTd"><p><code>nantosueltaKilled</code> / <code>mossySourceKilled</code> / <code>monarchKilled</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);"> yes</span></p></td><td class="confluenceTd"><p>The name of the event to register</p></td></tr><tr><td class="confluenceTd"><p><code>save</code></p></td><td class="confluenceTd"><p><code>string</code></p></td><td class="confluenceTd"><p><span style="color: rgb(255,86,48);">yes</span></p></td><td class="confluenceTd"><p>A save data file serialized.</p></td></tr></tbody></table></div><h4 id="Drifter&#39;sTalesWorldsAPIdocumentation-Responses">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normal behavior</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;id&quot;: 24,
+    &quot;name&quot;: &quot;monarchKilled&quot;,
+    &quot;bounced&quot;: 1,
+    &quot;registered_at&quot;: &quot;2021-04-22 13:13:35&quot;,
+    &quot;created_at&quot;: &quot;2021-04-22T13:13:34.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2021-04-22T13:13:34.000000Z&quot;
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>Validation error</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;field&quot;: errors
+}</pre>
+</div></div></td></tr><tr><td class="confluenceTd"><p><code>400 Bad Request</code></p></td><td class="confluenceTd"><p>Auth error</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;error&quot;: &quot;invalid bearer token&quot;
+}</pre>
+</div></div></td></tr></tbody></table></div><hr/><h3 id="Drifter&#39;sTalesWorldsAPIdocumentation-GET/monarch">GET /monarch</h3><p>Get the name of the last player who killed the monarch</p><h4 id="Drifter&#39;sTalesWorldsAPIdocumentation-Authorization.1">Authorization</h4><p>This endpoint is public</p><h4 id="Drifter&#39;sTalesWorldsAPIdocumentation-Responses.1">Responses</h4><div class="table-wrap"><table data-layout="default" class="confluenceTable"><colgroup><col style="width: 226.67px;"/><col style="width: 226.67px;"/><col style="width: 226.67px;"/></colgroup><tbody><tr><th class="confluenceTh"><p><strong>Response code</strong></p></th><th class="confluenceTh"><p><strong>Description</strong></p></th><th class="confluenceTh"><p><strong>Example</strong></p></th></tr><tr><td class="confluenceTd"><p><code>200 Ok</code></p></td><td class="confluenceTd"><p>Normall response</p></td><td class="confluenceTd"><div class="code panel pdl" style="border-width: 1px;"><div class="codeContent panelContent pdl">
+<pre class="syntaxhighlighter-pre" data-syntaxhighlighter-params="brush: java; gutter: false; theme: Confluence" data-theme="Confluence">{
+    &quot;id&quot;: 4,
+    &quot;name&quot;: &quot;MangeTesMorts&quot;,
+    &quot;created_at&quot;: &quot;2021-04-22T13:13:35.000000Z&quot;,
+    &quot;updated_at&quot;: &quot;2021-04-22T13:13:35.000000Z&quot;
+}</pre>
+</div></div></td></tr></tbody></table></div>
+                    </div>
+
+                    
+                                                      
+                </div>             </div> 
+            <div id="footer" role="contentinfo">
+                <section class="footer-body">
+                    <p>Document generated by Confluence on Aug 25, 2021 21:35</p>
+                    <div id="footer-logo"><a href="http://www.atlassian.com/">Atlassian</a></div>
+                </section>
+            </div>
+        </div>     </body>
+</html>
