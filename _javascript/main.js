@@ -141,6 +141,7 @@ document.addEventListener('DOMContentLoaded', () => {
           isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/ansible',
+            docs: 'docs/Ansible-playbooks_335478819.html',
           },
         },
         {
