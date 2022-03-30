@@ -262,7 +262,6 @@ document.addEventListener('DOMContentLoaded', () => {
           isProtected: true,
           name: 'drifters-tales-worlds',
           description: 'Connected-worlds service for our upcoming game.',
-          isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifters-tales-worlds',
           },
