@@ -405,12 +405,36 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'projects',
           color: 'warning',
           icon: 'fas fa-gamepad',
-          name: 'drifter-tales',
-          description: 'Next game to be delivered on PC.',
+          name: 'arena-client-desktop',
+          description: 'Web client made with VueJS.',
           isProtected: true,
-          isUnderConception: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/arena-client-desktop',
+            website: 'https://play.thefirstspine.fr/',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-gamepad',
+          name: 'arena-client-mobile',
+          description: 'Web mobile client made with VueJS.',
+          isProtected: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/arena-client-mobile',
+            website: 'https://play.m.thefirstspine.fr/',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-gamepad',
+          name: 'drifters-tales',
+          description: 'Game made with Unity.',
+          isProtected: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
+            website: 'https://www.thefirstspine.fr/drifters-tales',
           },
         },
         {
@@ -420,7 +444,6 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'yield',
           description: 'Yield allows your app to communicate with the TFS platform with your own authentication and services.',
           isProtected: true,
-          isOnHold: true,
           urls: {
             website: 'https://yield.thefirstspine.fr/',
             docs: 'docs/Yield_174063667.html',

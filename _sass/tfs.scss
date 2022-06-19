@@ -1,9 +1,11 @@
 .hero {
   &.is-tfs {
     background-color: black;
-    background-image: url(https://www.thefirstspine.fr/images/top-summoner.png);
+    background-image: url(https://www.thefirstspine.fr/images/background-renewal-2021.jpg);
     background-repeat: no-repeat;
     background-position: top center;
+    background-size: cover;
+    background-attachment: fixed;
     * {
       text-shadow: black 0 0 20px, black 0 0 20px;
     }
