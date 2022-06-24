@@ -439,19 +439,6 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'projects',
           color: 'warning',
-          icon: 'fas fa-terminal',
-          name: 'yield',
-          description: 'Yield allows your app to communicate with the TFS platform with your own authentication and services.',
-          isProtected: true,
-          urls: {
-            website: 'https://yield.thefirstspine.fr/',
-            docs: 'docs/Yield_174063667.html',
-            repo: 'https://github.com/thefirstspine/yield',
-          },
-        },
-        {
-          part: 'projects',
-          color: 'warning',
           icon: 'fas fa-chart-bar',
           name: 'solid-pancake-viewer',
           description: 'Data viewer for Solid Pancake. Made with Laravel and Vue JS.',
