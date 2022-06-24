@@ -439,6 +439,17 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           part: 'projects',
           color: 'warning',
+          icon: 'fas fa-gamepad',
+          name: 'adventures',
+          description: 'Some secret project',
+          isProtected: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/adventures',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
           icon: 'fas fa-chart-bar',
           name: 'solid-pancake-viewer',
           description: 'Data viewer for Solid Pancake. Made with Laravel and Vue JS.',
