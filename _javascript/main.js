@@ -429,7 +429,7 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'warning',
           icon: 'fas fa-gamepad',
           name: 'drifters-tales',
-          description: 'Game made with Unity.',
+          description: 'The solo made with Unity. Uses messenging and auth services for some online purposes.',
           isProtected: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
@@ -441,8 +441,9 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'warning',
           icon: 'fas fa-gamepad',
           name: 'adventures',
-          description: 'Some secret project',
+          description: 'Adventures is the code name of our upcoming project in web3. Will be open source once exting from beta.',
           isProtected: true,
+          isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/adventures',
           },
