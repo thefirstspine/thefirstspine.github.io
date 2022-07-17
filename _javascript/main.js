@@ -437,9 +437,9 @@ document.addEventListener('DOMContentLoaded', () => {
           },
         },
         {
-          part: 'projects',
-          color: 'warning',
-          icon: 'fas fa-gamepad',
+          part: 'services',
+          color: 'danger',
+          icon: 'fab fa-ethereum',
           name: 'adventures',
           description: 'Adventures is the code name of our upcoming project in web3. Will be open source once exting from beta.',
           isProtected: true,
