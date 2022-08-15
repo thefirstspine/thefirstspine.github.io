@@ -259,7 +259,6 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'services',
           color: 'danger',
           icon: 'fas fa-globe-europe',
-          isProtected: true,
           name: 'drifters-tales-worlds',
           description: 'Connected-worlds service for our upcoming game.',
           urls: {
