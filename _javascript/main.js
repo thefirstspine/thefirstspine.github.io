@@ -447,6 +447,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'drifter-tales-relaunch',
           description: 'The solo game made with Unity. Relaunch of the first version.',
           isProtected: true,
+          isUnderConception: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales-relaunch',
             website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
