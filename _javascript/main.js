@@ -260,7 +260,8 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'danger',
           icon: 'fas fa-globe-europe',
           name: 'drifters-tales-worlds',
-          description: 'Connected-worlds service for our upcoming game.',
+          description: 'Connected-worlds service for Drifter\'s Tales.',
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifters-tales-worlds',
           },
@@ -271,6 +272,7 @@ document.addEventListener('DOMContentLoaded', () => {
           icon: 'fas fa-burn',
           name: 'flame',
           description: 'Data computing & analysis on-demand on CLIs served by Google Fire.',
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/flame',
             docs: 'docs/Data-computing-with-Flame_63340602.html',
@@ -406,6 +408,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'arena-client-desktop',
           description: 'Web client made with VueJS.',
           isProtected: true,
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/arena-client-desktop',
             website: 'https://play.thefirstspine.fr/',
@@ -418,6 +421,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'arena-client-mobile',
           description: 'Web mobile client made with VueJS.',
           isProtected: true,
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/arena-client-mobile',
             website: 'https://play.m.thefirstspine.fr/',
@@ -428,23 +432,36 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'warning',
           icon: 'fas fa-gamepad',
           name: 'drifters-tales',
-          description: 'The solo made with Unity. Uses messenging and auth services for some online purposes.',
+          description: 'The solo game made with Unity. Uses messaging and auth services for some online purposes.',
           isProtected: true,
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/drifter-tales',
             website: 'https://www.thefirstspine.fr/drifters-tales',
           },
         },
         {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-gamepad',
+          name: 'drifter-tales-relaunch',
+          description: 'The solo game made with Unity. Relaunch of the first version.',
+          isProtected: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/drifter-tales-relaunch',
+            website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
+          },
+        },
+        {
           part: 'services',
           color: 'danger',
-          icon: 'fab fa-ethereum',
-          name: 'adventures',
-          description: 'Adventures is the code name of our upcoming project in web3. Will be open source once exting from beta.',
+          icon: 'fas fa-chess-rook',
+          name: 'arena-revamp',
+          description: 'Next Arena top-level API for managing games in heavy clients.',
           isProtected: true,
           isUnderConception: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/adventures',
+            repo: 'https://github.com/thefirstspine/arena-revamp',
           },
         },
         {
@@ -454,6 +471,7 @@ document.addEventListener('DOMContentLoaded', () => {
           name: 'solid-pancake-viewer',
           description: 'Data viewer for Solid Pancake. Made with Laravel and Vue JS.',
           isProtected: true,
+          isDeprecated: true,
           urls: {
             repo: 'https://github.com/thefirstspine/solid-pancake-viewer',
           },
