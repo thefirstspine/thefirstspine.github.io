@@ -476,6 +476,18 @@ document.addEventListener('DOMContentLoaded', () => {
             repo: 'https://github.com/thefirstspine/solid-pancake-viewer',
           },
         },
+        {
+          part: 'projects',
+          color: 'warning',
+          icon: 'fas fa-chess-rook',
+          name: 'arena-client',
+          description: 'Heavy client for next Arena version.',
+          isProtected: true,
+          isUnderConception: true,
+          urls: {
+            repo: 'https://github.com/thefirstspine/arena-client',
+          },
+        },
       ].sort(byName)
     }
   })
