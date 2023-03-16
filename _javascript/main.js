@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
           color: 'danger',
           icon: 'fas fa-hat-wizard',
           name: 'matches',
-          description: 'The matches service is the service that will manage all the games & wizards accounts in the online products.',
+          description: 'The matches service is the service that will manage all the games in the online products.',
           urls: {
             repo: 'https://github.com/thefirstspine/matches',
             docs: 'docs/Arena_688144.html',
