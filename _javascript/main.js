@@ -107,11 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           name: "solid-pancake",
           url: "https://solid-pancake.thefirstspine.fr/status",
-        },
-        {
-          name: "drifters-tales-worlds",
-          url: "https://drifters-tales-worlds.thefirstspine.fr/status",
-        },
+        }
       ],
       realms: [
         {
@@ -381,13 +377,13 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'projects',
           color: 'warning',
           icon: 'fas fa-gamepad',
-          name: 'drifter-tales-relaunch',
+          name: 'drifter-tales',
           description: 'The solo game made with Unity. Relaunch of the first version.',
           isProtected: true,
           isUnderConception: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/drifter-tales-relaunch',
-            website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
+            repo: 'https://github.com/thefirstspine/drifter-tales',
+            website: 'https://www.thefirstspine.fr/drifters-tales',
           },
         },
         {
