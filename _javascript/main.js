@@ -77,7 +77,7 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       services: [
         {
-          name: "arena",
+          name: "arena (WIP)",
           url: "https://arena.thefirstspine.fr/status",
         },
         {
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
           url: "https://calendar.thefirstspine.fr/status",
         },
         {
-          name: "matches",
+          name: "matches (WIP)",
           url: "https://matches.thefirstspine.fr/status",
         },
         {
