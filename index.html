@@ -98,12 +98,6 @@
             <app-status v-for="service in services" v-bind:key="service.name" :service="service">
             </app-status>
           </nav>
-          <hr />
-          <h3 class="is-size-3 mb-6">Realms status</h3>
-          <nav class="level">
-            <app-status v-for="realm in realms" v-bind:key="realm.name" :service="realm">
-            </app-status>
-          </nav>
         </div>
       </div>
     </section>

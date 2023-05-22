@@ -77,6 +77,10 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       services: [
         {
+          name: "arena",
+          url: "https://arena.thefirstspine.fr/status",
+        },
+        {
           name: "auth",
           url: "https://auth.thefirstspine.fr/status",
         },
@@ -87,6 +91,10 @@ document.addEventListener('DOMContentLoaded', () => {
         {
           name: "calendar",
           url: "https://calendar.thefirstspine.fr/status",
+        },
+        {
+          name: "matches",
+          url: "https://matches.thefirstspine.fr/status",
         },
         {
           name: "messaging",
@@ -108,24 +116,6 @@ document.addEventListener('DOMContentLoaded', () => {
           name: "solid-pancake",
           url: "https://solid-pancake.thefirstspine.fr/status",
         }
-      ],
-      realms: [
-        {
-          name: "Sanctuaire",
-          url: "https://sanctuaire.arena.thefirstspine.fr/status",
-        },
-        {
-          name: "Sanctuary",
-          url: "https://sanctuary.arena.thefirstspine.fr/status",
-        },
-        {
-          name: "Refuge",
-          url: "https://refuge.arena.thefirstspine.fr/status",
-        },
-        {
-          name: "Shelter",
-          url: "https://shelter.arena.thefirstspine.fr/status",
-        },
       ],
       links: [
         {
