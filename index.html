@@ -14,7 +14,7 @@
 
   <body>
   <div id="app">
-    <section class="hero is-black is-small">
+    <section class="hero is-warning is-medium">
       <div class="hero-head">
         <nav class="navbar">
           <div class="container">
@@ -55,8 +55,21 @@
       <div class="hero-body">
         <div class="container has-text-centered">
           <h1 class="title is-1 is-spaced is-uppercase my-6">
-            Building online <span class="has-text-info">board games</span><br />through <span class="has-text-info">open source</span> technology
+            Building online <span class="has-text-danger">board games</span><br />through <span class="has-text-danger">open source</span> technology
           </h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero is-danger is-small">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title">
+            Big roundup in progress!
+          </p>
+          <p class="subtitle">
+            In order to prepare the migration to another level with new games, we have deprecated many services and some big changes are coming.
+          </p>
         </div>
       </div>
     </section>
@@ -66,26 +79,22 @@
         <a name="infrastructure"></a>
         <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info has-text-centered">Infrastructure</h1>
         <p class="is-size-4 my-3 has-text-centered">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" :link="link">
-        </link-card>
+        <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" :link="link" />
         
         <a name="services"></a>
         <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger has-text-centered">Services</h1>
         <p class="is-size-4 my-3 has-text-centered">The TFS platform is powered by a Service-Oriented Architecture. These services are served by Boiler in containers.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'services')" :link="link">
-        </link-card>
+        <link-card v-for="link in links.filter((l) => l.part === 'services')" :link="link" />
 
         <a name="tools"></a>
         <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success has-text-centered">Tools & assets</h1>
         <p class="is-size-4 my-3 has-text-centered">All the tools & the assets we need to construct TFS apps.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'tools')" :link="link">
-        </link-card>
+        <link-card v-for="link in links.filter((l) => l.part === 'tools')" :link="link" />
         
         <a name="projects"></a>
         <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning has-text-centered">Projects</h1>
         <p class="is-size-4 my-3 has-text-centered">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'projects')" :link="link">
-        </link-card>
+        <link-card v-for="link in links.filter((l) => l.part === 'projects')" :link="link" />
         
       </div>
     </section>
