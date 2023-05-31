@@ -77,8 +77,8 @@ document.addEventListener('DOMContentLoaded', () => {
     data: {
       services: [
         {
-          name: "arena",
-          url: "https://arena.thefirstspine.fr/status",
+          name: "arena2 (WIP)",
+          url: "https://arena2.thefirstspine.fr/status",
         },
         {
           name: "auth",
@@ -93,7 +93,7 @@ document.addEventListener('DOMContentLoaded', () => {
           url: "https://calendar.thefirstspine.fr/status",
         },
         {
-          name: "matches",
+          name: "matches (WIP)",
           url: "https://matches.thefirstspine.fr/status",
         },
         {
@@ -380,24 +380,24 @@ document.addEventListener('DOMContentLoaded', () => {
           part: 'services',
           color: 'danger',
           icon: 'fas fa-chess-rook',
-          name: 'arena',
+          name: 'arena2',
           description: 'Next Arena top-level API for managing games in heavy clients.',
           isProtected: true,
           isUnderConception: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/arena',
+            repo: 'https://github.com/thefirstspine/arena2',
           },
         },
         {
           part: 'projects',
           color: 'warning',
           icon: 'fas fa-chess-rook',
-          name: 'arena-client',
+          name: 'arena2-client',
           description: 'Heavy client for next Arena version.',
           isProtected: true,
           isUnderConception: true,
           urls: {
-            repo: 'https://github.com/thefirstspine/arena-client',
+            repo: 'https://github.com/thefirstspine/arena2-client',
           },
         },
       ].sort(byName)
