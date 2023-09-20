@@ -364,19 +364,19 @@ Vue
       </h2>
       <hr class="my-3" />
       <p class="has-text-centered">
-        <a v-if="link.urls.repo" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.repo">
+        <a v-if="link.urls.repo" :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.repo">
           <i class="fab fa-github"></i>
         </a>
-        <a v-if="link.urls.docs" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docs">
+        <a v-if="link.urls.docs" :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docs">
           <i class="fas fa-book"></i>
         </a>
-        <a v-if="link.urls.npm" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.npm">
+        <a v-if="link.urls.npm" :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.npm">
           <i class="fab fa-npm"></i>
         </a>
-        <a v-if="link.urls.docker" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docker">
+        <a v-if="link.urls.docker" :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.docker">
           <i class="fab fa-docker"></i>
         </a>
-        <a v-if="link.urls.website" :class="'button is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.website">
+        <a v-if="link.urls.website" :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="link.urls.website">
           <i class="fas fa-link"></i>
         </a>
       </p>
