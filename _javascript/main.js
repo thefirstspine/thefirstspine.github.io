@@ -53,7 +53,6 @@ Vue
             icon: 'fab fa-redhat',
             name: 'ansible',
             description: 'Ansible playbooks to setup nodes & deploy apps.',
-            isUnderConception: true,
             urls: {
               repo: 'https://github.com/thefirstspine/ansible',
               docs: 'docs/Ansible-playbooks_335478819.html',
