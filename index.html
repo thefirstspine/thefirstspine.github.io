@@ -13,103 +13,103 @@
   </head>
 
   <body>
-  <div id="app">
-    <section class="hero is-black is-small">
-      <div class="hero-head">
-        <nav class="navbar">
-          <div class="container">
-            <div class="navbar-brand">
-              <span class="navbar-item is-size-3 has-text-weight-bold is-uppercase">
-                <i class="fas fa-code"></i> &nbsp; The First Spine
-              </span>
-            </div>
-            <div id="navbarMenuHeroB" class="navbar-menu">
-              <div class="navbar-end">
-                <span class="navbar-item">
-                  <a target="_blank" href="https://www.github.com/thefirstspine">
-                    <span class="icon">
-                      <i class="fab fa-github"></i>
-                    </span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a target="_blank" href="https://www.facebook.com/thefirstspine">
-                    <span class="icon">
-                      <i class="fab fa-facebook"></i>
-                    </span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a target="_blank" href="https://www.twitter.com/thefirstspine">
-                    <span class="icon">
-                      <i class="fab fa-twitter"></i>
-                    </span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a target="_blank" href="https://www.youtube.com/@thefirstspine9534">
-                    <span class="icon">
-                      <i class="fab fa-youtube"></i>
-                    </span>
-                  </a>
-                </span>
-                <span class="navbar-item">
-                  <a target="_blank" href="https://www.twitch.tv/teddydeveloppeunjeu">
-                    <span class="icon">
-                      <i class="fab fa-twitch"></i>
-                    </span>
-                  </a>
+    <div id="app">
+      <section class="hero is-black is-small">
+        <div class="hero-head">
+          <nav class="navbar">
+            <div class="container">
+              <div class="navbar-brand">
+                <span class="navbar-item is-size-3 has-text-weight-bold is-uppercase">
+                  <i class="fas fa-code"></i> &nbsp; The First Spine
                 </span>
               </div>
+              <div id="navbarMenuHeroB" class="navbar-menu">
+                <div class="navbar-end">
+                  <span class="navbar-item">
+                    <a target="_blank" href="https://www.github.com/thefirstspine">
+                      <span class="icon">
+                        <i class="fab fa-github"></i>
+                      </span>
+                    </a>
+                  </span>
+                  <span class="navbar-item">
+                    <a target="_blank" href="https://www.facebook.com/thefirstspine">
+                      <span class="icon">
+                        <i class="fab fa-facebook"></i>
+                      </span>
+                    </a>
+                  </span>
+                  <span class="navbar-item">
+                    <a target="_blank" href="https://www.twitter.com/thefirstspine">
+                      <span class="icon">
+                        <i class="fab fa-twitter"></i>
+                      </span>
+                    </a>
+                  </span>
+                  <span class="navbar-item">
+                    <a target="_blank" href="https://www.youtube.com/@thefirstspine9534">
+                      <span class="icon">
+                        <i class="fab fa-youtube"></i>
+                      </span>
+                    </a>
+                  </span>
+                  <span class="navbar-item">
+                    <a target="_blank" href="https://www.twitch.tv/teddydeveloppeunjeu">
+                      <span class="icon">
+                        <i class="fab fa-twitch"></i>
+                      </span>
+                    </a>
+                  </span>
+                </div>
+              </div>
             </div>
-          </div>
-        </nav>
-      </div>
-    
-      <div class="hero-body">
-        <div class="container has-text-centered">
-          <h1 class="title is-1 is-spaced is-uppercase my-6">
-            Building online <span class="has-text-warning">board games</span><br />through <span class="has-text-warning">open source</span> technology
-          </h1>
+          </nav>
         </div>
-      </div>
-    </section>
+      
+        <div class="hero-body">
+          <div class="container has-text-centered">
+            <h1 class="title is-1 is-spaced is-uppercase my-6">
+              Building online <span class="has-text-warning">board games</span><br />through <span class="has-text-warning">open source</span> technology
+            </h1>
+          </div>
+        </div>
+      </section>
 
-    <section class="section">
-      <div class="container">
-        <a name="infrastructure"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info has-text-centered">Infrastructure</h1>
-        <p class="is-size-4 my-3 has-text-centered">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" v-key="link.name" :link="link"></link-card>
-        
-        <a name="services"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger has-text-centered">Services</h1>
-        <p class="is-size-4 my-3 has-text-centered">The TFS platform is powered by a Service-Oriented Architecture. These services are served by Boiler in containers.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'services')" v-key="link.name" :link="link"></link-card>
+      <section class="section">
+        <div class="container">
+          <a name="infrastructure"></a>
+          <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info has-text-centered">Infrastructure</h1>
+          <p class="is-size-4 my-3 has-text-centered">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
+          <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" v-key="link.name" :link="link"></link-card>
+          
+          <a name="services"></a>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger has-text-centered">Services</h1>
+          <p class="is-size-4 my-3 has-text-centered">The TFS platform is powered by a Service-Oriented Architecture. These services are served by Boiler in containers.</p>
+          <link-card v-for="link in links.filter((l) => l.part === 'services')" v-key="link.name" :link="link"></link-card>
 
-        <a name="tools"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success has-text-centered">Tools & assets</h1>
-        <p class="is-size-4 my-3 has-text-centered">All the tools & the assets we need to construct TFS apps.</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'tools')" v-key="link.name" :link="link"></link-card>
-        
-        <a name="projects"></a>
-        <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning has-text-centered">Projects</h1>
-        <p class="is-size-4 my-3 has-text-centered">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
-        <link-card v-for="link in links.filter((l) => l.part === 'projects')" v-key="link.name" :link="link"></link-card>
-        
-      </div>
-    </section>
+          <a name="tools"></a>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success has-text-centered">Tools & assets</h1>
+          <p class="is-size-4 my-3 has-text-centered">All the tools & the assets we need to construct TFS apps.</p>
+          <link-card v-for="link in links.filter((l) => l.part === 'tools')" v-key="link.name" :link="link"></link-card>
+          
+          <a name="projects"></a>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning has-text-centered">Projects</h1>
+          <p class="is-size-4 my-3 has-text-centered">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
+          <link-card v-for="link in links.filter((l) => l.part === 'projects')" v-key="link.name" :link="link"></link-card>
+          
+        </div>
+      </section>
 
-    <footer class="footer">
-      <div class="content has-text-centered is-size-7">
-        <p>
-          <a href="https://teddygandon.github.io/" target="_blank">
-            <i class="fas fa-code"></i> TFS was developed by Teddy GANDON
-          </a>
-        </p>
-      </div>
-    </footer>
-  </div>
-    <script type="text/javascript" src="lib/main.js"></script>
+      <footer class="footer">
+        <div class="content has-text-centered is-size-7">
+          <p>
+            <a href="https://teddygandon.github.io/" target="_blank">
+              <i class="fas fa-code"></i> TFS was developed by Teddy GANDON
+            </a>
+          </p>
+        </div>
+      </footer>
+    </div>
+  <script type="text/javascript" src="lib/main.js"></script>
   </body>
 </html>

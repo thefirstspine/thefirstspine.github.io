@@ -4,48 +4,6 @@ Vue
   .createApp({
     setup() {
       return {
-        services: [
-          {
-            name: "arena",
-            url: "https://arena.thefirstspine.fr/status",
-          },
-          {
-            name: "auth",
-            url: "https://auth.thefirstspine.fr/status",
-          },
-          {
-            name: "bots",
-            url: "https://bots.thefirstspine.fr/status",
-          },
-          {
-            name: "calendar",
-            url: "https://calendar.thefirstspine.fr/status",
-          },
-          {
-            name: "matches",
-            url: "https://matches.thefirstspine.fr/status",
-          },
-          {
-            name: "messaging",
-            url: "https://messaging.thefirstspine.fr/status",
-          },
-          {
-            name: "rest",
-            url: "https://rest.thefirstspine.fr/status",
-          },
-          {
-            name: "rooms",
-            url: "https://rooms.thefirstspine.fr/status",
-          },
-          {
-            name: "shop",
-            url: "https://shop.thefirstspine.fr/status",
-          },
-          {
-            name: "solid-pancake",
-            url: "https://solid-pancake.thefirstspine.fr/status",
-          }
-        ],
         links: [
           {
             part: 'infrastructure',
@@ -55,7 +13,6 @@ Vue
             description: 'Ansible playbooks to setup nodes & deploy apps.',
             urls: {
               repo: 'https://github.com/thefirstspine/ansible',
-              docs: 'docs/Ansible-playbooks_335478819.html',
             },
           },
           {
@@ -66,7 +23,6 @@ Vue
             description: 'The matches service is the service that will manage all the games in the online products.',
             urls: {
               repo: 'https://github.com/thefirstspine/matches',
-              docs: 'docs/Arena_688144.html',
             },
           },
           {
@@ -78,8 +34,8 @@ Vue
             description: 'Main authentification service. Manages registrations & token generation.',
             urls: {
               repo: 'https://github.com/thefirstspine/auth',
-              docs: 'docs/Auth_15958333.html',
             },
+            deployBadge: 'https://github.com/thefirstspine/auth/actions/workflows/deploy.yml/badge.svg',
           },
           {
             part: 'services',
@@ -90,7 +46,6 @@ Vue
             description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
             urls: {
               repo: 'https://github.com/thefirstspine/bots',
-              docs: 'docs/Bots_305725445.html',
             },
           },
           {
@@ -111,8 +66,8 @@ Vue
             description: 'Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.',
             urls: {
               repo: 'https://github.com/thefirstspine/messaging',
-              docs: 'docs/Messaging_40993212.html',
             },
+            deployBadge: 'https://github.com/thefirstspine/messaging/actions/workflows/deploy.yml/badge.svg',
           },
           {
             part: 'services',
@@ -122,7 +77,6 @@ Vue
             description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
             urls: {
               repo: 'https://github.com/thefirstspine/rest',
-              docs: 'docs/Rest_40993179.html',
             },
           },
           {
@@ -144,7 +98,6 @@ Vue
             description: 'Manages all the purshases with real money. Works with the Stripe API.',
             urls: {
               repo: 'https://github.com/thefirstspine/shop',
-              docs: 'docs/Shop_303038481.html',
             },
           },
           {
@@ -155,8 +108,8 @@ Vue
             description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
             urls: {
               repo: 'https://github.com/thefirstspine/solid-pancake',
-              docs: 'docs/Solid-Pancake_37355521.html',
             },
+            deployBadge: 'https://github.com/thefirstspine/solid-pancake/actions/workflows/deploy.yml/badge.svg',
           },
           {
             part: 'services',
@@ -178,7 +131,6 @@ Vue
             urls: {
               repo: 'https://github.com/thefirstspine/certificate-authority',
               npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
-              docs: 'docs/Endpoint-protections_15958663.html',
             },
           },
           {
@@ -295,14 +247,15 @@ Vue
             part: 'projects',
             color: 'warning',
             icon: 'fas fa-gamepad',
-            name: 'drifter-tales',
+            name: 'drifter-tales-relaunch',
             description: 'The solo game made with Unity. Relaunch of the first version.',
             isProtected: true,
             isUnderConception: true,
             urls: {
-              repo: 'https://github.com/thefirstspine/drifter-tales',
-              website: 'https://www.thefirstspine.fr/drifters-tales',
+              repo: 'https://github.com/thefirstspine/drifter-tales-relaunch',
+              website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
             },
+            deployBadge: 'https://github.com/thefirstspine/drifters-tales-relaunch/actions/workflows/build.yml/badge.svg',
           },
           {
             part: 'services',
@@ -399,6 +352,9 @@ Vue
       </h2>
       <p>
         {{ link.description }}
+      </p>
+      <p v-if="link.deployBadge" class="has-text-centered mt-4">
+        <img :src="link.deployBadge" />
       </p>
     </div>`,
     props: ['link'],
