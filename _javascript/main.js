@@ -309,7 +309,9 @@ Vue
   .component('link-card', {
     template: `<div class="tile link-tile is-4 px-2 py-2 mt-6 mb-3">
       <h2 class="is-size-4 has-text-centered">
-        <i :class="link.icon + ' has-text-' + link.color"></i><br />
+        <p>
+          <span :class="'square-app has-box-shadow-' + link.color + ' is-' + link.color">{{ link.name.replace('@thefirstspine/', '').substring(0,2).toUpperCase() }}</span>
+        </p>
         {{ link.name }}
         <span class="bd-snippet-tag" v-if="link.isProtected">
           Private repo

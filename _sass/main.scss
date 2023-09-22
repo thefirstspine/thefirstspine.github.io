@@ -33,7 +33,6 @@ $text: $black;
 @import "tfs.scss";
 @import "status.scss";
 @import "links.scss";
-@import "docs.scss";
 
 .mt-7 {
   margin-top: 5rem;
@@ -49,4 +48,97 @@ $text: $black;
 
 .mt-10 {
   margin-top: 15rem;
+}
+
+.has-shadow-warning {
+  text-shadow: $warning 0 0 50px;
+}
+
+.has-shadow-primary {
+  text-shadow: $primary 0 0 50px;
+}
+
+.has-shadow-link {
+  text-shadow: $link 0 0 50px;
+}
+
+.has-shadow-info {
+  text-shadow: $info 0 0 50px;
+}
+
+.has-shadow-danger {
+  text-shadow: $danger 0 0 50px;
+}
+
+.has-shadow-white {
+  text-shadow: $white 0 0 50px;
+}
+
+.has-shadow-success {
+  text-shadow: $success 0 0 50px;
+}
+
+.has-box-shadow-warning {
+  box-shadow: $warning 0 0 50px;
+}
+
+.has-box-shadow-primary {
+  box-shadow: $primary 0 0 50px;
+}
+
+.has-box-shadow-link {
+  box-shadow: $link 0 0 50px;
+}
+
+.has-box-shadow-info {
+  box-shadow: $info 0 0 50px;
+}
+
+.has-box-shadow-danger {
+  box-shadow: $danger 0 0 50px;
+}
+
+.has-box-shadow-white {
+  box-shadow: $white 0 0 50px;
+}
+
+.has-box-shadow-success {
+  box-shadow: $success 0 0 50px;
+}
+
+.square-app {
+  border: .1em solid;
+  color: #EEE;
+  border-color: #EEE;
+  display: inline-block;
+  padding: .1em 0;
+  border-radius: .1em;
+  width: 2em;
+  height: 2em;
+  font-size: 2em;
+  font-weight: bold;
+  text-align: center;
+  vertical-align: middle;
+  &.is-info {
+    background-color: $info;
+  }
+  &.is-warning {
+    background-color: $warning;
+  }
+  &.is-danger {
+    background-color: $danger;
+  }
+  &.is-link {
+    background-color: $link;
+  }
+  &.is-success {
+    background-color: $success;
+  }
+  &.is-primary {
+    background-color: $primary;
+  }
+  @media (prefers-color-scheme: dark) {
+    color: #111; 
+    border-color: #111;
+  }
 }

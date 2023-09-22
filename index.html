@@ -14,7 +14,7 @@
 
   <body>
     <div id="app">
-      <section class="hero is-black is-small">
+      <section class="hero is-black is-medium">
         <div class="hero-head">
           <nav class="navbar">
             <div class="container">
@@ -69,7 +69,7 @@
         <div class="hero-body">
           <div class="container has-text-centered">
             <h1 class="title is-1 is-spaced is-uppercase my-6">
-              Building online <span class="has-text-warning">board games</span><br />through <span class="has-text-warning">open source</span> technology
+              Building online <span class="has-text-warning has-shadow-warning">board games</span><br />through <span class="has-text-warning has-shadow-warning">open source</span> technology
             </h1>
           </div>
         </div>
@@ -78,22 +78,22 @@
       <section class="section">
         <div class="container">
           <a name="infrastructure"></a>
-          <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info has-text-centered">Infrastructure</h1>
+          <h1 class="is-size-2 is-uppercase section-title mt-4 has-text-info has-text-centered has-shadow-info">Infrastructure</h1>
           <p class="is-size-4 my-3 has-text-centered">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
           <link-card v-for="link in links.filter((l) => l.part === 'infrastructure')" v-key="link.name" :link="link"></link-card>
           
           <a name="services"></a>
-          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger has-text-centered">Services</h1>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-danger has-text-centered has-shadow-danger">Services</h1>
           <p class="is-size-4 my-3 has-text-centered">The TFS platform is powered by a Service-Oriented Architecture. These services are deployed by Ansible through Github actions.</p>
           <link-card v-for="link in links.filter((l) => l.part === 'services')" v-key="link.name" :link="link"></link-card>
 
           <a name="tools"></a>
-          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success has-text-centered">Tools & assets</h1>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-success has-text-centered has-shadow-success">Tools & assets</h1>
           <p class="is-size-4 my-3 has-text-centered">All the tools & the assets we need to construct TFS apps.</p>
           <link-card v-for="link in links.filter((l) => l.part === 'tools')" v-key="link.name" :link="link"></link-card>
           
           <a name="projects"></a>
-          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning has-text-centered">Projects</h1>
+          <h1 class="is-size-2 is-uppercase section-title mt-8 has-text-warning has-text-centered has-shadow-warning">Projects</h1>
           <p class="is-size-4 my-3 has-text-centered">The projects outside of the TFS platform, but using it (third-party clients for example).</p>
           <link-card v-for="link in links.filter((l) => l.part === 'projects')" v-key="link.name" :link="link"></link-card>
           
