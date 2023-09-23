@@ -28,6 +28,7 @@ Vue
           name: 'matches',
           description: 'The matches service is the service that will manage all the games in the online products.',
           repo: 'thefirstspine/matches',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -48,6 +49,7 @@ Vue
           name: 'bots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine/bots',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -57,6 +59,7 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -84,6 +87,7 @@ Vue
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine/rooms',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -94,6 +98,7 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine/shop',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -142,6 +147,7 @@ Vue
           name: '@thefirstspine/nest-filesocket',
           description: 'This NestJS module allows you to call your app context through local file socket.',
           repo: 'thefirstspine/nest-filesocket',
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/nest-filesocket',
           },
@@ -152,6 +158,7 @@ Vue
           name: '@thefirstspine/types-matches',
           description: 'Types definition for matches resources. Contains all interfaces & build scripts.',
           repo: 'thefirstspine/types-matches',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
@@ -162,6 +169,7 @@ Vue
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
           repo: 'thefirstspine/dependency-auth',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
           },
@@ -172,6 +180,7 @@ Vue
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
           repo: 'thefirstspine/dependency-auth-nest',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
           }
@@ -182,6 +191,7 @@ Vue
           name: '@thefirstspine/messaging',
           description: 'Javascript & Typescript dependency to help developers to use the messaging net service & guard.',
           repo: 'thefirstspine/dependency-messaging',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging',
           },
@@ -192,6 +202,7 @@ Vue
           name: '@thefirstspine/messaging-nest',
           description: 'Build on top of @thefirstspine/messaging. Provides Nest services.',
           repo: 'thefirstspine/dependency-messaging-nest',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging-nest',
           }
@@ -202,6 +213,7 @@ Vue
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
           repo: 'thefirstspine/dependency-logs',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs',
           },
@@ -212,6 +224,7 @@ Vue
           name: '@thefirstspine/logs-nest',
           description: 'Build on top of @thefirstspine/logs. Provides Nest services.',
           repo: 'thefirstspine/dependency-logs-nest',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs-nest',
           }
@@ -222,6 +235,7 @@ Vue
           name: '@thefirstspine/types-rest',
           description: 'Types definition for Rest resources. Contains all interfaces & build scripts.',
           repo: 'thefirstspine/types-rest',
+          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-rest',
           },
@@ -312,6 +326,10 @@ Vue
       <h2 class="notification is-warning is-light" v-if="link.isOnHold">
         <i class="fas fa-stop-circle"></i>&nbsp; <strong>On hold</strong><br>
         This development is on hold. New projects should not use it.
+      </h2>
+      <h2 class="notification is-success is-light" v-if="link.isOnMaintenance">
+        <i class="fa fa-solid fa-mug-hot"></i>&nbsp; <strong>Maintenance</strong><br>
+        This repository is in maintenance and is subject to change.
       </h2>
       <p>
         {{ link.description }}
