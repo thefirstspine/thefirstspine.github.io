@@ -49,7 +49,6 @@ Vue
           name: 'bots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine/bots',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -117,6 +116,7 @@ Vue
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           repo: 'thefirstspine/website',
+          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
           },
