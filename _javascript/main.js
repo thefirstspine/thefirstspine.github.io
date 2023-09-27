@@ -58,7 +58,6 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -169,7 +168,6 @@ Vue
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
           repo: 'thefirstspine/dependency-auth',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
           },
@@ -180,7 +178,6 @@ Vue
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
           repo: 'thefirstspine/dependency-auth-nest',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
           }
