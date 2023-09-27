@@ -271,7 +271,11 @@ Vue
           urls: {
           },
         },
-      ].sort(byName);
+      ];
+      links.sort((a, b) => {
+        console.log(a.name, b.name, a.name >= b.name ? 1 : -1);
+        return a.name >= b.name ? 1 : -1;
+      });
       return {
         links,
         repos: jsonRepos,
@@ -341,7 +345,3 @@ Vue
     props: ['link', 'repo'],
   })
   .mount('#app');
-
-const byName = (a, b) => {
-  return a.name >= b.name ? 1 : -1;
-}
