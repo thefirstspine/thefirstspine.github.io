@@ -284,7 +284,6 @@ Vue
         },
       ];
       links.sort((a, b) => {
-        console.log(a.name, b.name, a.name >= b.name ? 1 : -1);
         return a.name >= b.name ? 1 : -1;
       });
       return {
