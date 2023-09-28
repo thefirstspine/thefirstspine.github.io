@@ -327,7 +327,7 @@ Vue
         <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
         This project is at an early conception stage and can change anytime.
       </h2>
-      <h2 class="notification is-link is-light" v-if="link.isOpenedToContributions">
+      <h2 class="notification is-primary" v-if="link.isOpenedToContributions">
         <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br>
         This repository is maintened by the TFS team and other contributors.
       </h2>
