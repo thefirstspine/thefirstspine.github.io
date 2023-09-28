@@ -96,7 +96,6 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine/shop',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -154,10 +153,21 @@ Vue
         {
           part: 'tools',
           color: 'success',
+          name: '@thefirstspine/types-arena',
+          description: 'Types definition for arena resources. Contains all interfaces & build scripts.',
+          repo: 'thefirstspine/types-arena',
+          isOnMaintenance: true,
+          urls: {
+            npm: 'https://www.npmjs.com/package/@thefirstspine/types-arena',
+          },
+        },
+        {
+          part: 'tools',
+          color: 'success',
           name: '@thefirstspine/types-matches',
           description: 'Types definition for matches resources. Contains all interfaces & build scripts.',
           repo: 'thefirstspine/types-matches',
-          isOnMaintenance: true,
+          isUnderConception: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
