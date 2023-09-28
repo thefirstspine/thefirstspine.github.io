@@ -125,6 +125,7 @@ Vue
           name: '@thefirstspine/certificate-authority',
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
           repo: 'thefirstspine/certificate-authority',
+          isOpenedToContributions: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
           },
@@ -338,7 +339,7 @@ Vue
         <i class="fas fa-stop-circle"></i>&nbsp; <strong>On hold</strong><br>
         This development is on hold. New projects should not use it.
       </h2>
-      <h2 class="notification is-success is-light" v-if="link.isOnMaintenance">
+      <h2 class="notification is-link" v-if="link.isOnMaintenance">
         <i class="fa fa-solid fa-mug-hot"></i>&nbsp; <strong>Maintenance</strong><br>
         This repository is in maintenance and is subject to change.
       </h2>
