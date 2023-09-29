@@ -303,6 +303,9 @@ Vue
         </span>
         {{ link.name }}
       </h2>
+      <p class="has-text-centered mt-4" v-if="repo !== undefined && repo.private === false">
+        <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'" />
+      </p>
       <hr class="my-3" />
       <p class="has-text-centered">
         <a :class="'button m-1 is-rounded is-outlined is-' + link.color" target="_blank" :href="'https://github.com/' + link.repo">
@@ -344,9 +347,6 @@ Vue
       </h2>
       <p>
         {{ link.description }}
-      </p>
-      <p class="has-text-centered mt-4" v-if="repo !== undefined && repo.private === false">
-        <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'" />
       </p>
     </div>`,
     props: ['link', 'repo'],
