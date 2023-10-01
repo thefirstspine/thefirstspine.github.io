@@ -345,7 +345,7 @@ Vue
         {{ link.description }}
       </p>
       <p class="has-text-centered mt-4" v-if="repo !== undefined && repo.private === false">
-        <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'" />
+        <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
       </p>
     </div>`,
     props: ['link', 'repo'],
