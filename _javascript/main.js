@@ -85,7 +85,6 @@ Vue
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine/rooms',
-          isOnMaintenance: true,
           urls: {
           },
         },
