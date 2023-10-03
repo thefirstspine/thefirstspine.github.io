@@ -104,6 +104,7 @@ Vue
           name: 'solid-pancake',
           description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
           repo: 'thefirstspine/solid-pancake',
+          isOpenedToContributions: true,
           urls: {
           },
         },
