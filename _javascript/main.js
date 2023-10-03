@@ -161,7 +161,7 @@ Vue
           name: '@thefirstspine/types-arena',
           description: 'Types definition for arena resources. Contains all interfaces & build scripts.',
           repo: 'thefirstspine/types-arena',
-          isOnMaintenance: true,
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-arena',
           },
@@ -246,9 +246,20 @@ Vue
           name: '@thefirstspine/types-rest',
           description: 'Types definition for Rest resources. Contains all interfaces & build scripts.',
           repo: 'thefirstspine/types-rest',
-          isOnMaintenance: true,
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-rest',
+          },
+        },
+        {
+          part: 'tools',
+          color: 'success',
+          name: '@thefirstspine/types-game',
+          description: 'Types definition for game (cards & decks). Contains all interfaces & build scripts.',
+          repo: 'thefirstspine/types-game',
+          isUnderConception: true,
+          urls: {
+            npm: 'https://www.npmjs.com/package/@thefirstspine/types-game',
           },
         },
         {
