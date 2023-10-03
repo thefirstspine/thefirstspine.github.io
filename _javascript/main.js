@@ -49,6 +49,7 @@ Vue
           name: 'bots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine/bots',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -58,6 +59,7 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -76,6 +78,7 @@ Vue
           name: 'rest',
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
           repo: 'thefirstspine/rest',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -95,6 +98,7 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine/shop',
+          isOnMaintenance: true,
           urls: {
           },
         },
