@@ -225,7 +225,6 @@ Vue
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
           repo: 'thefirstspine/dependency-logs',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs',
           },
