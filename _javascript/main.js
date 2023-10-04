@@ -234,7 +234,6 @@ Vue
           name: '@thefirstspine/logs-nest',
           description: 'Build on top of @thefirstspine/logs. Provides Nest services.',
           repo: 'thefirstspine/dependency-logs-nest',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs-nest',
           }
