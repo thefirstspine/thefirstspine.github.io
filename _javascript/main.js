@@ -170,9 +170,8 @@ Vue
           part: 'tools',
           color: 'success',
           name: '@thefirstspine/types-matches',
-          description: 'Types definition for matches resources. Contains all interfaces & build scripts.',
+          description: 'Types definition for matches resources.',
           repo: 'thefirstspine/types-matches',
-          isUnderConception: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
@@ -255,9 +254,8 @@ Vue
           part: 'tools',
           color: 'success',
           name: '@thefirstspine/types-game',
-          description: 'Types definition for game (cards & decks). Contains all interfaces & build scripts.',
+          description: 'Types definition for game resources (such as cards, decks, etc.)',
           repo: 'thefirstspine/types-game',
-          isUnderConception: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-game',
           },
