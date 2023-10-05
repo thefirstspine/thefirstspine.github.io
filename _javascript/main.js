@@ -202,7 +202,6 @@ Vue
           name: '@thefirstspine/messaging',
           description: 'Javascript & Typescript dependency to help developers to use the messaging net service & guard.',
           repo: 'thefirstspine/dependency-messaging',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging',
           },
