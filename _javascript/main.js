@@ -3454,7 +3454,6 @@ Vue
           name: '@thefirstspine/messaging-nest',
           description: 'Build on top of @thefirstspine/messaging. Provides Nest services.',
           repo: 'thefirstspine/dependency-messaging-nest',
-          isOnMaintenance: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging-nest',
           }
