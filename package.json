@@ -35,7 +35,7 @@
   "deprecated": false,
   "description": "Start package for Bulma",
   "devDependencies": {
-    "autoprefixer": "^10.4.15",
+    "autoprefixer": "^10.4.16",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babel-preset-es2015-ie": "^6.7.0",
@@ -67,7 +67,8 @@
     "deploy": "npm run css-deploy && npm run js-build",
     "js-build": "babel _javascript --out-dir lib",
     "js-watch": "npm run js-build -- --watch",
-    "start": "npm-run-all --parallel css-watch js-watch"
+    "start": "npm-run-all --parallel css-watch js-watch",
+    "upgrade": "npx npm-check-updates -u && npm i && git add . && git commit -m \"Updated dependencies\" && git push"
   },
   "version": "0.0.3"
 }
