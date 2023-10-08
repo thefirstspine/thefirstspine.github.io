@@ -3388,28 +3388,6 @@ Vue
         {
           part: 'tools',
           color: 'success',
-          name: '@thefirstspine/nest-filesocket',
-          description: 'This NestJS module allows you to call your app context through local file socket.',
-          repo: 'thefirstspine/nest-filesocket',
-          isDeprecated: true,
-          urls: {
-            npm: 'https://www.npmjs.com/package/@thefirstspine/nest-filesocket',
-          },
-        },
-        {
-          part: 'tools',
-          color: 'success',
-          name: '@thefirstspine/types-arena',
-          description: 'Types definition for arena resources. Contains all interfaces & build scripts.',
-          repo: 'thefirstspine/types-arena',
-          isDeprecated: true,
-          urls: {
-            npm: 'https://www.npmjs.com/package/@thefirstspine/types-arena',
-          },
-        },
-        {
-          part: 'tools',
-          color: 'success',
           name: '@thefirstspine/types-matches',
           description: 'Types definition for matches resources.',
           repo: 'thefirstspine/types-matches',
@@ -3477,17 +3455,6 @@ Vue
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs-nest',
           }
-        },
-        {
-          part: 'tools',
-          color: 'success',
-          name: '@thefirstspine/types-rest',
-          description: 'Types definition for Rest resources. Contains all interfaces & build scripts.',
-          repo: 'thefirstspine/types-rest',
-          isDeprecated: true,
-          urls: {
-            npm: 'https://www.npmjs.com/package/@thefirstspine/types-rest',
-          },
         },
         {
           part: 'tools',
