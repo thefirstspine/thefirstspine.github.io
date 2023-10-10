@@ -108,8 +108,6 @@ $text: $black;
 
 .square-app {
   border: .1em solid;
-  color: #EEE;
-  border-color: #EEE;
   display: inline-block;
   padding: .22em 0;
   border-radius: .1em;
@@ -119,6 +117,8 @@ $text: $black;
   font-weight: bold;
   text-align: center;
   vertical-align: middle;
+  color: #111; 
+  border-color: #111;
   &.is-info {
     background-color: $info;
   }
@@ -136,12 +136,5 @@ $text: $black;
   }
   &.is-primary {
     background-color: $primary;
-  }
-}
-
-@media (prefers-color-scheme: light) {
-  .square-app {
-    color: #111; 
-    border-color: #111;
   }
 }
