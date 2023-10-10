@@ -137,7 +137,10 @@ $text: $black;
   &.is-primary {
     background-color: $primary;
   }
-  @media (prefers-color-scheme: dark) {
+}
+
+@media (prefers-color-scheme: light) {
+  .square-app {
     color: #111; 
     border-color: #111;
   }
