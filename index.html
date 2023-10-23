@@ -96,6 +96,11 @@
           <h1 class="is-size-1 is-uppercase section-title mt-8 has-text-success has-text-centered has-shadow-success">Tools & assets</h1>
           <p class="is-size-4 my-3 has-text-centered">All the tools & the assets we need to construct TFS apps.</p>
           <link-card v-for="link in links.filter((l) => l.part === 'tools')" v-key="link.name" :link="link" :repo="repos.find((r) => r.full_name == link.repo)"></link-card>
+
+          <a name="contributing"></a>
+          <h1 class="is-size-1 is-uppercase section-title mt-8 has-text-primary has-text-centered has-shadow-success">Contributing to</h1>
+          <p class="is-size-4 my-3 has-text-centered">We are contributing to Open Source projects!</p>
+          <link-card v-for="link in links.filter((l) => l.part === 'contributing')" v-key="link.name" :link="link" :repo="repos.find((r) => r.full_name == link.repo)"></link-card>
         </div>
       </section>
 

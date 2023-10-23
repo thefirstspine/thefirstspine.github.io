@@ -3501,6 +3501,36 @@ Vue
           urls: {
           },
         },
+        {
+          part: 'contributing',
+          color: 'primary',
+          name: 'oneandone-cloudserver-sdk-go',
+          description: 'This SDK is a wrapper for the 1&1 REST API written in Go(lang)',
+          repo: '1and1/oneandone-cloudserver-sdk-go',
+          isProtected: false,
+          urls: {
+          },
+        },
+        {
+          part: 'contributing',
+          color: 'primary',
+          name: 'bulma',
+          description: 'Bulma is a modern CSS framework based on Flexbox.',
+          repo: 'jgthms/bulma',
+          isProtected: false,
+          urls: {
+          },
+        },
+        {
+          part: 'contributing',
+          color: 'primary',
+          name: 'nest',
+          description: 'A progressive Node.js framework for building efficient and scalable server-side applications.',
+          repo: 'nestjs/nest',
+          isProtected: false,
+          urls: {
+          },
+        },
       ];
       links.sort((a, b) => {
         return a.name >= b.name ? 1 : -1;
@@ -3517,7 +3547,7 @@ Vue
         <p>
           <span :class="'square-app has-box-shadow-' + link.color + ' is-' + link.color">{{ link.name.replace('@thefirstspine/', '').substring(0,2).toUpperCase() }}</span>
         </p>
-        <span class="bd-snippet-tag" v-if="repo === undefined || repo.private === true">
+        <span class="bd-snippet-tag" v-if="repo === undefined && (link.isProtected === true || link.isProtected === undefined)">
           <i class="fa fa-solid fa-lock"></i>
         </span>
         {{ link.name }}
