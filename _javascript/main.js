@@ -300,7 +300,7 @@ Vue
         {
           part: 'contributing',
           color: 'primary',
-          name: 'nest',
+          name: 'winston-loggly-bulk',
           description: 'A Loggly transport for winston.',
           repo: 'loggly/winston-loggly-bulk',
           urls: {
