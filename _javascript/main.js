@@ -53,7 +53,6 @@ Vue
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
           buildBadge: true,
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -74,7 +73,6 @@ Vue
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
           repo: 'thefirstspine/rest',
           buildBadge: true,
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -95,7 +93,6 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine/shop',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -152,7 +149,6 @@ Vue
           description: 'Types definition for matches resources.',
           repo: 'thefirstspine/types-matches',
           buildBadge: true,
-          isUnderConception: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
@@ -230,7 +226,6 @@ Vue
           description: 'Types definition for game resources (such as cards, decks, etc.)',
           repo: 'thefirstspine/types-game',
           buildBadge: true,
-          isUnderConception: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-game',
           },
