@@ -305,9 +305,9 @@ Vue
         {
           part: 'contributing',
           color: 'primary',
-          name: 'winston-loggly-bulk',
-          description: 'A Loggly transport for winston.',
-          repo: 'loggly/winston-loggly-bulk',
+          name: 'node-loggly-bulk',
+          description: 'A client implementation for Loggly in node.js.',
+          repo: 'loggly/node-loggly-bulk',
           urls: {
           },
         },
