@@ -15,6 +15,16 @@ Vue
           },
         },
         {
+          part: 'infrastructure',
+          color: 'info',
+          name: 'configurator',
+          description: 'Works along the Ansible playbooks to create clean & reliable dotenv configs to use in local / test envs.',
+          repo: 'thefirstspine/configurator',
+          buildBadge: true,
+          urls: {
+          },
+        },
+        {
           part: 'services',
           color: 'danger',
           name: 'matches',
