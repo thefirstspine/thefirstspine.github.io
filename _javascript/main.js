@@ -311,6 +311,15 @@ Vue
           urls: {
           },
         },
+        {
+          part: 'contributing',
+          color: 'primary',
+          name: 'sails-hook-grunt',
+          description: 'Implements support for the built-in asset pipeline and task runner in Sails.',
+          repo: 'sailshq/sails-hook-grunt',
+          urls: {
+          },
+        },
       ];
       links.sort((a, b) => {
         return a.name >= b.name ? 1 : -1;
