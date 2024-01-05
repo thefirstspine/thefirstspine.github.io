@@ -20,7 +20,6 @@ Vue
           name: 'configurator',
           description: 'Works along the Ansible playbooks to create clean & reliable dotenv configs to use in local / test envs.',
           repo: 'thefirstspine/configurator',
-          buildBadge: true,
           urls: {
           },
         },
@@ -324,8 +323,64 @@ Vue
       links.sort((a, b) => {
         return a.name >= b.name ? 1 : -1;
       });
+      const services = [
+        {
+          name: "Authentication",
+          url: "https://auth.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Arena",
+          url: "https://arena.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Bots",
+          url: "https://bots.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Events & cycles",
+          url: "https://calendar.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Matches (main realm)",
+          url: "https://bots.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Realtime messaging",
+          url: "https://messaging.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Game assets",
+          url: "https://rest.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Payments & shop",
+          url: "https://shop.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Bots",
+          url: "https://bots.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+        {
+          name: "Products usage",
+          url: "https://solid-pancake.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
+      ];
+      services.sort((a, b) => {
+        return a.name >= b.name ? 1 : -1;
+      });
       return {
         links,
+        services,
       };
     }
   })
@@ -382,10 +437,32 @@ Vue
       <p>
         {{ link.description }}
       </p>
-      <p class="has-text-centered mt-4" v-if="buildBadge === true">
+      <p class="has-text-centered mt-4" v-if="link.buildBadge === true">
         <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
       </p>
     </div>`,
-    props: ['link', 'repo'],
+    props: ['link'],
+  })
+  .component('status-tile', {
+    template: `<div class="tile link-tile is-2 px-2 py-2 mt-1 mb-1">
+      <i v-if="status === true" class="fas fa-check-circle has-text-success"></i>
+      <i v-if="status === false" class="fas fa-exclamation-circle has-text-danger"></i>
+      <i v-if="status === null" class="fas fa-question-circle has-text-warning"></i>
+      {{ service.name }}
+    </div>`,
+    setup: async (proxy) => {
+      const data = {
+        status: null,
+      };
+      try {
+        const response = await fetch(proxy.service.url);
+        const responseJson = await response.json();
+        data.status = proxy.service.validate(responseJson);
+      } catch (e) {
+        data.status = false;
+      }
+      return data;
+    },
+    props: ['service'],
   })
   .mount('#app');
