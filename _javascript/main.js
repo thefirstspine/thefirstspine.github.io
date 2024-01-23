@@ -356,7 +356,7 @@ Vue
         },
         {
           name: "Game assets",
-          url: "https://rest.thefirstspine.fr/status",
+          url: "https://game-assets.thefirstspine.fr/status",
           validate: (r) => r.status === "ok",
         },
         {
