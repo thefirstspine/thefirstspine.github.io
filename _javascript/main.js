@@ -78,10 +78,11 @@ Vue
         {
           part: 'services',
           color: 'danger',
-          name: 'rest',
+          name: 'game-assets',
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
-          repo: 'thefirstspine/rest',
+          repo: 'thefirstspine/game-assets',
           buildBadge: true,
+          isOnMaintenance: true,
           urls: {
           },
         },
