@@ -248,7 +248,6 @@ Vue
           isProtected: true,
           isUnderConception: true,
           repo: 'thefirstspine/drifters-tales-relaunch',
-          buildBadge: true,
           urls: {
             website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
           },
