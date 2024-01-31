@@ -249,7 +249,40 @@ Vue
           isUnderConception: true,
           repo: 'thefirstspine/drifters-tales-relaunch',
           urls: {
-            website: 'https://www.thefirstspine.fr/drifters-tales-relaunch',
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          name: 'drifters-tales-legacy',
+          description: 'The solo game made with Unity. Relaunch of the first version.',
+          isProtected: true,
+          isDeprecated: true,
+          repo: 'thefirstspine/drifters-tales-legacy',
+          urls: {
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          name: 'arena-client-mobile',
+          description: 'Web-based mobile client for Arena.',
+          isProtected: true,
+          isDeprecated: true,
+          repo: 'thefirstspine/arena-client-mobile',
+          urls: {
+          },
+        },
+        {
+          part: 'projects',
+          color: 'warning',
+          name: 'arena-client-desktop',
+          description: 'Web-based desktop client for Arena.',
+          isProtected: true,
+          isDeprecated: true,
+          repo: 'thefirstspine/arena-client-desktop',
+          urls: {
+            website: 'https://www.thefirstspine.fr/arena-client-desktop',
           },
         },
         {
