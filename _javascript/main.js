@@ -255,7 +255,7 @@ Vue
           part: 'projects',
           color: 'warning',
           name: 'drifters-tales-legacy',
-          description: 'The solo game made with Unity. Relaunch of the first version.',
+          description: 'The first verion of the solo game made with Unity.',
           isProtected: true,
           isDeprecated: true,
           repo: 'thefirstspine/drifters-tales-legacy',
