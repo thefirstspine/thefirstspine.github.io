@@ -20,16 +20,17 @@ $family-sans-serif: "Helvetica", "Arial", sans-serif;
 
 // 3. Set the derived variables
 // Use the new pink as the primary color
-$primary: $pink;
-$primary-invert: $pink-invert;
+$turquoise: $pink;
+$turquoise-invert: $pink-invert;
 
 // 4. Import the rest of Bulma
 */
 
-$black: hsl(0, 0%, 6%);
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+@import "../node_modules/bulma/bulma";
+
 $text: $black;
 
-@import "../node_modules/bulma/bulma";
 @import "tfs.scss";
 @import "status.scss";
 @import "links.scss";
@@ -51,23 +52,23 @@ $text: $black;
 }
 
 .has-shadow-warning {
-  text-shadow: $warning 0 0 50px;
+  text-shadow: $yellow 0 0 50px;
 }
 
 .has-shadow-primary {
-  text-shadow: $primary 0 0 50px;
+  text-shadow: $turquoise 0 0 50px;
 }
 
 .has-shadow-link {
-  text-shadow: $link 0 0 50px;
+  text-shadow: $blue 0 0 50px;
 }
 
 .has-shadow-info {
-  text-shadow: $info 0 0 50px;
+  text-shadow: $cyan 0 0 50px;
 }
 
 .has-shadow-danger {
-  text-shadow: $danger 0 0 50px;
+  text-shadow: $red 0 0 50px;
 }
 
 .has-shadow-white {
@@ -75,27 +76,27 @@ $text: $black;
 }
 
 .has-shadow-success {
-  text-shadow: $success 0 0 50px;
+  text-shadow: $green 0 0 50px;
 }
 
 .has-box-shadow-warning {
-  box-shadow: $warning 0 0 50px;
+  box-shadow: $yellow 0 0 50px;
 }
 
 .has-box-shadow-primary {
-  box-shadow: $primary 0 0 50px;
+  box-shadow: $turquoise 0 0 50px;
 }
 
 .has-box-shadow-link {
-  box-shadow: $link 0 0 50px;
+  box-shadow: $blue 0 0 50px;
 }
 
 .has-box-shadow-info {
-  box-shadow: $info 0 0 50px;
+  box-shadow: $cyan 0 0 50px;
 }
 
 .has-box-shadow-danger {
-  box-shadow: $danger 0 0 50px;
+  box-shadow: $red 0 0 50px;
 }
 
 .has-box-shadow-white {
@@ -103,7 +104,7 @@ $text: $black;
 }
 
 .has-box-shadow-success {
-  box-shadow: $success 0 0 50px;
+  box-shadow: $green 0 0 50px;
 }
 
 .square-app {
@@ -120,21 +121,21 @@ $text: $black;
   color: #111; 
   border-color: #111;
   &.is-info {
-    background-color: $info;
+    background-color: $cyan;
   }
   &.is-warning {
-    background-color: $warning;
+    background-color: $yellow;
   }
   &.is-danger {
-    background-color: $danger;
+    background-color: $red;
   }
   &.is-link {
-    background-color: $link;
+    background-color: $blue;
   }
   &.is-success {
-    background-color: $success;
+    background-color: $green;
   }
   &.is-primary {
-    background-color: $primary;
+    background-color: $turquoise;
   }
 }
