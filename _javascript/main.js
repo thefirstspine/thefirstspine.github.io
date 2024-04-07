@@ -78,6 +78,17 @@ Vue
         {
           part: 'services',
           color: 'danger',
+          name: 'game-assets',
+          description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
+          repo: 'thefirstspine/game-assets',
+          buildBadge: true,
+          isOnMaintenance: true,
+          urls: {
+          },
+        },
+        {
+          part: 'services',
+          color: 'danger',
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine/rooms',
