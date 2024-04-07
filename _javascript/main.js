@@ -82,7 +82,6 @@ Vue
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
           repo: 'thefirstspine/game-assets',
           buildBadge: true,
-          isOnMaintenance: true,
           urls: {
           },
         },
