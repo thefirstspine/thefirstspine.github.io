@@ -417,7 +417,7 @@ Vue
     }
   })
   .component('link-card', {
-    template: `<div class="tile link-tile is-4 px-2 py-2 mt-6 mb-3">
+    template: `<div class="cell link-tile is-4 px-2 py-2 mt-6 mb-3">
       <h2 class="is-size-4 has-text-centered">
         <p>
           <span :class="'square-app has-box-shadow-' + link.color + ' is-' + link.color">{{ link.name.replace('@thefirstspine/', '').substring(0,2).toUpperCase() }}</span>
