@@ -470,7 +470,7 @@ Vue
         {{ link.description }}
       </p>
       <p class="has-text-centered mt-4" v-if="link.buildBadge === true">
-        <div class="fixed-grid has-2-cols">
+        <div class="fixed-grid has-2-cols-mobile">
           <div class="grid">
             <div class="cell is-size-7">
               Deployment status (prod):<br />
