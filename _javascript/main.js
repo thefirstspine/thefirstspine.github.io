@@ -470,14 +470,16 @@ Vue
         {{ link.description }}
       </p>
       <p class="has-text-centered mt-4" v-if="link.buildBadge === true">
-        <div class="grid">
-          <div class="cell is-size-7">
-            Deployment status (prod):<br />
-            <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
-          </div>
-          <div class="cell is-size-7">
-            Deployment status (beta):<br />
-            <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy-dev.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
+        <div class="fixed-grid has-2-cols">
+          <div class="grid">
+            <div class="cell is-size-7">
+              Deployment status (prod):<br />
+              <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
+            </div>
+            <div class="cell is-size-7">
+              Deployment status (beta):<br />
+              <img :src="'https://github.com/' + link.repo + '/actions/workflows/deploy-dev.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
+            </div>
           </div>
         </div>
       </p>
