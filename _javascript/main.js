@@ -248,6 +248,7 @@ Vue
           isUnderConception: true,
           repo: 'thefirstspine/drifters-tales-relaunch',
           urls: {
+            website: 'https://www.thefirstspine.fr/drifters-tales',
           },
         },
         {
@@ -259,6 +260,7 @@ Vue
           isDeprecated: true,
           repo: 'thefirstspine/drifters-tales-legacy',
           urls: {
+            website: 'https://www.thefirstspine.fr/drifters-tales',
           },
         },
         {
@@ -270,6 +272,7 @@ Vue
           isDeprecated: true,
           repo: 'thefirstspine/arena-client-mobile',
           urls: {
+            website: 'https://www.thefirstspine.fr/arena',
           },
         },
         {
@@ -281,7 +284,7 @@ Vue
           isDeprecated: true,
           repo: 'thefirstspine/arena-client-desktop',
           urls: {
-            website: 'https://www.thefirstspine.fr/arena-client-desktop',
+            website: 'https://www.thefirstspine.fr/arena',
           },
         },
         {
@@ -293,6 +296,7 @@ Vue
           isUnderConception: true,
           repo: 'thefirstspine/arena',
           urls: {
+            website: 'https://www.thefirstspine.fr/arena',
           },
         },
         {
@@ -312,6 +316,7 @@ Vue
           name: 'oneandone-cloudserver-sdk-go',
           description: 'This SDK is a wrapper for the 1&1 REST API written in Go(lang)',
           repo: '1and1/oneandone-cloudserver-sdk-go',
+          isDeprecated: true,
           urls: {
           },
         },
@@ -339,6 +344,7 @@ Vue
           name: 'node-loggly-bulk',
           description: 'A client implementation for Loggly in node.js.',
           repo: 'loggly/node-loggly-bulk',
+          isDeprecated: true,
           urls: {
           },
         },
