@@ -123,7 +123,6 @@ Vue
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           repo: 'thefirstspine/website',
           buildBadge: true,
-          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
           },
