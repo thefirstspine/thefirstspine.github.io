@@ -253,42 +253,6 @@ Vue
           },
         },
         {
-          part: 'projects',
-          color: 'warning',
-          name: 'drifters-tales-legacy',
-          description: 'The first verion of the solo game made with Unity.',
-          isProtected: true,
-          isDeprecated: true,
-          repo: 'thefirstspine/drifters-tales-legacy',
-          urls: {
-            website: 'https://www.thefirstspine.fr/drifters-tales',
-          },
-        },
-        {
-          part: 'projects',
-          color: 'warning',
-          name: 'arena-client-mobile',
-          description: 'Web-based mobile client for Arena.',
-          isProtected: true,
-          isDeprecated: true,
-          repo: 'thefirstspine/arena-client-mobile',
-          urls: {
-            website: 'https://www.thefirstspine.fr/arena',
-          },
-        },
-        {
-          part: 'projects',
-          color: 'warning',
-          name: 'arena-client-desktop',
-          description: 'Web-based desktop client for Arena.',
-          isProtected: true,
-          isDeprecated: true,
-          repo: 'thefirstspine/arena-client-desktop',
-          urls: {
-            website: 'https://www.thefirstspine.fr/arena',
-          },
-        },
-        {
           part: 'services',
           color: 'danger',
           name: 'arena',
@@ -314,16 +278,6 @@ Vue
         {
           part: 'contributing',
           color: 'primary',
-          name: 'oneandone-cloudserver-sdk-go',
-          description: 'This SDK is a wrapper for the 1&1 REST API written in Go(lang)',
-          repo: '1and1/oneandone-cloudserver-sdk-go',
-          isDeprecated: true,
-          urls: {
-          },
-        },
-        {
-          part: 'contributing',
-          color: 'primary',
           name: 'bulma',
           description: 'Bulma is a modern CSS framework based on Flexbox.',
           repo: 'jgthms/bulma',
@@ -336,16 +290,6 @@ Vue
           name: 'nest',
           description: 'A progressive Node.js framework for building efficient and scalable server-side applications.',
           repo: 'nestjs/nest',
-          urls: {
-          },
-        },
-        {
-          part: 'contributing',
-          color: 'primary',
-          name: 'node-loggly-bulk',
-          description: 'A client implementation for Loggly in node.js.',
-          repo: 'loggly/node-loggly-bulk',
-          isDeprecated: true,
           urls: {
           },
         },
