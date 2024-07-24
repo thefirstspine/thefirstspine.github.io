@@ -246,7 +246,6 @@ Vue
           name: 'drifters-tales-relaunch',
           description: 'The solo game made with Unity. Relaunch of the first version.',
           isProtected: true,
-          isUnderConception: true,
           repo: 'thefirstspine/drifters-tales-relaunch',
           urls: {
             website: 'https://www.thefirstspine.fr/drifters-tales',
