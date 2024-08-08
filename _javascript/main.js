@@ -395,23 +395,23 @@ Vue
         </a>
       </p>
       <hr class="my-3" />
-      <h2 class="notification is-success" v-if="link.isUnderConception">
+      <h2 class="notification is-success mb-2" v-if="link.isUnderConception">
         <i class="fas fa-vial"></i> &nbsp; <strong>Under conception</strong><br />
         This project is at an early conception stage and can change anytime.
       </h2>
-      <h2 class="notification is-primary" v-if="link.isOpenedToContributions">
+      <h2 class="notification is-primary mb-2" v-if="link.isOpenedToContributions">
         <i class="fas fa-code-branch"></i>&nbsp; <strong>Opened to contributions</strong><br>
         This repository is maintened by the TFS team and other contributors.
       </h2>
-      <h2 class="notification is-danger" v-if="link.isDeprecated">
+      <h2 class="notification is-danger mb-2" v-if="link.isDeprecated">
         <i class="fas fa-hourglass-end"></i>&nbsp; <strong>Sunset</strong><br>
         This repository is considered as deprecated and will be deleted soon. New projects should not use it.
       </h2>
-      <h2 class="notification is-warning" v-if="link.isOnHold">
+      <h2 class="notification is-warning mb-2" v-if="link.isOnHold">
         <i class="fas fa-stop-circle"></i>&nbsp; <strong>On hold</strong><br>
         This development is on hold. New projects should not use it.
       </h2>
-      <h2 class="notification is-link" v-if="link.isOnMaintenance">
+      <h2 class="notification is-link mb-2" v-if="link.isOnMaintenance">
         <i class="fa fa-solid fa-mug-hot"></i>&nbsp; <strong>Maintenance</strong><br>
         This repository is in maintenance and is subject to change.
       </h2>
