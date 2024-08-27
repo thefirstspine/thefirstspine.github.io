@@ -30,7 +30,6 @@ Vue
           description: 'The matches service is the service that will manage all the games in the online products.',
           repo: 'thefirstspine/matches',
           buildBadge: true,
-          isOnMaintenance: true,
           urls: {
           },
         },
