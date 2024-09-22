@@ -345,11 +345,6 @@ Vue
           validate: (r) => r.status === "ok",
         },
         {
-          name: "Bots",
-          url: "https://bots.thefirstspine.fr/status",
-          validate: (r) => r.status === "ok",
-        },
-        {
           name: "Products usage",
           url: "https://solid-pancake.thefirstspine.fr/status",
           validate: (r) => r.status === "ok",
