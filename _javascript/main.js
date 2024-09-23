@@ -349,6 +349,11 @@ Vue
           url: "https://solid-pancake.thefirstspine.fr/status",
           validate: (r) => r.status === "ok",
         },
+        {
+          name: "Discussions",
+          url: "https://rooms.thefirstspine.fr/status",
+          validate: (r) => r.status === "ok",
+        },
       ];
       services.sort((a, b) => {
         return a.name >= b.name ? 1 : -1;
