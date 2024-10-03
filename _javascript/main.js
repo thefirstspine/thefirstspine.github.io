@@ -10,7 +10,6 @@ Vue
           name: 'ansible',
           description: 'Ansible playbooks to setup nodes & deploy apps.',
           repo: 'thefirstspine/ansible',
-          buildBadge: true,
           urls: {
           },
         },
@@ -29,7 +28,6 @@ Vue
           name: 'matches',
           description: 'The matches service is the service that will manage all the games in the online products.',
           repo: 'thefirstspine/matches',
-          buildBadge: true,
           urls: {
           },
         },
@@ -60,7 +58,6 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
-          buildBadge: true,
           urls: {
           },
         },
@@ -70,7 +67,6 @@ Vue
           name: 'messaging',
           description: 'Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.',
           repo: 'thefirstspine/messaging',
-          buildBadge: true,
           urls: {
           },
         },
@@ -80,7 +76,6 @@ Vue
           name: 'game-assets',
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
           repo: 'thefirstspine/game-assets',
-          buildBadge: true,
           urls: {
           },
         },
@@ -90,7 +85,6 @@ Vue
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine/rooms',
-          buildBadge: true,
           urls: {
           },
         },
@@ -110,7 +104,6 @@ Vue
           name: 'solid-pancake',
           description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
           repo: 'thefirstspine/solid-pancake',
-          buildBadge: true,
           isOpenedToContributions: true,
           urls: {
           },
@@ -121,7 +114,6 @@ Vue
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           repo: 'thefirstspine/website',
-          buildBadge: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
           },
@@ -132,7 +124,6 @@ Vue
           name: '@thefirstspine/certificate-authority',
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
           repo: 'thefirstspine/certificate-authority',
-          buildBadge: true,
           isOpenedToContributions: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
@@ -144,7 +135,6 @@ Vue
           name: '@thefirstspine/certificate-nest',
           description: 'Built on top of @thefirstspine/certificate-authority. Provides Nest services.',
           repo: 'thefirstspine/dependency-certificate-nest',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-nest',
           },
@@ -155,7 +145,6 @@ Vue
           name: '@thefirstspine/types-matches',
           description: 'Types definition for matches resources.',
           repo: 'thefirstspine/types-matches',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
@@ -166,7 +155,6 @@ Vue
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
           repo: 'thefirstspine/dependency-auth',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
           },
@@ -177,7 +165,6 @@ Vue
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
           repo: 'thefirstspine/dependency-auth-nest',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
           }
@@ -188,7 +175,6 @@ Vue
           name: '@thefirstspine/messaging',
           description: 'Javascript & Typescript dependency to help developers to use the messaging net service & guard.',
           repo: 'thefirstspine/dependency-messaging',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging',
           },
@@ -199,7 +185,6 @@ Vue
           name: '@thefirstspine/messaging-nest',
           description: 'Build on top of @thefirstspine/messaging. Provides Nest services.',
           repo: 'thefirstspine/dependency-messaging-nest',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging-nest',
           }
@@ -210,7 +195,6 @@ Vue
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
           repo: 'thefirstspine/dependency-logs',
-          buildBadge: true,
           isOpenedToContributions: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs',
@@ -222,7 +206,6 @@ Vue
           name: '@thefirstspine/logs-nest',
           description: 'Build on top of @thefirstspine/logs. Provides Nest services.',
           repo: 'thefirstspine/dependency-logs-nest',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs-nest',
           }
@@ -233,7 +216,6 @@ Vue
           name: '@thefirstspine/types-game',
           description: 'Types definition for game resources (such as cards, decks, etc.)',
           repo: 'thefirstspine/types-game',
-          buildBadge: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-game',
           },
@@ -416,20 +398,6 @@ Vue
       </h2>
       <p>
         {{ link.description }}
-      </p>
-      <p class="has-text-centered mt-4" v-if="link.buildBadge === true">
-        <div class="fixed-grid has-2-cols-mobile">
-          <div class="grid">
-            <div class="cell is-size-7">
-              Deployment status (prod):<br />
-              <img class="mt-2" :src="'https://github.com/' + link.repo + '/actions/workflows/deploy.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
-            </div>
-            <div class="cell is-size-7">
-              Deployment status (beta):<br />
-              <img class="mt-2" :src="'https://github.com/' + link.repo + '/actions/workflows/deploy-dev.yml/badge.svg'"  onerror="this.src='https://img.shields.io/badge/no%20action-grey'" />
-            </div>
-          </div>
-        </div>
       </p>
     </div>`,
     props: ['link'],
