@@ -48,7 +48,6 @@ Vue
           name: 'robots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine/robots',
-          isOnMaintenance: true,
           urls: {
           },
         },
