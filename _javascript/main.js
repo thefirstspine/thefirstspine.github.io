@@ -45,9 +45,9 @@ Vue
           part: 'services',
           color: 'danger',
           isProtected: true,
-          name: 'bots',
+          name: 'robots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
-          repo: 'thefirstspine/bots',
+          repo: 'thefirstspine/robots',
           isOnMaintenance: true,
           urls: {
           },
@@ -297,8 +297,8 @@ Vue
           validate: (r) => r.status === "ok",
         },
         {
-          name: "Bots",
-          url: "https://bots.thefirstspine.fr/status",
+          name: "Robots",
+          url: "https://robots.thefirstspine.fr/status",
           validate: (r) => r.status === "ok",
         },
         {
@@ -307,8 +307,8 @@ Vue
           validate: (r) => r.status === "ok",
         },
         {
-          name: "Matches (main realm)",
-          url: "https://bots.thefirstspine.fr/status",
+          name: "Matches",
+          url: "https://matches.thefirstspine.fr/status",
           validate: (r) => r.status === "ok",
         },
         {
