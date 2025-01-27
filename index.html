@@ -113,6 +113,17 @@
           </div>
         </div>
       </section>
+
+      <section class="hero is-small is-black">
+        <div class="hero-body">
+          <hr />
+          <div class="container">
+            <div class="grid is-col-min-9">
+              <Suspense><status-tile v-for="service in services" :service="service"></status-tile></Suspense>
+            </div>
+          </div>
+        </div>
+      </section>
       
       <section class="section">
         <div class="container">
@@ -126,7 +137,7 @@
           </div>
     
           <a name="infrastructure"></a>
-          <h1 class="is-size-1 is-size-2-mobile is-uppercase section-title mt-4 has-text-info has-text-centered has-shadow-info">Infrastructure</h1>
+          <h1 class="is-size-1 is-size-2-mobile is-uppercase section-title mt-8 has-text-info has-text-centered has-shadow-info">Infrastructure</h1>
           <p class="is-size-4 my-3 has-text-centered">Monitoring, deployment... all the server/docker-related things that empowers the TFS platform.</p>
           <div class="fixed-grid has-3-cols-desktop has-2-cols-tablet has-1-cols-mobile">
             <div class="grid">
@@ -159,16 +170,6 @@
             <div class="grid">
               <link-card v-for="link in links.filter((l) => l.part === 'contributing')" :link="link"></link-card>
             </div>
-          </div>
-        </div>
-      </section>
-
-      <section class="hero is-small is-black">
-        <div class="hero-body">
-          <div class="container">
-            <a name="status"></a>
-            <p class="is-size-2 is-uppercase has-text-centered mb-3">Service status</p>
-            <Suspense><status-tile v-for="service in services" :service="service"></status-tile></Suspense>
           </div>
         </div>
       </section>

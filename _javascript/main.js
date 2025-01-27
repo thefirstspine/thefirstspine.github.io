@@ -402,10 +402,11 @@ Vue
     props: ['link'],
   })
   .component('status-tile', {
-    template: `<div class="tile link-tile is-2 px-2 py-2 mt-1 mb-1">
-      <i v-if="status === true" class="fas fa-check-circle has-text-success"></i>
-      <i v-if="status === false" class="fas fa-exclamation-circle has-text-danger"></i>
-      <i v-if="status === null" class="fas fa-question-circle has-text-warning"></i>
+    template: `<div class="cell link-tile is-2 px-2 py-2 mt-1 mb-1 has-text-centered">
+      <i v-if="status === true" class="fas fa-check-circle has-text-success is-size-4 mb-4"></i>
+      <i v-if="status === false" class="fas fa-exclamation-circle has-text-danger is-size-4 mb-4"></i>
+      <i v-if="status === null" class="fas fa-question-circle has-text-warning is-size-4 mb-4"></i>
+      <br>
       {{ service.name }}
     </div>`,
     setup: async (proxy) => {
