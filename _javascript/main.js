@@ -254,6 +254,17 @@ Vue
           },
         },
         {
+          part: 'projects',
+          color: 'warning',
+          name: 'ravens-reach',
+          description: 'New mobile game project.',
+          isProtected: true,
+          isUnderConception: true,
+          repo: 'thefirstspine/ravens-reach',
+          urls: {
+          },
+        },
+        {
           part: 'contributing',
           color: 'primary',
           name: 'bulma',
