@@ -35,6 +35,7 @@ Vue
           part: 'services',
           color: 'danger',
           isProtected: true,
+          isDeprecated: true,
           name: 'auth',
           description: 'Main authentification service. Manages registrations & token generation.',
           repo: 'thefirstspine/auth',
@@ -124,6 +125,7 @@ Vue
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
           repo: 'thefirstspine/certificate-authority',
           isOpenedToContributions: true,
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
           },
@@ -134,6 +136,7 @@ Vue
           name: '@thefirstspine/certificate-nest',
           description: 'Built on top of @thefirstspine/certificate-authority. Provides Nest services.',
           repo: 'thefirstspine/dependency-certificate-nest',
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-nest',
           },
