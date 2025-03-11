@@ -28,6 +28,7 @@ Vue
           name: 'matches',
           description: 'The matches service is the service that will manage all the games in the online products.',
           repo: 'thefirstspine/matches',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -49,6 +50,7 @@ Vue
           name: 'robots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine/robots',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -58,6 +60,7 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -67,6 +70,7 @@ Vue
           name: 'messaging',
           description: 'Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.',
           repo: 'thefirstspine/messaging',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -85,6 +89,7 @@ Vue
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine/rooms',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -95,6 +100,7 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine/shop',
+          isOnMaintenance: true,
           urls: {
           },
         },
@@ -114,6 +120,7 @@ Vue
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           repo: 'thefirstspine/website',
+          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
           },
@@ -241,6 +248,7 @@ Vue
           isProtected: true,
           isUnderConception: true,
           repo: 'thefirstspine/arena',
+          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/arena',
           },
