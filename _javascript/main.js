@@ -110,7 +110,6 @@ Vue
           name: 'solid-pancake',
           description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
           repo: 'thefirstspine/solid-pancake',
-          isOpenedToContributions: true,
           urls: {
           },
         },
@@ -131,7 +130,6 @@ Vue
           name: '@thefirstspine/certificate-authority',
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
           repo: 'thefirstspine/certificate-authority',
-          isOpenedToContributions: true,
           isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
@@ -204,7 +202,6 @@ Vue
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
           repo: 'thefirstspine/dependency-logs',
-          isOpenedToContributions: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs',
           },
