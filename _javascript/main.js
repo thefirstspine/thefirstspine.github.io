@@ -162,6 +162,7 @@ Vue
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
           repo: 'thefirstspine/dependency-auth',
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
           },
@@ -172,6 +173,7 @@ Vue
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
           repo: 'thefirstspine/dependency-auth-nest',
+          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
           }
