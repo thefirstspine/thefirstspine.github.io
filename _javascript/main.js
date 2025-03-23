@@ -61,6 +61,7 @@ Vue
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine/calendar',
           isOnMaintenance: true,
+          isDeprecated: true,
           urls: {
           },
         },
