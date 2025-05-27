@@ -233,7 +233,6 @@ Vue
           name: 'arena',
           description: 'Next Arena top-level API for managing games in heavy clients.',
           isProtected: true,
-          isUnderConception: true,
           repo: 'thefirstspine-org/arena',
           urls: {
             website: 'https://www.thefirstspine.fr/arena',
@@ -245,7 +244,6 @@ Vue
           name: 'arena-client',
           description: 'Heavy client for next Arena version.',
           isProtected: true,
-          isUnderConception: true,
           repo: 'thefirstspine-org/arena-client',
           urls: {
           },
