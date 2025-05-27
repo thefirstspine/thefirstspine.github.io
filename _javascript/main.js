@@ -28,7 +28,6 @@ Vue
           name: 'matches',
           description: 'The matches service is the service that will manage all the games in the online products.',
           repo: 'thefirstspine-org/matches',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -36,7 +35,6 @@ Vue
           part: 'services',
           color: 'danger',
           isProtected: true,
-          isDeprecated: true,
           name: 'auth',
           description: 'Main authentification service. Manages registrations & token generation.',
           repo: 'thefirstspine-org/auth',
@@ -50,7 +48,6 @@ Vue
           name: 'robots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
           repo: 'thefirstspine-org/robots',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -60,8 +57,6 @@ Vue
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
           repo: 'thefirstspine-org/calendar',
-          isOnMaintenance: true,
-          isDeprecated: true,
           urls: {
           },
         },
@@ -71,7 +66,6 @@ Vue
           name: 'messaging',
           description: 'Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.',
           repo: 'thefirstspine-org/messaging',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -90,7 +84,6 @@ Vue
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
           repo: 'thefirstspine-org/rooms',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -101,7 +94,6 @@ Vue
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
           repo: 'thefirstspine-org/shop',
-          isOnMaintenance: true,
           urls: {
           },
         },
@@ -120,7 +112,6 @@ Vue
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
           repo: 'thefirstspine-org/website',
-          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
           },
@@ -131,7 +122,6 @@ Vue
           name: '@thefirstspine/certificate-authority',
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
           repo: 'thefirstspine-org/certificate-authority',
-          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
           },
@@ -142,7 +132,6 @@ Vue
           name: '@thefirstspine/certificate-nest',
           description: 'Built on top of @thefirstspine/certificate-authority. Provides Nest services.',
           repo: 'thefirstspine-org/dependency-certificate-nest',
-          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-nest',
           },
@@ -163,7 +152,6 @@ Vue
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
           repo: 'thefirstspine-org/dependency-auth',
-          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
           },
@@ -174,7 +162,6 @@ Vue
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
           repo: 'thefirstspine-org/dependency-auth-nest',
-          isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
           }
@@ -248,7 +235,6 @@ Vue
           isProtected: true,
           isUnderConception: true,
           repo: 'thefirstspine-org/arena',
-          isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/arena',
           },
