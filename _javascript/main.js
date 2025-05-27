@@ -9,7 +9,7 @@ Vue
           color: 'info',
           name: 'ansible',
           description: 'Ansible playbooks to setup nodes & deploy apps.',
-          repo: 'thefirstspine/ansible',
+          repo: 'thefirstspine-org/ansible',
           urls: {
           },
         },
@@ -18,7 +18,7 @@ Vue
           color: 'info',
           name: 'configurator',
           description: 'Works along the Ansible playbooks to create clean & reliable dotenv configs to use in local / test envs.',
-          repo: 'thefirstspine/configurator',
+          repo: 'thefirstspine-org/configurator',
           urls: {
           },
         },
@@ -27,7 +27,7 @@ Vue
           color: 'danger',
           name: 'matches',
           description: 'The matches service is the service that will manage all the games in the online products.',
-          repo: 'thefirstspine/matches',
+          repo: 'thefirstspine-org/matches',
           isOnMaintenance: true,
           urls: {
           },
@@ -39,7 +39,7 @@ Vue
           isDeprecated: true,
           name: 'auth',
           description: 'Main authentification service. Manages registrations & token generation.',
-          repo: 'thefirstspine/auth',
+          repo: 'thefirstspine-org/auth',
           urls: {
           },
         },
@@ -49,7 +49,7 @@ Vue
           isProtected: true,
           name: 'robots',
           description: 'Bot service to act like a human in the games. The bots should not be used for ranked games & tournaments.',
-          repo: 'thefirstspine/robots',
+          repo: 'thefirstspine-org/robots',
           isOnMaintenance: true,
           urls: {
           },
@@ -59,7 +59,7 @@ Vue
           color: 'danger',
           name: 'calendar',
           description: 'Calendar API. All the temporary things belong here (events, cycles, etc.)',
-          repo: 'thefirstspine/calendar',
+          repo: 'thefirstspine-org/calendar',
           isOnMaintenance: true,
           isDeprecated: true,
           urls: {
@@ -70,7 +70,7 @@ Vue
           color: 'danger',
           name: 'messaging',
           description: 'Simple realtime messaging system. Contains an API to send message through sockets, where clients can subscribe.',
-          repo: 'thefirstspine/messaging',
+          repo: 'thefirstspine-org/messaging',
           isOnMaintenance: true,
           urls: {
           },
@@ -80,7 +80,7 @@ Vue
           color: 'danger',
           name: 'game-assets',
           description: 'Rest API. They are all static assets in the API, such as cards, decks, avatars, game types, etc.',
-          repo: 'thefirstspine/game-assets',
+          repo: 'thefirstspine-org/game-assets',
           urls: {
           },
         },
@@ -89,7 +89,7 @@ Vue
           color: 'danger',
           name: 'rooms',
           description: 'The rooms service will manage discussions between players inside rooms, contained in subjects.',
-          repo: 'thefirstspine/rooms',
+          repo: 'thefirstspine-org/rooms',
           isOnMaintenance: true,
           urls: {
           },
@@ -100,7 +100,7 @@ Vue
           isProtected: true,
           name: 'shop',
           description: 'Manages all the purshases with real money. Works with the Stripe API.',
-          repo: 'thefirstspine/shop',
+          repo: 'thefirstspine-org/shop',
           isOnMaintenance: true,
           urls: {
           },
@@ -110,7 +110,7 @@ Vue
           color: 'danger',
           name: 'solid-pancake',
           description: 'Solid Pancakes is an event-based consumer that tracks usages on the TFS products.',
-          repo: 'thefirstspine/solid-pancake',
+          repo: 'thefirstspine-org/solid-pancake',
           urls: {
           },
         },
@@ -119,7 +119,7 @@ Vue
           color: 'danger',
           name: 'website',
           description: 'Website built with Sails.js, using all the other services to serve data to the players.',
-          repo: 'thefirstspine/website',
+          repo: 'thefirstspine-org/website',
           isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/',
@@ -130,7 +130,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/certificate-authority',
           description: 'Javascript and Typescript service to validate public keys against private key stored in environment variable.',
-          repo: 'thefirstspine/certificate-authority',
+          repo: 'thefirstspine-org/certificate-authority',
           isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-authority',
@@ -141,7 +141,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/certificate-nest',
           description: 'Built on top of @thefirstspine/certificate-authority. Provides Nest services.',
-          repo: 'thefirstspine/dependency-certificate-nest',
+          repo: 'thefirstspine-org/dependency-certificate-nest',
           isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/certificate-nest',
@@ -152,7 +152,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/types-matches',
           description: 'Types definition for matches resources.',
-          repo: 'thefirstspine/types-matches',
+          repo: 'thefirstspine-org/types-matches',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-matches',
           },
@@ -162,7 +162,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/auth',
           description: 'Javascript & Typescript dependency to help developers to use the auth net service & guard.',
-          repo: 'thefirstspine/dependency-auth',
+          repo: 'thefirstspine-org/dependency-auth',
           isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth',
@@ -173,7 +173,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/auth-nest',
           description: 'Build on top of @thefirstspine/auth. Provides Nest services.',
-          repo: 'thefirstspine/dependency-auth-nest',
+          repo: 'thefirstspine-org/dependency-auth-nest',
           isDeprecated: true,
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/auth-nest',
@@ -184,7 +184,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/messaging',
           description: 'Javascript & Typescript dependency to help developers to use the messaging net service & guard.',
-          repo: 'thefirstspine/dependency-messaging',
+          repo: 'thefirstspine-org/dependency-messaging',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging',
           },
@@ -194,7 +194,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/messaging-nest',
           description: 'Build on top of @thefirstspine/messaging. Provides Nest services.',
-          repo: 'thefirstspine/dependency-messaging-nest',
+          repo: 'thefirstspine-org/dependency-messaging-nest',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/messaging-nest',
           }
@@ -204,7 +204,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/logs',
           description: 'Javascript and Typescript service to deliver unified logs. Works with Winstonjs.',
-          repo: 'thefirstspine/dependency-logs',
+          repo: 'thefirstspine-org/dependency-logs',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs',
           },
@@ -214,7 +214,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/logs-nest',
           description: 'Build on top of @thefirstspine/logs. Provides Nest services.',
-          repo: 'thefirstspine/dependency-logs-nest',
+          repo: 'thefirstspine-org/dependency-logs-nest',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/logs-nest',
           }
@@ -224,7 +224,7 @@ Vue
           color: 'success',
           name: '@thefirstspine/types-game',
           description: 'Types definition for game resources (such as cards, decks, etc.)',
-          repo: 'thefirstspine/types-game',
+          repo: 'thefirstspine-org/types-game',
           urls: {
             npm: 'https://www.npmjs.com/package/@thefirstspine/types-game',
           },
@@ -235,7 +235,7 @@ Vue
           name: 'drifters-tales',
           description: 'The solo game made with Unity. Relaunch of the first version.',
           isProtected: true,
-          repo: 'thefirstspine/drifters-tales',
+          repo: 'thefirstspine-org/drifters-tales',
           urls: {
             website: 'https://www.thefirstspine.fr/drifters-tales',
           },
@@ -247,7 +247,7 @@ Vue
           description: 'Next Arena top-level API for managing games in heavy clients.',
           isProtected: true,
           isUnderConception: true,
-          repo: 'thefirstspine/arena',
+          repo: 'thefirstspine-org/arena',
           isOnMaintenance: true,
           urls: {
             website: 'https://www.thefirstspine.fr/arena',
@@ -260,29 +260,7 @@ Vue
           description: 'Heavy client for next Arena version.',
           isProtected: true,
           isUnderConception: true,
-          repo: 'thefirstspine/arena-client',
-          urls: {
-          },
-        },
-        {
-          part: 'projects',
-          color: 'warning',
-          name: 'ravens-reach-client',
-          description: 'New mobile game project.',
-          isProtected: true,
-          isUnderConception: true,
-          repo: 'thefirstspine/ravens-reach-client',
-          urls: {
-          },
-        },
-        {
-          part: 'services',
-          color: 'danger',
-          name: 'ravens-reach',
-          description: 'New mobile game project.',
-          isProtected: true,
-          isUnderConception: true,
-          repo: 'thefirstspine/ravens-reach',
+          repo: 'thefirstspine-org/arena-client',
           urls: {
           },
         },

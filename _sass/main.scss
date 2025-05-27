@@ -26,14 +26,14 @@ $turquoise-invert: $pink-invert;
 // 4. Import the rest of Bulma
 */
 
-@import "../node_modules/bulma/sass/utilities/initial-variables";
-@import "../node_modules/bulma/bulma";
+@use "../node_modules/bulma/sass/utilities/initial-variables" as variables;
+@use "../node_modules/bulma/bulma";
 
-$text: $black;
+$text: variables.$black;
 
-@import "tfs.scss";
-@import "status.scss";
-@import "links.scss";
+@use "tfs.scss";
+@use "status.scss";
+@use "links.scss";
 
 .mt-7 {
   margin-top: 5rem;
@@ -52,59 +52,59 @@ $text: $black;
 }
 
 .has-shadow-warning {
-  text-shadow: $yellow 0 0 50px;
+  text-shadow: variables.$yellow 0 0 50px;
 }
 
 .has-shadow-primary {
-  text-shadow: $turquoise 0 0 50px;
+  text-shadow: variables.$turquoise 0 0 50px;
 }
 
 .has-shadow-link {
-  text-shadow: $blue 0 0 50px;
+  text-shadow: variables.$blue 0 0 50px;
 }
 
 .has-shadow-info {
-  text-shadow: $cyan 0 0 50px;
+  text-shadow: variables.$cyan 0 0 50px;
 }
 
 .has-shadow-danger {
-  text-shadow: $red 0 0 50px;
+  text-shadow: variables.$red 0 0 50px;
 }
 
 .has-shadow-white {
-  text-shadow: $white 0 0 50px;
+  text-shadow: variables.$white 0 0 50px;
 }
 
 .has-shadow-success {
-  text-shadow: $green 0 0 50px;
+  text-shadow: variables.$green 0 0 50px;
 }
 
 .has-box-shadow-warning {
-  box-shadow: $yellow 0 0 50px;
+  box-shadow: variables.$yellow 0 0 50px;
 }
 
 .has-box-shadow-primary {
-  box-shadow: $turquoise 0 0 50px;
+  box-shadow: variables.$turquoise 0 0 50px;
 }
 
 .has-box-shadow-link {
-  box-shadow: $blue 0 0 50px;
+  box-shadow: variables.$blue 0 0 50px;
 }
 
 .has-box-shadow-info {
-  box-shadow: $cyan 0 0 50px;
+  box-shadow: variables.$cyan 0 0 50px;
 }
 
 .has-box-shadow-danger {
-  box-shadow: $red 0 0 50px;
+  box-shadow: variables.$red 0 0 50px;
 }
 
 .has-box-shadow-white {
-  box-shadow: $white 0 0 50px;
+  box-shadow: variables.$white 0 0 50px;
 }
 
 .has-box-shadow-success {
-  box-shadow: $green 0 0 50px;
+  box-shadow: variables.$green 0 0 50px;
 }
 
 .square-app {
@@ -121,21 +121,21 @@ $text: $black;
   color: #111; 
   border-color: #111;
   &.is-info {
-    background-color: $cyan;
+    background-color: variables.$cyan;
   }
   &.is-warning {
-    background-color: $yellow;
+    background-color: variables.$yellow;
   }
   &.is-danger {
-    background-color: $red;
+    background-color: variables.$red;
   }
   &.is-link {
-    background-color: $blue;
+    background-color: variables.$blue;
   }
   &.is-success {
-    background-color: $green;
+    background-color: variables.$green;
   }
   &.is-primary {
-    background-color: $turquoise;
+    background-color: variables.$turquoise;
   }
 }
